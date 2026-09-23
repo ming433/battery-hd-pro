@@ -25,21 +25,44 @@ public final class FragmentSettingsBinding implements ViewBinding {
   public final Button btnDeleteData;
 
   @NonNull
+  public final Button btnNotificationPermission;
+
+  @NonNull
   public final Button btnPro;
 
   @NonNull
   public final MaterialSwitch switchAnalytics;
 
   @NonNull
+  public final MaterialSwitch switchReminderCalibration;
+
+  @NonNull
+  public final MaterialSwitch switchReminderChargeLimit;
+
+  @NonNull
+  public final MaterialSwitch switchReminderTempAlert;
+
+  @NonNull
+  public final MaterialSwitch switchReminderWeeklyReport;
+
+  @NonNull
   public final TextView tvVersion;
 
   private FragmentSettingsBinding(@NonNull LinearLayout rootView, @NonNull Button btnDeleteData,
-      @NonNull Button btnPro, @NonNull MaterialSwitch switchAnalytics,
-      @NonNull TextView tvVersion) {
+      @NonNull Button btnNotificationPermission, @NonNull Button btnPro,
+      @NonNull MaterialSwitch switchAnalytics, @NonNull MaterialSwitch switchReminderCalibration,
+      @NonNull MaterialSwitch switchReminderChargeLimit,
+      @NonNull MaterialSwitch switchReminderTempAlert,
+      @NonNull MaterialSwitch switchReminderWeeklyReport, @NonNull TextView tvVersion) {
     this.rootView = rootView;
     this.btnDeleteData = btnDeleteData;
+    this.btnNotificationPermission = btnNotificationPermission;
     this.btnPro = btnPro;
     this.switchAnalytics = switchAnalytics;
+    this.switchReminderCalibration = switchReminderCalibration;
+    this.switchReminderChargeLimit = switchReminderChargeLimit;
+    this.switchReminderTempAlert = switchReminderTempAlert;
+    this.switchReminderWeeklyReport = switchReminderWeeklyReport;
     this.tvVersion = tvVersion;
   }
 
@@ -76,6 +99,12 @@ public final class FragmentSettingsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnNotificationPermission;
+      Button btnNotificationPermission = ViewBindings.findChildViewById(rootView, id);
+      if (btnNotificationPermission == null) {
+        break missingId;
+      }
+
       id = R.id.btnPro;
       Button btnPro = ViewBindings.findChildViewById(rootView, id);
       if (btnPro == null) {
@@ -88,14 +117,40 @@ public final class FragmentSettingsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.switchReminderCalibration;
+      MaterialSwitch switchReminderCalibration = ViewBindings.findChildViewById(rootView, id);
+      if (switchReminderCalibration == null) {
+        break missingId;
+      }
+
+      id = R.id.switchReminderChargeLimit;
+      MaterialSwitch switchReminderChargeLimit = ViewBindings.findChildViewById(rootView, id);
+      if (switchReminderChargeLimit == null) {
+        break missingId;
+      }
+
+      id = R.id.switchReminderTempAlert;
+      MaterialSwitch switchReminderTempAlert = ViewBindings.findChildViewById(rootView, id);
+      if (switchReminderTempAlert == null) {
+        break missingId;
+      }
+
+      id = R.id.switchReminderWeeklyReport;
+      MaterialSwitch switchReminderWeeklyReport = ViewBindings.findChildViewById(rootView, id);
+      if (switchReminderWeeklyReport == null) {
+        break missingId;
+      }
+
       id = R.id.tvVersion;
       TextView tvVersion = ViewBindings.findChildViewById(rootView, id);
       if (tvVersion == null) {
         break missingId;
       }
 
-      return new FragmentSettingsBinding((LinearLayout) rootView, btnDeleteData, btnPro,
-          switchAnalytics, tvVersion);
+      return new FragmentSettingsBinding((LinearLayout) rootView, btnDeleteData,
+          btnNotificationPermission, btnPro, switchAnalytics, switchReminderCalibration,
+          switchReminderChargeLimit, switchReminderTempAlert, switchReminderWeeklyReport,
+          tvVersion);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

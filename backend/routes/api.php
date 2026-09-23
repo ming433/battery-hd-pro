@@ -8,6 +8,7 @@ use App\Http\Controllers\Api\V1\HealthController;
 use App\Http\Controllers\Api\V1\MeController;
 use App\Http\Controllers\Api\V1\RegisterController;
 use App\Http\Controllers\Api\V1\RtdnController;
+use App\Http\Middleware\DecompressRequest;
 use App\Http\Middleware\EventVolumeLimit;
 use Illuminate\Support\Facades\Route;
 
@@ -32,8 +33,10 @@ Route::prefix('v1')->group(function () {
 
     Route::middleware('auth:sanctum')->group(function () {
         // 批量事件上报：按条数限流（600/分钟）+ 请求数限流（10/分钟）
+        // DecompressRequest 必须排在最前：客户端 >1KB 的批体会 gzip，
+        // 先解压 EventVolumeLimit 才能按真实条数计费、validate() 才能看到字段
         Route::post('/analytics/events', [EventController::class, 'store'])
-            ->middleware([EventVolumeLimit::class.':600', 'throttle:analytics:events']);
+            ->middleware([DecompressRequest::class, EventVolumeLimit::class.':600', 'throttle:analytics:events']);
 
         // 删除我的数据（合规：数据删除权）
         Route::delete('/analytics/me', [MeController::class, 'destroy']);

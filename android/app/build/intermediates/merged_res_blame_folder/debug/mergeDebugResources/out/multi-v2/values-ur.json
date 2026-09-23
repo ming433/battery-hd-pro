@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.batteryhd.app-mergeDebugResources-50:/values-ur/values-ur.xml",
+            "outputFile": "com.batteryhd.app-mergeDebugResources-48:/values-ur/values-ur.xml",
             "map": [
                 {
                     "source": "/Users/ming.yang/.gradle/caches/8.9/transforms/3da8c38abfa6f52baec23c6b9a51c619/transformed/play-services-ads-23.6.0/res/values-ur/values.xml",

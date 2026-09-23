@@ -23,6 +23,16 @@ class ConsentActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // 已表态则不再打扰：直接进主界面。
+        // 此时 SDK 已由 BatteryHdApp.onCreate 初始化（它同样判断 hasDecided），
+        // 这里必须 return，否则既重复弹同意页、又会让 binding 未初始化就被用到。
+        if (ConsentManager.hasDecided(this)) {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+            return
+        }
+
         binding = ActivityConsentBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

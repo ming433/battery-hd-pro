@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  仅 debug sourceSet 使用的网络安全配置。
+
+  放行明文 HTTP 只为连本地/测试服务器（http://39.106.113.189:8082）。
+  信任锚保持 system，不引入用户证书，避免 debug 包意外信任自签 CA。
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

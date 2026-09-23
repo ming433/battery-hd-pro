@@ -2031,6 +2031,13 @@
     <string name="character_counter_content_description">Characters entered %1$d of %2$d</string>
     <string name="character_counter_overflowed_content_description">Character limit exceeded %1$d of %2$d</string>
     <string name="character_counter_pattern" translatable="false">%1$d/%2$d</string>
+    <string name="charge_calibration_abandoned">Kalibrasi dibatalkan</string>
+    <string name="charge_calibration_cancel">Batalkan kalibrasi</string>
+    <string name="charge_calibration_finish">Selesai</string>
+    <string name="charge_calibration_next">Lanjut</string>
+    <string name="charge_calibration_step_charge">Langkah 2/3: isi daya hingga 100%% tanpa mencabut</string>
+    <string name="charge_calibration_step_discharge">Langkah 1/3: gunakan baterai hingga di bawah 20%%</string>
+    <string name="charge_calibration_step_verify">Langkah 3/3: menghitung kapasitas…</string>
     <string name="charge_limit_label">Batas pengisian: %1$d%%</string>
     <string name="charge_start_calibration">Mulai Kalibrasi</string>
     <string name="charge_status">Status: %1$s</string>
@@ -2126,6 +2133,7 @@
     <string name="monitor_technology">Jenis: %1$s</string>
     <string name="monitor_title">Detail Baterai</string>
     <string name="monitor_voltage">Tegangan: %1$.2f V</string>
+    <string name="monitor_weekly_report">Lihat laporan mingguan</string>
     <string description="Content description for new notification (no number count) [CHAR_LIMIT=NONE]" name="mtrl_badge_numberless_content_description">New notification</string>
     <string name="mtrl_checkbox_button_icon_path_checked" translatable="false">M14,18.2 11.4,15.6 10,17 14,21 22,13 20.6,11.6z</string>
     <string name="mtrl_checkbox_button_icon_path_group_name" translatable="false">icon</string>
@@ -2209,6 +2217,16 @@
     <string name="nav_power">Daya</string>
     <string name="nav_saving">Hemat</string>
     <string name="nav_settings">Setelan</string>
+    <string name="notification_channel_alerts">Peringatan baterai</string>
+    <string name="notification_channel_alerts_desc">Peringatan suhu dan batas pengisian</string>
+    <string name="notification_channel_reports">Laporan</string>
+    <string name="notification_channel_reports_desc">Laporan pengisian mingguan</string>
+    <string name="notification_charge_limit_text">Baterai mencapai %1$d%%. Cabut pengisi daya untuk menjaga kesehatan baterai.</string>
+    <string name="notification_charge_limit_title">Batas pengisian tercapai</string>
+    <string name="notification_temp_text">Suhu %1$.1f°C melewati ambang %2$.1f°C. Hentikan pengisian sementara.</string>
+    <string name="notification_temp_title">Suhu baterai tinggi</string>
+    <string name="notification_weekly_report_text">Lihat ringkasan kebiasaan pengisian minggu ini.</string>
+    <string name="notification_weekly_report_title">Laporan pengisian mingguan</string>
     <string description="Label on the button to go to settings. [CHAR_LIMIT=20]" name="notifications_permission_confirm">
       Allow</string>
     <string description="Label on the button to decline going to settings. [CHAR_LIMIT=20]" name="notifications_permission_decline">
@@ -2248,6 +2266,9 @@
     <string name="pro_owned">Terima kasih! Anda sudah Pro.</string>
     <string name="pro_price_error">Harga tidak tersedia</string>
     <string name="pro_restore">Pulihkan pembelian</string>
+    <string name="report_no_data">Belum ada data pengisian minggu ini.</string>
+    <string name="report_weekly_summary">Rata-rata durasi pengisian %1$s dari %2$d sesi.</string>
+    <string name="report_weekly_title">Laporan Minggu ke-%1$d</string>
     <string name="s1">Save image</string>
     <string name="s2">"Allow Ad to store image in Picture gallery?"</string>
     <string name="s3">Accept</string>
@@ -2271,6 +2292,13 @@
     <string name="settings_analytics_off">Nonaktifkan pengumpulan</string>
     <string name="settings_delete_data">Hapus data saya</string>
     <string name="settings_delete_done">Data lokal telah dihapus</string>
+    <string name="settings_notification_denied">Notifikasi dinonaktifkan di setelan sistem</string>
+    <string name="settings_notification_permission">Izinkan notifikasi</string>
+    <string name="settings_reminder_calibration">Pengingat kalibrasi</string>
+    <string name="settings_reminder_charge_limit">Batas pengisian</string>
+    <string name="settings_reminder_temp_alert">Peringatan suhu</string>
+    <string name="settings_reminder_weekly_report">Laporan mingguan</string>
+    <string name="settings_reminders_title">Pengingat</string>
     <string name="settings_title">Setelan</string>
     <string name="settings_version">Versi %1$s</string>
     <string description="Title of the side sheet&apos;s accessibility pane that is spoken by TalkBack when the side sheet appears on screen. [CHAR_LIMIT=NONE]" name="side_sheet_accessibility_pane_title">Side Sheet</string>

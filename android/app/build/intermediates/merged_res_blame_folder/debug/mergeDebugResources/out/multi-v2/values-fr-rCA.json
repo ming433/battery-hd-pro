@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.batteryhd.app-mergeDebugResources-50:/values-fr-rCA/values-fr-rCA.xml",
+            "outputFile": "com.batteryhd.app-mergeDebugResources-48:/values-fr-rCA/values-fr-rCA.xml",
             "map": [
                 {
                     "source": "/Users/ming.yang/.gradle/caches/8.9/transforms/9155d5eaa60b313c76699f88d3330471/transformed/core-1.13.1/res/values-fr-rCA/values-fr-rCA.xml",

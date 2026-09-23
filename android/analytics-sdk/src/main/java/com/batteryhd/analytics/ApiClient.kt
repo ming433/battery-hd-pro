@@ -14,6 +14,12 @@ import java.util.zip.GZIPOutputStream
  * 请求体超过 [GZIP_THRESHOLD_BYTES] 时启用 gzip——批量上报 20~50 条事件的 JSON
  * 通常在 5~20KB，压缩后可降至 1/5，对东南亚弱网环境的上报成功率影响显著。
  */
+/**
+ * @param baseUrl **必须已包含 `/api/v1` 前缀**（如 `https://api.batteryhd.pro/api/v1`）。
+ *   下面的 path 一律写成该前缀之后的相对路径。
+ *   曾经两边都带 `/api/v1`，拼出 `.../api/v1/api/v1/analytics/register` 直接 404，
+ *   而这个问题长期被明文流量拦截掩盖——本地一直没真正跑到请求阶段。
+ */
 internal class ApiClient(
     private val baseUrl: String,
     private val connectTimeoutMs: Int = 10_000,
@@ -30,7 +36,7 @@ internal class ApiClient(
     data class RegisterResponse(val token: String, val serverTimestamp: Long)
 
     fun register(payload: JSONObject): kotlin.Result<RegisterResponse> = runCatching {
-        val res = post("/api/v1/analytics/register", payload, authToken = null)
+        val res = post("/analytics/register", payload, authToken = null)
         when (res) {
             is Result.Success -> {
                 val json = JSONObject(res.body)
@@ -54,16 +60,16 @@ internal class ApiClient(
      * 导致所有计数类指标系统性虚高。
      */
     fun uploadEvents(payload: JSONObject, authToken: String): Result =
-        post("/api/v1/analytics/events", payload, authToken)
+        post("/analytics/events", payload, authToken)
 
     // ------------------------------------------------------------ 配置拉取
 
     fun fetchAnalyticsConfig(authToken: String): Result =
-        get("/api/v1/config/analytics", authToken)
+        get("/config/analytics", authToken)
 
     /** 广告配置走独立端点（PRD 10.5：与埋点解耦，用户关闭埋点后广告仍可拉取） */
     fun fetchAdConfig(authToken: String, country: String, appVersion: String, isPro: Boolean): Result =
-        get("/api/v1/config/ads?country=$country&app_version=$appVersion&is_pro=$isPro", authToken)
+        get("/config/ads?country=$country&app_version=$appVersion&is_pro=$isPro", authToken)
 
     // -------------------------------------------------------- 同意凭证
 
@@ -82,7 +88,7 @@ internal class ApiClient(
         policyVersion: String,
         decidedAtMs: Long
     ): Result = post(
-        "/api/v1/analytics/consent",
+        "/analytics/consent",
         JSONObject().apply {
             put("action", action)
             put("analytics", analytics)

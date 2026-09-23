@@ -1,42 +1,42 @@
 [
     {
-        "merged": "com.batteryhd.app-mergeDebugResources-51:/layout/fragment_power.xml",
-        "source": "com.batteryhd.app-main-46:/layout/fragment_power.xml"
+        "merged": "com.batteryhd.app-mergeDebugResources-49:/layout/fragment_home.xml",
+        "source": "com.batteryhd.app-main-52:/layout/fragment_home.xml"
     },
     {
-        "merged": "com.batteryhd.app-mergeDebugResources-51:/layout/fragment_monitor.xml",
-        "source": "com.batteryhd.app-main-46:/layout/fragment_monitor.xml"
+        "merged": "com.batteryhd.app-mergeDebugResources-49:/layout/activity_consent.xml",
+        "source": "com.batteryhd.app-main-52:/layout/activity_consent.xml"
     },
     {
-        "merged": "com.batteryhd.app-mergeDebugResources-51:/layout/item_app.xml",
-        "source": "com.batteryhd.app-main-46:/layout/item_app.xml"
+        "merged": "com.batteryhd.app-mergeDebugResources-49:/layout/item_app.xml",
+        "source": "com.batteryhd.app-main-52:/layout/item_app.xml"
     },
     {
-        "merged": "com.batteryhd.app-mergeDebugResources-51:/layout/fragment_saving.xml",
-        "source": "com.batteryhd.app-main-46:/layout/fragment_saving.xml"
+        "merged": "com.batteryhd.app-mergeDebugResources-49:/layout/fragment_power.xml",
+        "source": "com.batteryhd.app-main-52:/layout/fragment_power.xml"
     },
     {
-        "merged": "com.batteryhd.app-mergeDebugResources-51:/layout/fragment_home.xml",
-        "source": "com.batteryhd.app-main-46:/layout/fragment_home.xml"
+        "merged": "com.batteryhd.app-mergeDebugResources-49:/layout/activity_main.xml",
+        "source": "com.batteryhd.app-main-52:/layout/activity_main.xml"
     },
     {
-        "merged": "com.batteryhd.app-mergeDebugResources-51:/layout/activity_main.xml",
-        "source": "com.batteryhd.app-main-46:/layout/activity_main.xml"
+        "merged": "com.batteryhd.app-mergeDebugResources-49:/layout/fragment_settings.xml",
+        "source": "com.batteryhd.app-main-52:/layout/fragment_settings.xml"
     },
     {
-        "merged": "com.batteryhd.app-mergeDebugResources-51:/layout/fragment_settings.xml",
-        "source": "com.batteryhd.app-main-46:/layout/fragment_settings.xml"
+        "merged": "com.batteryhd.app-mergeDebugResources-49:/layout/fragment_charge.xml",
+        "source": "com.batteryhd.app-main-52:/layout/fragment_charge.xml"
     },
     {
-        "merged": "com.batteryhd.app-mergeDebugResources-51:/layout/activity_consent.xml",
-        "source": "com.batteryhd.app-main-46:/layout/activity_consent.xml"
+        "merged": "com.batteryhd.app-mergeDebugResources-49:/layout/activity_pro.xml",
+        "source": "com.batteryhd.app-main-52:/layout/activity_pro.xml"
     },
     {
-        "merged": "com.batteryhd.app-mergeDebugResources-51:/layout/activity_pro.xml",
-        "source": "com.batteryhd.app-main-46:/layout/activity_pro.xml"
+        "merged": "com.batteryhd.app-mergeDebugResources-49:/layout/fragment_saving.xml",
+        "source": "com.batteryhd.app-main-52:/layout/fragment_saving.xml"
     },
     {
-        "merged": "com.batteryhd.app-mergeDebugResources-51:/layout/fragment_charge.xml",
-        "source": "com.batteryhd.app-main-46:/layout/fragment_charge.xml"
+        "merged": "com.batteryhd.app-mergeDebugResources-49:/layout/fragment_monitor.xml",
+        "source": "com.batteryhd.app-main-52:/layout/fragment_monitor.xml"
     }
 ]

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.batteryhd.app-mergeDebugResources-50:/values-sq/values-sq.xml",
+            "outputFile": "com.batteryhd.app-mergeDebugResources-48:/values-sq/values-sq.xml",
             "map": [
                 {
                     "source": "/Users/ming.yang/.gradle/caches/8.9/transforms/e861ea547b910808ea217b8db8afbe75/transformed/browser-1.8.0/res/values-sq/values-sq.xml",

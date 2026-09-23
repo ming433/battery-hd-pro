@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  debug 变体专用 Manifest（仅参与 debug 构建，release 不受影响）。
+
+  为什么需要它：
+  build.gradle 里 debug 的 API_BASE_URL 是 http://39.106.113.189:8082，
+  而 targetSdk 34 起 Android 默认禁止明文 HTTP（usesCleartextTraffic=false）。
+  不声明的话 debug 包一上来就会抛
+  "Cleartext HTTP traffic to 39.106.113.189 not permitted"，
+  导致设备注册、埋点上报、广告配置拉取全部失败 —— 测试环境等于不可用。
+
+  为什么只在 debug：
+  release 的 API_BASE_URL 是 https://api.batteryhd.pro，本就不需要明文；
+  把 cleartext 放行写进 main 会让正式包也允许明文流量，属于实质性安全退让。
+  sourceSet 隔离能保证这个口子只开在开发包上。
+-->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.batteryhd.app.debug"
     android:versionCode="1"
@@ -10,15 +25,9 @@
 
     <!-- 网络：埋点上报与广告（PRD 10.7 说明均已包含，无新增权限） -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-    <!-- Android 13+ 通知运行时权限：充电限值/温度告警/周报提醒 -->
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-
-    <!-- 功耗分析的应用耗电排行（需引导用户到系统设置授予） -->
-    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
-
-    <!-- 充电状态变化：充电会话埋点（PRD 10.2 P0：平均充电时长的唯一来源） -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Android 13+ 通知运行时权限：充电限值/温度告警/周报提醒 -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" /> <!-- 功耗分析的应用耗电排行（需引导用户到系统设置授予） -->
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" /> <!-- 充电状态变化：充电会话埋点（PRD 10.2 P0：平均充电时长的唯一来源） -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="com.android.vending.BILLING" />
 
@@ -80,12 +89,12 @@
         android:extractNativeLibs="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.BatteryHD" >
-
         <!--
-             ─────────────────────────────────────────────────────────────
+ ─────────────────────────────────────────────────────────────
              AdMob App ID。
              这里填的是 **测试 ID**，仅用于工程可编译与开发期验证。
              正式包必须在 build.gradle 里按 flavor 注入真实 App ID；
@@ -95,9 +104,8 @@
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3940256099942544~3347511713" />
-
         <!--
-             隐私同意：必须是 launcher。
+ 隐私同意：必须是 launcher。
              PRD 10.6.2 / 10.3 要求「先取得同意再初始化埋点」，
              若把主界面设为 launcher，启动瞬间就会采集数据，等同未获同意即收集。
         -->
@@ -121,9 +129,8 @@
             android:exported="false"
             android:label="@string/title_pro"
             android:screenOrientation="portrait" />
-
         <!--
-             充电状态广播：Android 8+ 隐式广播豁免列表不含 ACTION_POWER_CONNECTED，
+ 充电状态广播：Android 8+ 隐式广播豁免列表不含 ACTION_POWER_CONNECTED，
              因此不在 manifest 静态注册，改由 ChargeSessionTracker 在进程内动态注册。
              此处仅保留可显式触发的开机广播，用于补报未结束的充电会话。
         -->

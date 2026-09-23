@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.batteryhd.app-mergeDebugResources-50:/values-zh-rTW/values-zh-rTW.xml",
+            "outputFile": "com.batteryhd.app-mergeDebugResources-48:/values-zh-rTW/values-zh-rTW.xml",
             "map": [
                 {
                     "source": "/Users/ming.yang/.gradle/caches/8.9/transforms/9520db16aed0ad6b455c0a4b9967ea85/transformed/material-1.12.0/res/values-zh-rTW/values-zh-rTW.xml",

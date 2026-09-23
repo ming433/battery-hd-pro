@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\AdPendingReviewController;
 use App\Http\Controllers\Admin\AdPlacementController;
 use App\Http\Controllers\Admin\AdPolicyController;
 use App\Http\Controllers\Admin\AdUnitController;
+use App\Http\Controllers\Admin\AnalyticsDashboardController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\DashboardController;
 use Illuminate\Support\Facades\Route;

@@ -64,6 +64,39 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="@string/charge_start_calibration" />
+
+            <!-- 校准分步引导：真实校准要经历放电→充满→校验三步，
+                 中途退出必须能上报 calibration_abandoned，否则无法衡量校准流失率。 -->
+            <LinearLayout
+                android:id="@+id/calibrationPanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvCalibrationStep"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/charge_calibration_step_discharge"
+                    android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+                <Button
+                    android:id="@+id/btnCalibrationNext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/charge_calibration_next" />
+
+                <Button
+                    android:id="@+id/btnCalibrationCancel"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/charge_calibration_cancel" />
+            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>

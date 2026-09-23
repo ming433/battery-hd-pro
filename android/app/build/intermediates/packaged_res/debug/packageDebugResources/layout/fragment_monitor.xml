@@ -64,6 +64,22 @@
                 android:layout_marginTop="8dp"
                 android:textAppearance="?attr/textAppearanceBodySmall"
                 android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnWeeklyReport"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/monitor_weekly_report" />
+
+            <TextView
+                android:id="@+id/tvWeeklyReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textAppearance="?attr/textAppearanceBodySmall"
+                android:visibility="gone" />
         </LinearLayout>
 
     </LinearLayout>

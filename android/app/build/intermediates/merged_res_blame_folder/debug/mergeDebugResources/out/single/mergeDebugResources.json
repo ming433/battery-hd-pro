@@ -1,86 +1,94 @@
 [
     {
-        "merged": "com.batteryhd.app-debug-52:/drawable_ic_saving.xml.flat",
-        "source": "com.batteryhd.app-main-46:/drawable/ic_saving.xml"
+        "merged": "com.batteryhd.app-debug-50:/drawable_ic_battery.xml.flat",
+        "source": "com.batteryhd.app-main-52:/drawable/ic_battery.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-52:/layout_activity_pro.xml.flat",
-        "source": "com.batteryhd.app-main-46:/layout/activity_pro.xml"
+        "merged": "com.batteryhd.app-debug-50:/layout_fragment_saving.xml.flat",
+        "source": "com.batteryhd.app-main-52:/layout/fragment_saving.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-52:/drawable_ic_battery.xml.flat",
-        "source": "com.batteryhd.app-main-46:/drawable/ic_battery.xml"
+        "merged": "com.batteryhd.app-debug-50:/drawable_ic_charge.xml.flat",
+        "source": "com.batteryhd.app-main-52:/drawable/ic_charge.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-52:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.batteryhd.app-main-46:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "com.batteryhd.app-debug-50:/menu_bottom_nav_menu.xml.flat",
+        "source": "com.batteryhd.app-main-52:/menu/bottom_nav_menu.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-52:/layout_fragment_power.xml.flat",
-        "source": "com.batteryhd.app-main-46:/layout/fragment_power.xml"
+        "merged": "com.batteryhd.app-debug-50:/layout_activity_consent.xml.flat",
+        "source": "com.batteryhd.app-main-52:/layout/activity_consent.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-52:/layout_fragment_charge.xml.flat",
-        "source": "com.batteryhd.app-main-46:/layout/fragment_charge.xml"
+        "merged": "com.batteryhd.app-debug-50:/layout_activity_pro.xml.flat",
+        "source": "com.batteryhd.app-main-52:/layout/activity_pro.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-52:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.batteryhd.app-main-46:/drawable/ic_launcher_foreground.xml"
+        "merged": "com.batteryhd.app-debug-50:/drawable_ic_power.xml.flat",
+        "source": "com.batteryhd.app-main-52:/drawable/ic_power.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-52:/layout_fragment_saving.xml.flat",
-        "source": "com.batteryhd.app-main-46:/layout/fragment_saving.xml"
+        "merged": "com.batteryhd.app-debug-50:/drawable_ic_settings.xml.flat",
+        "source": "com.batteryhd.app-main-52:/drawable/ic_settings.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-52:/layout_activity_consent.xml.flat",
-        "source": "com.batteryhd.app-main-46:/layout/activity_consent.xml"
+        "merged": "com.batteryhd.app-debug-50:/drawable_ic_home.xml.flat",
+        "source": "com.batteryhd.app-main-52:/drawable/ic_home.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-52:/layout_activity_main.xml.flat",
-        "source": "com.batteryhd.app-main-46:/layout/activity_main.xml"
+        "merged": "com.batteryhd.app-debug-50:/layout_fragment_home.xml.flat",
+        "source": "com.batteryhd.app-main-52:/layout/fragment_home.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-52:/menu_main_menu.xml.flat",
-        "source": "com.batteryhd.app-main-46:/menu/main_menu.xml"
+        "merged": "com.batteryhd.app-debug-50:/xml_network_security_config.xml.flat",
+        "source": "com.batteryhd.app-debug-51:/xml/network_security_config.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-52:/drawable_ic_charge.xml.flat",
-        "source": "com.batteryhd.app-main-46:/drawable/ic_charge.xml"
+        "merged": "com.batteryhd.app-debug-50:/layout_fragment_settings.xml.flat",
+        "source": "com.batteryhd.app-main-52:/layout/fragment_settings.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-52:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.batteryhd.app-main-46:/drawable/ic_launcher_background.xml"
+        "merged": "com.batteryhd.app-debug-50:/menu_main_menu.xml.flat",
+        "source": "com.batteryhd.app-main-52:/menu/main_menu.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-52:/menu_bottom_nav_menu.xml.flat",
-        "source": "com.batteryhd.app-main-46:/menu/bottom_nav_menu.xml"
+        "merged": "com.batteryhd.app-debug-50:/drawable_ic_stat_battery.xml.flat",
+        "source": "com.batteryhd.app-main-52:/drawable/ic_stat_battery.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-52:/drawable_ic_power.xml.flat",
-        "source": "com.batteryhd.app-main-46:/drawable/ic_power.xml"
+        "merged": "com.batteryhd.app-debug-50:/drawable_ic_saving.xml.flat",
+        "source": "com.batteryhd.app-main-52:/drawable/ic_saving.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-52:/drawable_ic_home.xml.flat",
-        "source": "com.batteryhd.app-main-46:/drawable/ic_home.xml"
+        "merged": "com.batteryhd.app-debug-50:/layout_fragment_power.xml.flat",
+        "source": "com.batteryhd.app-main-52:/layout/fragment_power.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-52:/layout_item_app.xml.flat",
-        "source": "com.batteryhd.app-main-46:/layout/item_app.xml"
+        "merged": "com.batteryhd.app-debug-50:/layout_fragment_monitor.xml.flat",
+        "source": "com.batteryhd.app-main-52:/layout/fragment_monitor.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-52:/layout_fragment_monitor.xml.flat",
-        "source": "com.batteryhd.app-main-46:/layout/fragment_monitor.xml"
+        "merged": "com.batteryhd.app-debug-50:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.batteryhd.app-main-52:/drawable/ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-52:/layout_fragment_settings.xml.flat",
-        "source": "com.batteryhd.app-main-46:/layout/fragment_settings.xml"
+        "merged": "com.batteryhd.app-debug-50:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.batteryhd.app-main-52:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-52:/drawable_ic_settings.xml.flat",
-        "source": "com.batteryhd.app-main-46:/drawable/ic_settings.xml"
+        "merged": "com.batteryhd.app-debug-50:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.batteryhd.app-main-52:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-52:/layout_fragment_home.xml.flat",
-        "source": "com.batteryhd.app-main-46:/layout/fragment_home.xml"
+        "merged": "com.batteryhd.app-debug-50:/layout_fragment_charge.xml.flat",
+        "source": "com.batteryhd.app-main-52:/layout/fragment_charge.xml"
+    },
+    {
+        "merged": "com.batteryhd.app-debug-50:/layout_item_app.xml.flat",
+        "source": "com.batteryhd.app-main-52:/layout/item_app.xml"
+    },
+    {
+        "merged": "com.batteryhd.app-debug-50:/layout_activity_main.xml.flat",
+        "source": "com.batteryhd.app-main-52:/layout/activity_main.xml"
     }
 ]

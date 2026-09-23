@@ -24,6 +24,9 @@ public final class FragmentMonitorBinding implements ViewBinding {
   public final Button btnExpand;
 
   @NonNull
+  public final Button btnWeeklyReport;
+
+  @NonNull
   public final TextView tvCapacity;
 
   @NonNull
@@ -38,16 +41,22 @@ public final class FragmentMonitorBinding implements ViewBinding {
   @NonNull
   public final TextView tvVoltage;
 
+  @NonNull
+  public final TextView tvWeeklyReport;
+
   private FragmentMonitorBinding(@NonNull ScrollView rootView, @NonNull Button btnExpand,
-      @NonNull TextView tvCapacity, @NonNull TextView tvHealthScore, @NonNull TextView tvScenes,
-      @NonNull TextView tvTechnology, @NonNull TextView tvVoltage) {
+      @NonNull Button btnWeeklyReport, @NonNull TextView tvCapacity,
+      @NonNull TextView tvHealthScore, @NonNull TextView tvScenes, @NonNull TextView tvTechnology,
+      @NonNull TextView tvVoltage, @NonNull TextView tvWeeklyReport) {
     this.rootView = rootView;
     this.btnExpand = btnExpand;
+    this.btnWeeklyReport = btnWeeklyReport;
     this.tvCapacity = tvCapacity;
     this.tvHealthScore = tvHealthScore;
     this.tvScenes = tvScenes;
     this.tvTechnology = tvTechnology;
     this.tvVoltage = tvVoltage;
+    this.tvWeeklyReport = tvWeeklyReport;
   }
 
   @Override
@@ -83,6 +92,12 @@ public final class FragmentMonitorBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnWeeklyReport;
+      Button btnWeeklyReport = ViewBindings.findChildViewById(rootView, id);
+      if (btnWeeklyReport == null) {
+        break missingId;
+      }
+
       id = R.id.tvCapacity;
       TextView tvCapacity = ViewBindings.findChildViewById(rootView, id);
       if (tvCapacity == null) {
@@ -113,8 +128,14 @@ public final class FragmentMonitorBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentMonitorBinding((ScrollView) rootView, btnExpand, tvCapacity, tvHealthScore,
-          tvScenes, tvTechnology, tvVoltage);
+      id = R.id.tvWeeklyReport;
+      TextView tvWeeklyReport = ViewBindings.findChildViewById(rootView, id);
+      if (tvWeeklyReport == null) {
+        break missingId;
+      }
+
+      return new FragmentMonitorBinding((ScrollView) rootView, btnExpand, btnWeeklyReport,
+          tvCapacity, tvHealthScore, tvScenes, tvTechnology, tvVoltage, tvWeeklyReport);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

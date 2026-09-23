@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -25,7 +26,19 @@ public final class FragmentChargeBinding implements ViewBinding {
   public final Button btnCalibrate;
 
   @NonNull
+  public final Button btnCalibrationCancel;
+
+  @NonNull
+  public final Button btnCalibrationNext;
+
+  @NonNull
+  public final LinearLayout calibrationPanel;
+
+  @NonNull
   public final Slider sliderLimit;
+
+  @NonNull
+  public final TextView tvCalibrationStep;
 
   @NonNull
   public final TextView tvLimit;
@@ -37,11 +50,17 @@ public final class FragmentChargeBinding implements ViewBinding {
   public final TextView tvTempAlert;
 
   private FragmentChargeBinding(@NonNull ScrollView rootView, @NonNull Button btnCalibrate,
-      @NonNull Slider sliderLimit, @NonNull TextView tvLimit, @NonNull TextView tvStatus,
+      @NonNull Button btnCalibrationCancel, @NonNull Button btnCalibrationNext,
+      @NonNull LinearLayout calibrationPanel, @NonNull Slider sliderLimit,
+      @NonNull TextView tvCalibrationStep, @NonNull TextView tvLimit, @NonNull TextView tvStatus,
       @NonNull TextView tvTempAlert) {
     this.rootView = rootView;
     this.btnCalibrate = btnCalibrate;
+    this.btnCalibrationCancel = btnCalibrationCancel;
+    this.btnCalibrationNext = btnCalibrationNext;
+    this.calibrationPanel = calibrationPanel;
     this.sliderLimit = sliderLimit;
+    this.tvCalibrationStep = tvCalibrationStep;
     this.tvLimit = tvLimit;
     this.tvStatus = tvStatus;
     this.tvTempAlert = tvTempAlert;
@@ -80,9 +99,33 @@ public final class FragmentChargeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnCalibrationCancel;
+      Button btnCalibrationCancel = ViewBindings.findChildViewById(rootView, id);
+      if (btnCalibrationCancel == null) {
+        break missingId;
+      }
+
+      id = R.id.btnCalibrationNext;
+      Button btnCalibrationNext = ViewBindings.findChildViewById(rootView, id);
+      if (btnCalibrationNext == null) {
+        break missingId;
+      }
+
+      id = R.id.calibrationPanel;
+      LinearLayout calibrationPanel = ViewBindings.findChildViewById(rootView, id);
+      if (calibrationPanel == null) {
+        break missingId;
+      }
+
       id = R.id.sliderLimit;
       Slider sliderLimit = ViewBindings.findChildViewById(rootView, id);
       if (sliderLimit == null) {
+        break missingId;
+      }
+
+      id = R.id.tvCalibrationStep;
+      TextView tvCalibrationStep = ViewBindings.findChildViewById(rootView, id);
+      if (tvCalibrationStep == null) {
         break missingId;
       }
 
@@ -104,8 +147,9 @@ public final class FragmentChargeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentChargeBinding((ScrollView) rootView, btnCalibrate, sliderLimit, tvLimit,
-          tvStatus, tvTempAlert);
+      return new FragmentChargeBinding((ScrollView) rootView, btnCalibrate, btnCalibrationCancel,
+          btnCalibrationNext, calibrationPanel, sliderLimit, tvCalibrationStep, tvLimit, tvStatus,
+          tvTempAlert);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
