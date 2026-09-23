@@ -1,0 +1,24 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/analytics-sdk/src/main/AndroidManifest.xml:2:1-14:12
+INJECTED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/analytics-sdk/src/main/AndroidManifest.xml:2:1-14:12
+	package
+		INJECTED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/analytics-sdk/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/analytics-sdk/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/analytics-sdk/src/main/AndroidManifest.xml:11:5-67
+	android:name
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/analytics-sdk/src/main/AndroidManifest.xml:11:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/analytics-sdk/src/main/AndroidManifest.xml:12:5-79
+	android:name
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/analytics-sdk/src/main/AndroidManifest.xml:12:22-76
+uses-sdk
+INJECTED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/analytics-sdk/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/analytics-sdk/src/main/AndroidManifest.xml
+INJECTED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/analytics-sdk/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/analytics-sdk/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/analytics-sdk/src/main/AndroidManifest.xml

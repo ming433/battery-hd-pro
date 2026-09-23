@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Material3 主题。
+         注意：本项目未使用 MaterialComponents（旧版）主题，避免两者混用导致
+         "This Activity already has an action bar supplied by the window decor" 崩溃。 -->
+    <style name="Theme.BatteryHD" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorSecondary">@color/accent</item>
+        <item name="android:colorBackground">@color/bg</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/primary_dark</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+    </style>
+</resources>

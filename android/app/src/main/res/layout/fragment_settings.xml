@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/surface"
+        android:elevation="2dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_title"
+            android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+        <!-- 埋点总开关：PRD 10.6.2 要求用户可随时关闭。
+             关闭后 SDK 停止采集与上报，但广告配置下发不受影响（10.1 原则 5 隔离）。 -->
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchAnalytics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/settings_analytics" />
+
+        <!-- 提醒开关：变更需上报 reminder_setting_changed（PRD 10.2.4 H）。
+             注意开关状态与"通知权限"是两件事：开关关了不发通知，
+             权限没授予则发了也收不到，两者都要能分别度量。 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/settings_reminders_title"
+            android:textAppearance="?attr/textAppearanceTitleSmall" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchReminderChargeLimit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:checked="true"
+            android:text="@string/settings_reminder_charge_limit" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchReminderTempAlert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/settings_reminder_temp_alert" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchReminderWeeklyReport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/settings_reminder_weekly_report" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchReminderCalibration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="@string/settings_reminder_calibration" />
+
+        <!-- Android 13+ 通知运行时权限；低于 13 时隐藏 -->
+        <Button
+            android:id="@+id/btnNotificationPermission"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/settings_notification_permission"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnDeleteData"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/settings_delete_data" />
+
+        <Button
+            android:id="@+id/btnPro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/home_go_pro" />
+
+        <TextView
+            android:id="@+id/tvVersion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/settings_version"
+            android:textAppearance="?attr/textAppearanceBodySmall"
+            android:textColor="?android:attr/textColorSecondary" />
+    </LinearLayout>
+
+</LinearLayout>

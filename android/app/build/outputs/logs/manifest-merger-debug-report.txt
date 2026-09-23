@@ -1,0 +1,966 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:2:1-80:12
+INJECTED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:2:1-80:12
+INJECTED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:2:1-80:12
+INJECTED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:2:1-80:12
+MERGED from [androidx.databinding:viewbinding:8.7.3] /Users/ming.yang/.gradle/caches/8.9/transforms/96a9298c6b66f9d7504ae38a89e4e951/transformed/viewbinding-8.7.3/AndroidManifest.xml:2:1-7:12
+MERGED from [:analytics-sdk] /tmp/bhd-build/analytics-sdk/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:2:1-17:12
+MERGED from [com.google.android.material:material:1.12.0] /Users/ming.yang/.gradle/caches/8.9/transforms/9520db16aed0ad6b455c0a4b9967ea85/transformed/material-1.12.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.0] /Users/ming.yang/.gradle/caches/8.9/transforms/3bb893183d81d8a866b5140031078ea4/transformed/constraintlayout-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/86dce3630522c3f882874a9ca5626f32/transformed/appcompat-resources-1.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.appcompat:appcompat:1.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/49c4f5d1a966de01c909e91be9c4e3f8/transformed/appcompat-1.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.recyclerview:recyclerview:1.3.2] /Users/ming.yang/.gradle/caches/8.9/transforms/e2b26149201dfa502dd6fc77d64086a8/transformed/recyclerview-1.3.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] /Users/ming.yang/.gradle/caches/8.9/transforms/975be2da5aedd0d3fe2c2b0f406412fc/transformed/viewpager2-1.1.0-beta02/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-ads:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/3da8c38abfa6f52baec23c6b9a51c619/transformed/play-services-ads-23.6.0/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.billingclient:billing-ktx:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/40e681dcdfd541fc3acd316d9bdb5d26/transformed/billing-ktx-7.1.1/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.billingclient:billing:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/1440b4197715bd6e5679b575feab8bf7/transformed/billing-7.1.1/AndroidManifest.xml:2:1-38:12
+MERGED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:17:1-112:12
+MERGED from [com.google.android.gms:play-services-ads-base:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/98b066dcef45a94569d4de5b85abb114/transformed/play-services-ads-base-23.6.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/56b98ba0707337ae9e163ee5f962b254/transformed/play-services-ads-identifier-18.0.0/AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.gms:play-services-appset:16.0.1] /Users/ming.yang/.gradle/caches/8.9/transforms/c724a4ca54f8a5ae7db16f340c7580eb/transformed/play-services-appset-16.0.1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-location:19.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/45e39dd1b40c3a34b0494aa8e1ed9548/transformed/play-services-location-19.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:18.5.0] /Users/ming.yang/.gradle/caches/8.9/transforms/ef104b8bb8fa2b289dc8cb7fda4eddfb/transformed/play-services-base-18.5.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/ming.yang/.gradle/caches/8.9/transforms/ff2e18cc2cc16fa73287eb010476c839/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.2] /Users/ming.yang/.gradle/caches/8.9/transforms/da07ff09849cb6771ec77cac0d61099a/transformed/play-services-measurement-sdk-api-20.1.2/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.ump:user-messaging-platform:3.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/0f5180bc1fedcae86b1f4231f19d38e3/transformed/user-messaging-platform-3.0.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/0c6fd6badec9b847b484ffbb0924a661/transformed/play-services-places-placereport-17.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-measurement-base:20.1.2] /Users/ming.yang/.gradle/caches/8.9/transforms/9829f6bdfbc5d22623a47808c99e9d45/transformed/play-services-measurement-base-20.1.2/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/0c4420be04de9a6756f0ba9b96cef118/transformed/play-services-basement-18.4.0/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.fragment:fragment:1.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/9a6bd86c5256c09b94147b26dccaf06c/transformed/fragment-1.8.4/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.fragment:fragment-ktx:1.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/0e3d03b6a694c3025152cd89f0f4cfa2/transformed/fragment-ktx-1.8.4/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity:1.9.2] /Users/ming.yang/.gradle/caches/8.9/transforms/299eed12cbfe2d8e33fdb2fc25a4acb3/transformed/activity-1.9.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity-ktx:1.9.2] /Users/ming.yang/.gradle/caches/8.9/transforms/91bcaa33fb83bebf33b8ca269e3f740a/transformed/activity-ktx-1.9.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /Users/ming.yang/.gradle/caches/8.9/transforms/607088b6483eede47fbb4202ef3c5151/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/ming.yang/.gradle/caches/8.9/transforms/888c0ae0af93e1c5e31b1db21358a3a9/transformed/emoji2-1.3.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/22595513795e2e2697ea10a601e732af/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/ming.yang/.gradle/caches/8.9/transforms/15f8580c0bdb54dcdb202773c436ba33/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.5.0] /Users/ming.yang/.gradle/caches/8.9/transforms/115109d33d9c1f66947e25b098db0a1d/transformed/transition-1.5.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/c069e9b87c5f45cfc84e129558f85073/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/ming.yang/.gradle/caches/8.9/transforms/fe777e2e20515002a12e310e2f47ef0d/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/ming.yang/.gradle/caches/8.9/transforms/bb9f7a11dfb2229e888cbd0e87593a97/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.browser:browser:1.8.0] /Users/ming.yang/.gradle/caches/8.9/transforms/e861ea547b910808ea217b8db8afbe75/transformed/browser-1.8.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.webkit:webkit:1.11.0-alpha02] /Users/ming.yang/.gradle/caches/8.9/transforms/dd02f451a0a885d3e9fc83fc016b18ee/transformed/webkit-1.11.0-alpha02/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/10a7e7e5287b9ce88e1a03dee730cadd/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/189c25d93d270622d70f376772cca077/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/1f48ed37d07e486d68d06c5911dace84/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.1.0] /Users/ming.yang/.gradle/caches/8.9/transforms/6ed6cc5e519065966d431fead050f0b9/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:17:1-145:12
+MERGED from [androidx.core:core:1.13.1] /Users/ming.yang/.gradle/caches/8.9/transforms/9155d5eaa60b313c76699f88d3330471/transformed/core-1.13.1/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/a5c9bc169a1051ca8e03541f5b62e945/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.privacysandbox.ads:ads-adservices-java:1.0.0-beta05] /Users/ming.yang/.gradle/caches/8.9/transforms/6ee0343c2318a6d423bf0fa6fc308506/transformed/ads-adservices-java-1.0.0-beta05/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] /Users/ming.yang/.gradle/caches/8.9/transforms/bdee19783677d9948fa6d3c315e518e3/transformed/ads-adservices-1.0.0-beta05/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/ming.yang/.gradle/caches/8.9/transforms/39ebbe1e551c07bfcd6c164cb1f22fac/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/ming.yang/.gradle/caches/8.9/transforms/7cbbc8859d084404ce836115df260f30/transformed/savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/c8feec99a9e64f222ab98b098e9ee3f1/transformed/lifecycle-service-2.8.4/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/6f80dcd30b9f81bdb40b1f73b1411078/transformed/lifecycle-livedata-2.8.4/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/547892ae2127f74fe706c7045f0d9619/transformed/lifecycle-viewmodel-2.8.4/AndroidManifest.xml:2:1-5:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/6683254a9bde36a38f7c9df13e45f47f/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/61d082eb412e280a0637503bb84266ca/transformed/lifecycle-runtime-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/0ac70ad3ede77763169bb982d589e19e/transformed/lifecycle-livedata-core-2.8.4/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/1a42a30f5157180ae5e9e4c94ecb42f5/transformed/lifecycle-viewmodel-ktx-2.8.4/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/4161458808552e6fe1b956a629f64d22/transformed/lifecycle-livedata-core-ktx-2.8.4/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/f83eec970a9693e68be2a1dbbeac3d24/transformed/lifecycle-process-2.8.4/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/72a82aceb33ccff762782fb31041719a/transformed/lifecycle-runtime-ktx-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/bef321e244a2d339c3e2b0267e864e40/transformed/lifecycle-viewmodel-savedstate-2.8.4/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.13.1] /Users/ming.yang/.gradle/caches/8.9/transforms/79bf454479e2615ae996c2e53da25d1d/transformed/core-ktx-1.13.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5a09b54852c8eae99af6d81ad4a107a1/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5510af1fe33ca396b3dc9b9fe0b3b31e/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/28688df0e0cfe1e4f38e149300c79ac7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/38a318140319c4a3b03a4dee02486f29/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/76ea0275432bd0f6f854d9dca1927d54/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f2204af0215b35d3db1e07545fab679/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:15:1-37:12
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f6893fb84151d5d34edd0f7043b2408/transformed/transport-runtime-3.1.8/AndroidManifest.xml:15:1-41:12
+MERGED from [com.google.android.datatransport:transport-api:3.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/a40133de3ce79ed1e994e190197f2355/transformed/transport-api-3.0.0/AndroidManifest.xml:15:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/bda7e0e6a56b6d5ff2aa3bd3cb557a9a/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/949c225e8d323fc9377655076623e423/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/35ea9b7538beb4f090ed49564725d270/transformed/tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/409741b24aa66bac1405aafb408fe669/transformed/firebase-encoders-json-18.0.0/AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.room:room-runtime:2.2.5] /Users/ming.yang/.gradle/caches/8.9/transforms/0214994db6396add966e4562604e45b7/transformed/room-runtime-2.2.5/AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/ming.yang/.gradle/caches/8.9/transforms/08ff96117aef32e15853f6538d6b8412/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/51ab39b41b715c1178976463ab7c94d7/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/ab9df7c8722b46e584f1b2ee1e571956/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/c335402893f21e2184022b418fd798dc/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite-framework:2.1.0] /Users/ming.yang/.gradle/caches/8.9/transforms/d5611454269c85eae05c4c8becc680bf/transformed/sqlite-framework-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.sqlite:sqlite:2.1.0] /Users/ming.yang/.gradle/caches/8.9/transforms/ee57d8a2e854013377716834fca43a6f/transformed/sqlite-2.1.0/AndroidManifest.xml:17:1-24:12
+	package
+		INJECTED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:6:5-67
+MERGED from [:analytics-sdk] /tmp/bhd-build/analytics-sdk/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:14:5-67
+MERGED from [:analytics-sdk] /tmp/bhd-build/analytics-sdk/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:14:5-67
+MERGED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.2] /Users/ming.yang/.gradle/caches/8.9/transforms/da07ff09849cb6771ec77cac0d61099a/transformed/play-services-measurement-sdk-api-20.1.2/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.2] /Users/ming.yang/.gradle/caches/8.9/transforms/da07ff09849cb6771ec77cac0d61099a/transformed/play-services-measurement-sdk-api-20.1.2/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f2204af0215b35d3db1e07545fab679/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:25:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f2204af0215b35d3db1e07545fab679/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:25:5-67
+	android:name
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:6:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:7:5-79
+MERGED from [:analytics-sdk] /tmp/bhd-build/analytics-sdk/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:15:5-79
+MERGED from [:analytics-sdk] /tmp/bhd-build/analytics-sdk/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:15:5-79
+MERGED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.2] /Users/ming.yang/.gradle/caches/8.9/transforms/da07ff09849cb6771ec77cac0d61099a/transformed/play-services-measurement-sdk-api-20.1.2/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.2] /Users/ming.yang/.gradle/caches/8.9/transforms/da07ff09849cb6771ec77cac0d61099a/transformed/play-services-measurement-sdk-api-20.1.2/AndroidManifest.xml:24:5-79
+MERGED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:26:5-79
+MERGED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:26:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f2204af0215b35d3db1e07545fab679/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f2204af0215b35d3db1e07545fab679/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f6893fb84151d5d34edd0f7043b2408/transformed/transport-runtime-3.1.8/AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f6893fb84151d5d34edd0f7043b2408/transformed/transport-runtime-3.1.8/AndroidManifest.xml:22:5-79
+	android:name
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:7:22-76
+uses-permission#android.permission.POST_NOTIFICATIONS
+ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:10:5-77
+	android:name
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:10:22-74
+uses-permission#android.permission.PACKAGE_USAGE_STATS
+ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:13:5-15:47
+	tools:ignore
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:15:9-44
+	android:name
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:14:9-62
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:18:5-81
+REJECTED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:30:5-32:31
+REJECTED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:27:5-81
+	android:name
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:18:22-78
+application
+ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:20:5-78:19
+INJECTED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:20:5-78:19
+MERGED from [com.google.android.material:material:1.12.0] /Users/ming.yang/.gradle/caches/8.9/transforms/9520db16aed0ad6b455c0a4b9967ea85/transformed/material-1.12.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.12.0] /Users/ming.yang/.gradle/caches/8.9/transforms/9520db16aed0ad6b455c0a4b9967ea85/transformed/material-1.12.0/AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.0] /Users/ming.yang/.gradle/caches/8.9/transforms/3bb893183d81d8a866b5140031078ea4/transformed/constraintlayout-2.2.0/AndroidManifest.xml:7:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.0] /Users/ming.yang/.gradle/caches/8.9/transforms/3bb893183d81d8a866b5140031078ea4/transformed/constraintlayout-2.2.0/AndroidManifest.xml:7:5-20
+MERGED from [com.android.billingclient:billing:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/1440b4197715bd6e5679b575feab8bf7/transformed/billing-7.1.1/AndroidManifest.xml:21:5-36:19
+MERGED from [com.android.billingclient:billing:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/1440b4197715bd6e5679b575feab8bf7/transformed/billing-7.1.1/AndroidManifest.xml:21:5-36:19
+MERGED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:70:5-110:19
+MERGED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:70:5-110:19
+MERGED from [com.google.android.gms:play-services-ads-base:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/98b066dcef45a94569d4de5b85abb114/transformed/play-services-ads-base-23.6.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-ads-base:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/98b066dcef45a94569d4de5b85abb114/transformed/play-services-ads-base-23.6.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/56b98ba0707337ae9e163ee5f962b254/transformed/play-services-ads-identifier-18.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/56b98ba0707337ae9e163ee5f962b254/transformed/play-services-ads-identifier-18.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.google.android.gms:play-services-appset:16.0.1] /Users/ming.yang/.gradle/caches/8.9/transforms/c724a4ca54f8a5ae7db16f340c7580eb/transformed/play-services-appset-16.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-appset:16.0.1] /Users/ming.yang/.gradle/caches/8.9/transforms/c724a4ca54f8a5ae7db16f340c7580eb/transformed/play-services-appset-16.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:19.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/45e39dd1b40c3a34b0494aa8e1ed9548/transformed/play-services-location-19.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:19.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/45e39dd1b40c3a34b0494aa8e1ed9548/transformed/play-services-location-19.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-base:18.5.0] /Users/ming.yang/.gradle/caches/8.9/transforms/ef104b8bb8fa2b289dc8cb7fda4eddfb/transformed/play-services-base-18.5.0/AndroidManifest.xml:4:5-6:19
+MERGED from [com.google.android.gms:play-services-base:18.5.0] /Users/ming.yang/.gradle/caches/8.9/transforms/ef104b8bb8fa2b289dc8cb7fda4eddfb/transformed/play-services-base-18.5.0/AndroidManifest.xml:4:5-6:19
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/ming.yang/.gradle/caches/8.9/transforms/ff2e18cc2cc16fa73287eb010476c839/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:4:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/ming.yang/.gradle/caches/8.9/transforms/ff2e18cc2cc16fa73287eb010476c839/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:4:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/0c6fd6badec9b847b484ffbb0924a661/transformed/play-services-places-placereport-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/0c6fd6badec9b847b484ffbb0924a661/transformed/play-services-places-placereport-17.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:20.1.2] /Users/ming.yang/.gradle/caches/8.9/transforms/9829f6bdfbc5d22623a47808c99e9d45/transformed/play-services-measurement-base-20.1.2/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:20.1.2] /Users/ming.yang/.gradle/caches/8.9/transforms/9829f6bdfbc5d22623a47808c99e9d45/transformed/play-services-measurement-base-20.1.2/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/0c4420be04de9a6756f0ba9b96cef118/transformed/play-services-basement-18.4.0/AndroidManifest.xml:5:5-7:19
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/0c4420be04de9a6756f0ba9b96cef118/transformed/play-services-basement-18.4.0/AndroidManifest.xml:5:5-7:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/ming.yang/.gradle/caches/8.9/transforms/888c0ae0af93e1c5e31b1db21358a3a9/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/ming.yang/.gradle/caches/8.9/transforms/888c0ae0af93e1c5e31b1db21358a3a9/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:30:5-143:19
+MERGED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:30:5-143:19
+MERGED from [androidx.core:core:1.13.1] /Users/ming.yang/.gradle/caches/8.9/transforms/9155d5eaa60b313c76699f88d3330471/transformed/core-1.13.1/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.13.1] /Users/ming.yang/.gradle/caches/8.9/transforms/9155d5eaa60b313c76699f88d3330471/transformed/core-1.13.1/AndroidManifest.xml:28:5-89
+MERGED from [androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] /Users/ming.yang/.gradle/caches/8.9/transforms/bdee19783677d9948fa6d3c315e518e3/transformed/ads-adservices-1.0.0-beta05/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] /Users/ming.yang/.gradle/caches/8.9/transforms/bdee19783677d9948fa6d3c315e518e3/transformed/ads-adservices-1.0.0-beta05/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/f83eec970a9693e68be2a1dbbeac3d24/transformed/lifecycle-process-2.8.4/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/f83eec970a9693e68be2a1dbbeac3d24/transformed/lifecycle-process-2.8.4/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/28688df0e0cfe1e4f38e149300c79ac7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/28688df0e0cfe1e4f38e149300c79ac7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/38a318140319c4a3b03a4dee02486f29/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/38a318140319c4a3b03a4dee02486f29/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f2204af0215b35d3db1e07545fab679/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:27:5-35:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f2204af0215b35d3db1e07545fab679/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:27:5-35:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f6893fb84151d5d34edd0f7043b2408/transformed/transport-runtime-3.1.8/AndroidManifest.xml:25:5-39:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f6893fb84151d5d34edd0f7043b2408/transformed/transport-runtime-3.1.8/AndroidManifest.xml:25:5-39:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/949c225e8d323fc9377655076623e423/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/949c225e8d323fc9377655076623e423/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.room:room-runtime:2.2.5] /Users/ming.yang/.gradle/caches/8.9/transforms/0214994db6396add966e4562604e45b7/transformed/room-runtime-2.2.5/AndroidManifest.xml:24:5-29:19
+MERGED from [androidx.room:room-runtime:2.2.5] /Users/ming.yang/.gradle/caches/8.9/transforms/0214994db6396add966e4562604e45b7/transformed/room-runtime-2.2.5/AndroidManifest.xml:24:5-29:19
+	android:extractNativeLibs
+		INJECTED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.13.1] /Users/ming.yang/.gradle/caches/8.9/transforms/9155d5eaa60b313c76699f88d3330471/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:26:9-35
+	android:label
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:24:9-41
+	android:roundIcon
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:25:9-48
+	tools:targetApi
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:28:9-29
+	android:icon
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:23:9-43
+	android:allowBackup
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:22:9-36
+	android:theme
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:27:9-47
+	android:name
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:21:9-37
+meta-data#com.google.android.gms.ads.APPLICATION_ID
+ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:36:9-38:70
+	android:value
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:38:13-67
+	android:name
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:37:13-69
+activity#com.batteryhd.app.ui.ConsentActivity
+ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:43:9-51:20
+	android:screenOrientation
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:46:13-49
+	android:exported
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:45:13-36
+	android:name
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:44:13-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:47:13-50:29
+action#android.intent.action.MAIN
+ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:48:17-69
+	android:name
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:48:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:49:17-77
+	android:name
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:49:27-74
+activity#com.batteryhd.app.ui.MainActivity
+ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:53:9-57:58
+	android:screenOrientation
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:56:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:57:13-55
+	android:exported
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:55:13-37
+	android:name
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:54:13-44
+activity#com.batteryhd.app.ui.ProActivity
+ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:59:9-63:52
+	android:screenOrientation
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:63:13-49
+	android:label
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:62:13-46
+	android:exported
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:61:13-37
+	android:name
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:60:13-43
+receiver#com.batteryhd.app.battery.BootReceiver
+ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:68:9-76:20
+	android:enabled
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:70:13-35
+	android:exported
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:71:13-36
+	android:name
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:69:13-49
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.MY_PACKAGE_REPLACED
+ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:72:13-75:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:73:17-79
+	android:name
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:73:25-76
+action#android.intent.action.MY_PACKAGE_REPLACED
+ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:74:17-84
+	android:name
+		ADDED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml:74:25-81
+uses-sdk
+INJECTED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml
+MERGED from [androidx.databinding:viewbinding:8.7.3] /Users/ming.yang/.gradle/caches/8.9/transforms/96a9298c6b66f9d7504ae38a89e4e951/transformed/viewbinding-8.7.3/AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:viewbinding:8.7.3] /Users/ming.yang/.gradle/caches/8.9/transforms/96a9298c6b66f9d7504ae38a89e4e951/transformed/viewbinding-8.7.3/AndroidManifest.xml:5:5-44
+MERGED from [:analytics-sdk] /tmp/bhd-build/analytics-sdk/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [:analytics-sdk] /tmp/bhd-build/analytics-sdk/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.material:material:1.12.0] /Users/ming.yang/.gradle/caches/8.9/transforms/9520db16aed0ad6b455c0a4b9967ea85/transformed/material-1.12.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.12.0] /Users/ming.yang/.gradle/caches/8.9/transforms/9520db16aed0ad6b455c0a4b9967ea85/transformed/material-1.12.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.0] /Users/ming.yang/.gradle/caches/8.9/transforms/3bb893183d81d8a866b5140031078ea4/transformed/constraintlayout-2.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.0] /Users/ming.yang/.gradle/caches/8.9/transforms/3bb893183d81d8a866b5140031078ea4/transformed/constraintlayout-2.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/86dce3630522c3f882874a9ca5626f32/transformed/appcompat-resources-1.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/86dce3630522c3f882874a9ca5626f32/transformed/appcompat-resources-1.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/49c4f5d1a966de01c909e91be9c4e3f8/transformed/appcompat-1.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/49c4f5d1a966de01c909e91be9c4e3f8/transformed/appcompat-1.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.3.2] /Users/ming.yang/.gradle/caches/8.9/transforms/e2b26149201dfa502dd6fc77d64086a8/transformed/recyclerview-1.3.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.3.2] /Users/ming.yang/.gradle/caches/8.9/transforms/e2b26149201dfa502dd6fc77d64086a8/transformed/recyclerview-1.3.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] /Users/ming.yang/.gradle/caches/8.9/transforms/975be2da5aedd0d3fe2c2b0f406412fc/transformed/viewpager2-1.1.0-beta02/AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] /Users/ming.yang/.gradle/caches/8.9/transforms/975be2da5aedd0d3fe2c2b0f406412fc/transformed/viewpager2-1.1.0-beta02/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-ads:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/3da8c38abfa6f52baec23c6b9a51c619/transformed/play-services-ads-23.6.0/AndroidManifest.xml:21:5-23:52
+MERGED from [com.google.android.gms:play-services-ads:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/3da8c38abfa6f52baec23c6b9a51c619/transformed/play-services-ads-23.6.0/AndroidManifest.xml:21:5-23:52
+MERGED from [com.android.billingclient:billing-ktx:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/40e681dcdfd541fc3acd316d9bdb5d26/transformed/billing-ktx-7.1.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.billingclient:billing-ktx:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/40e681dcdfd541fc3acd316d9bdb5d26/transformed/billing-ktx-7.1.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.billingclient:billing:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/1440b4197715bd6e5679b575feab8bf7/transformed/billing-7.1.1/AndroidManifest.xml:6:5-8:41
+MERGED from [com.android.billingclient:billing:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/1440b4197715bd6e5679b575feab8bf7/transformed/billing-7.1.1/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:21:5-44
+MERGED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:21:5-44
+MERGED from [com.google.android.gms:play-services-ads-base:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/98b066dcef45a94569d4de5b85abb114/transformed/play-services-ads-base-23.6.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-ads-base:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/98b066dcef45a94569d4de5b85abb114/transformed/play-services-ads-base-23.6.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/56b98ba0707337ae9e163ee5f962b254/transformed/play-services-ads-identifier-18.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/56b98ba0707337ae9e163ee5f962b254/transformed/play-services-ads-identifier-18.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-appset:16.0.1] /Users/ming.yang/.gradle/caches/8.9/transforms/c724a4ca54f8a5ae7db16f340c7580eb/transformed/play-services-appset-16.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-appset:16.0.1] /Users/ming.yang/.gradle/caches/8.9/transforms/c724a4ca54f8a5ae7db16f340c7580eb/transformed/play-services-appset-16.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:19.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/45e39dd1b40c3a34b0494aa8e1ed9548/transformed/play-services-location-19.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:19.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/45e39dd1b40c3a34b0494aa8e1ed9548/transformed/play-services-location-19.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:18.5.0] /Users/ming.yang/.gradle/caches/8.9/transforms/ef104b8bb8fa2b289dc8cb7fda4eddfb/transformed/play-services-base-18.5.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-base:18.5.0] /Users/ming.yang/.gradle/caches/8.9/transforms/ef104b8bb8fa2b289dc8cb7fda4eddfb/transformed/play-services-base-18.5.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/ming.yang/.gradle/caches/8.9/transforms/ff2e18cc2cc16fa73287eb010476c839/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] /Users/ming.yang/.gradle/caches/8.9/transforms/ff2e18cc2cc16fa73287eb010476c839/transformed/play-services-tasks-18.2.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.2] /Users/ming.yang/.gradle/caches/8.9/transforms/da07ff09849cb6771ec77cac0d61099a/transformed/play-services-measurement-sdk-api-20.1.2/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.2] /Users/ming.yang/.gradle/caches/8.9/transforms/da07ff09849cb6771ec77cac0d61099a/transformed/play-services-measurement-sdk-api-20.1.2/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.ump:user-messaging-platform:3.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/0f5180bc1fedcae86b1f4231f19d38e3/transformed/user-messaging-platform-3.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.ump:user-messaging-platform:3.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/0f5180bc1fedcae86b1f4231f19d38e3/transformed/user-messaging-platform-3.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/0c6fd6badec9b847b484ffbb0924a661/transformed/play-services-places-placereport-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/0c6fd6badec9b847b484ffbb0924a661/transformed/play-services-places-placereport-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:20.1.2] /Users/ming.yang/.gradle/caches/8.9/transforms/9829f6bdfbc5d22623a47808c99e9d45/transformed/play-services-measurement-base-20.1.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:20.1.2] /Users/ming.yang/.gradle/caches/8.9/transforms/9829f6bdfbc5d22623a47808c99e9d45/transformed/play-services-measurement-base-20.1.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/0c4420be04de9a6756f0ba9b96cef118/transformed/play-services-basement-18.4.0/AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/0c4420be04de9a6756f0ba9b96cef118/transformed/play-services-basement-18.4.0/AndroidManifest.xml:3:5-44
+MERGED from [androidx.fragment:fragment:1.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/9a6bd86c5256c09b94147b26dccaf06c/transformed/fragment-1.8.4/AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment:1.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/9a6bd86c5256c09b94147b26dccaf06c/transformed/fragment-1.8.4/AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment-ktx:1.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/0e3d03b6a694c3025152cd89f0f4cfa2/transformed/fragment-ktx-1.8.4/AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment-ktx:1.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/0e3d03b6a694c3025152cd89f0f4cfa2/transformed/fragment-ktx-1.8.4/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity:1.9.2] /Users/ming.yang/.gradle/caches/8.9/transforms/299eed12cbfe2d8e33fdb2fc25a4acb3/transformed/activity-1.9.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.9.2] /Users/ming.yang/.gradle/caches/8.9/transforms/299eed12cbfe2d8e33fdb2fc25a4acb3/transformed/activity-1.9.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-ktx:1.9.2] /Users/ming.yang/.gradle/caches/8.9/transforms/91bcaa33fb83bebf33b8ca269e3f740a/transformed/activity-ktx-1.9.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.9.2] /Users/ming.yang/.gradle/caches/8.9/transforms/91bcaa33fb83bebf33b8ca269e3f740a/transformed/activity-ktx-1.9.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /Users/ming.yang/.gradle/caches/8.9/transforms/607088b6483eede47fbb4202ef3c5151/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /Users/ming.yang/.gradle/caches/8.9/transforms/607088b6483eede47fbb4202ef3c5151/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/ming.yang/.gradle/caches/8.9/transforms/888c0ae0af93e1c5e31b1db21358a3a9/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/ming.yang/.gradle/caches/8.9/transforms/888c0ae0af93e1c5e31b1db21358a3a9/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/22595513795e2e2697ea10a601e732af/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/22595513795e2e2697ea10a601e732af/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/ming.yang/.gradle/caches/8.9/transforms/15f8580c0bdb54dcdb202773c436ba33/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/ming.yang/.gradle/caches/8.9/transforms/15f8580c0bdb54dcdb202773c436ba33/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.5.0] /Users/ming.yang/.gradle/caches/8.9/transforms/115109d33d9c1f66947e25b098db0a1d/transformed/transition-1.5.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.transition:transition:1.5.0] /Users/ming.yang/.gradle/caches/8.9/transforms/115109d33d9c1f66947e25b098db0a1d/transformed/transition-1.5.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/c069e9b87c5f45cfc84e129558f85073/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/c069e9b87c5f45cfc84e129558f85073/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/ming.yang/.gradle/caches/8.9/transforms/fe777e2e20515002a12e310e2f47ef0d/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/ming.yang/.gradle/caches/8.9/transforms/fe777e2e20515002a12e310e2f47ef0d/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/ming.yang/.gradle/caches/8.9/transforms/bb9f7a11dfb2229e888cbd0e87593a97/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/ming.yang/.gradle/caches/8.9/transforms/bb9f7a11dfb2229e888cbd0e87593a97/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.8.0] /Users/ming.yang/.gradle/caches/8.9/transforms/e861ea547b910808ea217b8db8afbe75/transformed/browser-1.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.browser:browser:1.8.0] /Users/ming.yang/.gradle/caches/8.9/transforms/e861ea547b910808ea217b8db8afbe75/transformed/browser-1.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.webkit:webkit:1.11.0-alpha02] /Users/ming.yang/.gradle/caches/8.9/transforms/dd02f451a0a885d3e9fc83fc016b18ee/transformed/webkit-1.11.0-alpha02/AndroidManifest.xml:5:5-44
+MERGED from [androidx.webkit:webkit:1.11.0-alpha02] /Users/ming.yang/.gradle/caches/8.9/transforms/dd02f451a0a885d3e9fc83fc016b18ee/transformed/webkit-1.11.0-alpha02/AndroidManifest.xml:5:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/10a7e7e5287b9ce88e1a03dee730cadd/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/10a7e7e5287b9ce88e1a03dee730cadd/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/189c25d93d270622d70f376772cca077/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/189c25d93d270622d70f376772cca077/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/1f48ed37d07e486d68d06c5911dace84/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/1f48ed37d07e486d68d06c5911dace84/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.1.0] /Users/ming.yang/.gradle/caches/8.9/transforms/6ed6cc5e519065966d431fead050f0b9/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/ming.yang/.gradle/caches/8.9/transforms/6ed6cc5e519065966d431fead050f0b9/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.core:core:1.13.1] /Users/ming.yang/.gradle/caches/8.9/transforms/9155d5eaa60b313c76699f88d3330471/transformed/core-1.13.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.13.1] /Users/ming.yang/.gradle/caches/8.9/transforms/9155d5eaa60b313c76699f88d3330471/transformed/core-1.13.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/a5c9bc169a1051ca8e03541f5b62e945/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/a5c9bc169a1051ca8e03541f5b62e945/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.privacysandbox.ads:ads-adservices-java:1.0.0-beta05] /Users/ming.yang/.gradle/caches/8.9/transforms/6ee0343c2318a6d423bf0fa6fc308506/transformed/ads-adservices-java-1.0.0-beta05/AndroidManifest.xml:5:5-44
+MERGED from [androidx.privacysandbox.ads:ads-adservices-java:1.0.0-beta05] /Users/ming.yang/.gradle/caches/8.9/transforms/6ee0343c2318a6d423bf0fa6fc308506/transformed/ads-adservices-java-1.0.0-beta05/AndroidManifest.xml:5:5-44
+MERGED from [androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] /Users/ming.yang/.gradle/caches/8.9/transforms/bdee19783677d9948fa6d3c315e518e3/transformed/ads-adservices-1.0.0-beta05/AndroidManifest.xml:20:5-44
+MERGED from [androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] /Users/ming.yang/.gradle/caches/8.9/transforms/bdee19783677d9948fa6d3c315e518e3/transformed/ads-adservices-1.0.0-beta05/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/ming.yang/.gradle/caches/8.9/transforms/39ebbe1e551c07bfcd6c164cb1f22fac/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/ming.yang/.gradle/caches/8.9/transforms/39ebbe1e551c07bfcd6c164cb1f22fac/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/ming.yang/.gradle/caches/8.9/transforms/7cbbc8859d084404ce836115df260f30/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/ming.yang/.gradle/caches/8.9/transforms/7cbbc8859d084404ce836115df260f30/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/c8feec99a9e64f222ab98b098e9ee3f1/transformed/lifecycle-service-2.8.4/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/c8feec99a9e64f222ab98b098e9ee3f1/transformed/lifecycle-service-2.8.4/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/6f80dcd30b9f81bdb40b1f73b1411078/transformed/lifecycle-livedata-2.8.4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/6f80dcd30b9f81bdb40b1f73b1411078/transformed/lifecycle-livedata-2.8.4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/547892ae2127f74fe706c7045f0d9619/transformed/lifecycle-viewmodel-2.8.4/AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/547892ae2127f74fe706c7045f0d9619/transformed/lifecycle-viewmodel-2.8.4/AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/6683254a9bde36a38f7c9df13e45f47f/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/6683254a9bde36a38f7c9df13e45f47f/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/61d082eb412e280a0637503bb84266ca/transformed/lifecycle-runtime-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/61d082eb412e280a0637503bb84266ca/transformed/lifecycle-runtime-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/0ac70ad3ede77763169bb982d589e19e/transformed/lifecycle-livedata-core-2.8.4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/0ac70ad3ede77763169bb982d589e19e/transformed/lifecycle-livedata-core-2.8.4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/1a42a30f5157180ae5e9e4c94ecb42f5/transformed/lifecycle-viewmodel-ktx-2.8.4/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/1a42a30f5157180ae5e9e4c94ecb42f5/transformed/lifecycle-viewmodel-ktx-2.8.4/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/4161458808552e6fe1b956a629f64d22/transformed/lifecycle-livedata-core-ktx-2.8.4/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/4161458808552e6fe1b956a629f64d22/transformed/lifecycle-livedata-core-ktx-2.8.4/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/f83eec970a9693e68be2a1dbbeac3d24/transformed/lifecycle-process-2.8.4/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/f83eec970a9693e68be2a1dbbeac3d24/transformed/lifecycle-process-2.8.4/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/72a82aceb33ccff762782fb31041719a/transformed/lifecycle-runtime-ktx-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/72a82aceb33ccff762782fb31041719a/transformed/lifecycle-runtime-ktx-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/bef321e244a2d339c3e2b0267e864e40/transformed/lifecycle-viewmodel-savedstate-2.8.4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/bef321e244a2d339c3e2b0267e864e40/transformed/lifecycle-viewmodel-savedstate-2.8.4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.13.1] /Users/ming.yang/.gradle/caches/8.9/transforms/79bf454479e2615ae996c2e53da25d1d/transformed/core-ktx-1.13.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.13.1] /Users/ming.yang/.gradle/caches/8.9/transforms/79bf454479e2615ae996c2e53da25d1d/transformed/core-ktx-1.13.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5a09b54852c8eae99af6d81ad4a107a1/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5a09b54852c8eae99af6d81ad4a107a1/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5510af1fe33ca396b3dc9b9fe0b3b31e/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5510af1fe33ca396b3dc9b9fe0b3b31e/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/28688df0e0cfe1e4f38e149300c79ac7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/28688df0e0cfe1e4f38e149300c79ac7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/38a318140319c4a3b03a4dee02486f29/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/38a318140319c4a3b03a4dee02486f29/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/76ea0275432bd0f6f854d9dca1927d54/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/76ea0275432bd0f6f854d9dca1927d54/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f2204af0215b35d3db1e07545fab679/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f2204af0215b35d3db1e07545fab679/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f6893fb84151d5d34edd0f7043b2408/transformed/transport-runtime-3.1.8/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f6893fb84151d5d34edd0f7043b2408/transformed/transport-runtime-3.1.8/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-api:3.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/a40133de3ce79ed1e994e190197f2355/transformed/transport-api-3.0.0/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-api:3.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/a40133de3ce79ed1e994e190197f2355/transformed/transport-api-3.0.0/AndroidManifest.xml:18:5-20:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/bda7e0e6a56b6d5ff2aa3bd3cb557a9a/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/bda7e0e6a56b6d5ff2aa3bd3cb557a9a/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/949c225e8d323fc9377655076623e423/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/949c225e8d323fc9377655076623e423/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/35ea9b7538beb4f090ed49564725d270/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/35ea9b7538beb4f090ed49564725d270/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/409741b24aa66bac1405aafb408fe669/transformed/firebase-encoders-json-18.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/409741b24aa66bac1405aafb408fe669/transformed/firebase-encoders-json-18.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.room:room-runtime:2.2.5] /Users/ming.yang/.gradle/caches/8.9/transforms/0214994db6396add966e4562604e45b7/transformed/room-runtime-2.2.5/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-runtime:2.2.5] /Users/ming.yang/.gradle/caches/8.9/transforms/0214994db6396add966e4562604e45b7/transformed/room-runtime-2.2.5/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/ming.yang/.gradle/caches/8.9/transforms/08ff96117aef32e15853f6538d6b8412/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/ming.yang/.gradle/caches/8.9/transforms/08ff96117aef32e15853f6538d6b8412/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/51ab39b41b715c1178976463ab7c94d7/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/51ab39b41b715c1178976463ab7c94d7/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/ab9df7c8722b46e584f1b2ee1e571956/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/ab9df7c8722b46e584f1b2ee1e571956/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/c335402893f21e2184022b418fd798dc/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/c335402893f21e2184022b418fd798dc/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.1.0] /Users/ming.yang/.gradle/caches/8.9/transforms/d5611454269c85eae05c4c8becc680bf/transformed/sqlite-framework-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework:2.1.0] /Users/ming.yang/.gradle/caches/8.9/transforms/d5611454269c85eae05c4c8becc680bf/transformed/sqlite-framework-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite:2.1.0] /Users/ming.yang/.gradle/caches/8.9/transforms/ee57d8a2e854013377716834fca43a6f/transformed/sqlite-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite:2.1.0] /Users/ming.yang/.gradle/caches/8.9/transforms/ee57d8a2e854013377716834fca43a6f/transformed/sqlite-2.1.0/AndroidManifest.xml:20:5-22:41
+	tools:overrideLibrary
+		ADDED from [com.google.android.gms:play-services-ads:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/3da8c38abfa6f52baec23c6b9a51c619/transformed/play-services-ads-23.6.0/AndroidManifest.xml:23:9-49
+	android:targetSdkVersion
+		INJECTED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/app/src/main/AndroidManifest.xml
+uses-permission#com.android.vending.BILLING
+ADDED from [com.android.billingclient:billing-ktx:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/40e681dcdfd541fc3acd316d9bdb5d26/transformed/billing-ktx-7.1.1/AndroidManifest.xml:9:5-67
+MERGED from [com.android.billingclient:billing:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/1440b4197715bd6e5679b575feab8bf7/transformed/billing-7.1.1/AndroidManifest.xml:10:5-67
+MERGED from [com.android.billingclient:billing:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/1440b4197715bd6e5679b575feab8bf7/transformed/billing-7.1.1/AndroidManifest.xml:10:5-67
+	android:name
+		ADDED from [com.android.billingclient:billing-ktx:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/40e681dcdfd541fc3acd316d9bdb5d26/transformed/billing-ktx-7.1.1/AndroidManifest.xml:9:22-64
+queries
+ADDED from [com.android.billingclient:billing:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/1440b4197715bd6e5679b575feab8bf7/transformed/billing-7.1.1/AndroidManifest.xml:12:5-19:15
+MERGED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:35:5-68:15
+MERGED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:35:5-68:15
+intent#action:name:com.android.vending.billing.InAppBillingService.BIND
+ADDED from [com.android.billingclient:billing:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/1440b4197715bd6e5679b575feab8bf7/transformed/billing-7.1.1/AndroidManifest.xml:13:9-15:18
+action#com.android.vending.billing.InAppBillingService.BIND
+ADDED from [com.android.billingclient:billing:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/1440b4197715bd6e5679b575feab8bf7/transformed/billing-7.1.1/AndroidManifest.xml:14:13-91
+	android:name
+		ADDED from [com.android.billingclient:billing:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/1440b4197715bd6e5679b575feab8bf7/transformed/billing-7.1.1/AndroidManifest.xml:14:21-88
+intent#action:name:com.google.android.apps.play.billingtestcompanion.BillingOverrideService.BIND
+ADDED from [com.android.billingclient:billing:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/1440b4197715bd6e5679b575feab8bf7/transformed/billing-7.1.1/AndroidManifest.xml:16:9-18:18
+action#com.google.android.apps.play.billingtestcompanion.BillingOverrideService.BIND
+ADDED from [com.android.billingclient:billing:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/1440b4197715bd6e5679b575feab8bf7/transformed/billing-7.1.1/AndroidManifest.xml:17:13-116
+	android:name
+		ADDED from [com.android.billingclient:billing:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/1440b4197715bd6e5679b575feab8bf7/transformed/billing-7.1.1/AndroidManifest.xml:17:21-113
+meta-data#com.google.android.play.billingclient.version
+ADDED from [com.android.billingclient:billing:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/1440b4197715bd6e5679b575feab8bf7/transformed/billing-7.1.1/AndroidManifest.xml:22:9-24:37
+	android:value
+		ADDED from [com.android.billingclient:billing:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/1440b4197715bd6e5679b575feab8bf7/transformed/billing-7.1.1/AndroidManifest.xml:24:13-34
+	android:name
+		ADDED from [com.android.billingclient:billing:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/1440b4197715bd6e5679b575feab8bf7/transformed/billing-7.1.1/AndroidManifest.xml:23:13-73
+activity#com.android.billingclient.api.ProxyBillingActivity
+ADDED from [com.android.billingclient:billing:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/1440b4197715bd6e5679b575feab8bf7/transformed/billing-7.1.1/AndroidManifest.xml:26:9-30:75
+	android:exported
+		ADDED from [com.android.billingclient:billing:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/1440b4197715bd6e5679b575feab8bf7/transformed/billing-7.1.1/AndroidManifest.xml:29:13-37
+	android:configChanges
+		ADDED from [com.android.billingclient:billing:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/1440b4197715bd6e5679b575feab8bf7/transformed/billing-7.1.1/AndroidManifest.xml:28:13-96
+	android:theme
+		ADDED from [com.android.billingclient:billing:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/1440b4197715bd6e5679b575feab8bf7/transformed/billing-7.1.1/AndroidManifest.xml:30:13-72
+	android:name
+		ADDED from [com.android.billingclient:billing:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/1440b4197715bd6e5679b575feab8bf7/transformed/billing-7.1.1/AndroidManifest.xml:27:13-78
+activity#com.android.billingclient.api.ProxyBillingActivityV2
+ADDED from [com.android.billingclient:billing:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/1440b4197715bd6e5679b575feab8bf7/transformed/billing-7.1.1/AndroidManifest.xml:31:9-35:75
+	android:exported
+		ADDED from [com.android.billingclient:billing:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/1440b4197715bd6e5679b575feab8bf7/transformed/billing-7.1.1/AndroidManifest.xml:34:13-37
+	android:configChanges
+		ADDED from [com.android.billingclient:billing:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/1440b4197715bd6e5679b575feab8bf7/transformed/billing-7.1.1/AndroidManifest.xml:33:13-96
+	android:theme
+		ADDED from [com.android.billingclient:billing:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/1440b4197715bd6e5679b575feab8bf7/transformed/billing-7.1.1/AndroidManifest.xml:35:13-72
+	android:name
+		ADDED from [com.android.billingclient:billing:7.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/1440b4197715bd6e5679b575feab8bf7/transformed/billing-7.1.1/AndroidManifest.xml:32:13-80
+uses-permission#com.google.android.gms.permission.AD_ID
+ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:26:5-79
+MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/56b98ba0707337ae9e163ee5f962b254/transformed/play-services-ads-identifier-18.0.0/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /Users/ming.yang/.gradle/caches/8.9/transforms/56b98ba0707337ae9e163ee5f962b254/transformed/play-services-ads-identifier-18.0.0/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.2] /Users/ming.yang/.gradle/caches/8.9/transforms/da07ff09849cb6771ec77cac0d61099a/transformed/play-services-measurement-sdk-api-20.1.2/AndroidManifest.xml:26:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.2] /Users/ming.yang/.gradle/caches/8.9/transforms/da07ff09849cb6771ec77cac0d61099a/transformed/play-services-measurement-sdk-api-20.1.2/AndroidManifest.xml:26:5-79
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:26:22-76
+uses-permission#android.permission.ACCESS_ADSERVICES_AD_ID
+ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:27:5-82
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:27:22-79
+uses-permission#android.permission.ACCESS_ADSERVICES_ATTRIBUTION
+ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:28:5-88
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:28:22-85
+uses-permission#android.permission.ACCESS_ADSERVICES_TOPICS
+ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:29:5-83
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:29:22-80
+intent#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+data:scheme:https
+ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:38:9-44:18
+action#android.intent.action.VIEW
+ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:39:13-65
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:39:21-62
+category#android.intent.category.BROWSABLE
+ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:41:13-74
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:41:23-71
+data
+ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:43:13-44
+	android:scheme
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:43:19-41
+intent#action:name:android.support.customtabs.action.CustomTabsService
+ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:47:9-49:18
+action#android.support.customtabs.action.CustomTabsService
+ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:48:13-90
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:48:21-87
+intent#action:name:android.intent.action.INSERT+data:mimeType:vnd.android.cursor.dir/event
+ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:52:9-56:18
+action#android.intent.action.INSERT
+ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:53:13-67
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:53:21-64
+intent#action:name:android.intent.action.VIEW+data:scheme:sms
+ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:57:9-61:18
+intent#action:name:android.intent.action.DIAL+data:path:tel:
+ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:62:9-66:18
+action#android.intent.action.DIAL
+ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:63:13-65
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:63:21-62
+activity#com.google.android.gms.ads.AdActivity
+ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:73:9-78:43
+	android:exported
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:76:13-37
+	tools:ignore
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:78:13-40
+	android:configChanges
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:75:13-122
+	android:theme
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:77:13-61
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:74:13-65
+provider#com.google.android.gms.ads.MobileAdsInitProvider
+ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:80:9-85:43
+	android:authorities
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:82:13-73
+	android:exported
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:83:13-37
+	tools:ignore
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:85:13-40
+	android:initOrder
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:84:13-36
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:81:13-76
+service#com.google.android.gms.ads.AdService
+ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:87:9-91:43
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:89:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:90:13-37
+	tools:ignore
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:91:13-40
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:88:13-64
+activity#com.google.android.gms.ads.OutOfContextTestingActivity
+ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:93:9-97:43
+	android:exported
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:96:13-37
+	tools:ignore
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:97:13-40
+	android:configChanges
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:95:13-122
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:94:13-82
+activity#com.google.android.gms.ads.NotificationHandlerActivity
+ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:98:9-105:43
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:100:13-46
+	android:launchMode
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:102:13-44
+	android:exported
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:101:13-37
+	tools:ignore
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:105:13-40
+	android:theme
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:104:13-72
+	android:taskAffinity
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:103:13-36
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:99:13-82
+property#android.adservices.AD_SERVICES_CONFIG
+ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:107:9-109:62
+	android:resource
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:109:13-59
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:23.6.0] /Users/ming.yang/.gradle/caches/8.9/transforms/f503f1250d52cd35922cadb740a037d9/transformed/play-services-ads-lite-23.6.0/AndroidManifest.xml:108:13-65
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.5.0] /Users/ming.yang/.gradle/caches/8.9/transforms/ef104b8bb8fa2b289dc8cb7fda4eddfb/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:9-173
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.5.0] /Users/ming.yang/.gradle/caches/8.9/transforms/ef104b8bb8fa2b289dc8cb7fda4eddfb/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.5.0] /Users/ming.yang/.gradle/caches/8.9/transforms/ef104b8bb8fa2b289dc8cb7fda4eddfb/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.5.0] /Users/ming.yang/.gradle/caches/8.9/transforms/ef104b8bb8fa2b289dc8cb7fda4eddfb/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:19-85
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.2] /Users/ming.yang/.gradle/caches/8.9/transforms/da07ff09849cb6771ec77cac0d61099a/transformed/play-services-measurement-sdk-api-20.1.2/AndroidManifest.xml:25:5-68
+MERGED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:25:5-68
+MERGED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:25:5-68
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.2] /Users/ming.yang/.gradle/caches/8.9/transforms/da07ff09849cb6771ec77cac0d61099a/transformed/play-services-measurement-sdk-api-20.1.2/AndroidManifest.xml:25:22-65
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/0c4420be04de9a6756f0ba9b96cef118/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:9-122
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/0c4420be04de9a6756f0ba9b96cef118/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/0c4420be04de9a6756f0ba9b96cef118/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:20-65
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/ming.yang/.gradle/caches/8.9/transforms/888c0ae0af93e1c5e31b1db21358a3a9/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:31:9-39:20
+MERGED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:31:9-39:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/f83eec970a9693e68be2a1dbbeac3d24/transformed/lifecycle-process-2.8.4/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/f83eec970a9693e68be2a1dbbeac3d24/transformed/lifecycle-process-2.8.4/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/28688df0e0cfe1e4f38e149300c79ac7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/28688df0e0cfe1e4f38e149300c79ac7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/38a318140319c4a3b03a4dee02486f29/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/ming.yang/.gradle/caches/8.9/transforms/38a318140319c4a3b03a4dee02486f29/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/ming.yang/.gradle/caches/8.9/transforms/888c0ae0af93e1c5e31b1db21358a3a9/transformed/emoji2-1.3.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/ming.yang/.gradle/caches/8.9/transforms/888c0ae0af93e1c5e31b1db21358a3a9/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/ming.yang/.gradle/caches/8.9/transforms/888c0ae0af93e1c5e31b1db21358a3a9/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/ming.yang/.gradle/caches/8.9/transforms/888c0ae0af93e1c5e31b1db21358a3a9/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/ming.yang/.gradle/caches/8.9/transforms/888c0ae0af93e1c5e31b1db21358a3a9/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/ming.yang/.gradle/caches/8.9/transforms/888c0ae0af93e1c5e31b1db21358a3a9/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/ming.yang/.gradle/caches/8.9/transforms/888c0ae0af93e1c5e31b1db21358a3a9/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:28:5-77
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:28:22-74
+meta-data#androidx.work.WorkManagerInitializer
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:36:13-38:52
+	android:value
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:38:17-49
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:37:17-68
+service#androidx.work.impl.background.systemalarm.SystemAlarmService
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:41:9-46:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:44:13-72
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:45:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:46:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:43:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:42:13-88
+service#androidx.work.impl.background.systemjob.SystemJobService
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:47:9-53:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:50:13-70
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:51:13-36
+	android:permission
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:52:13-69
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:53:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:49:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:48:13-84
+service#androidx.work.impl.foreground.SystemForegroundService
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:54:9-59:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:57:13-77
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:58:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:59:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:56:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:55:13-81
+receiver#androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:61:9-66:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:64:13-35
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:65:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:66:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:63:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:62:13-88
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:67:9-77:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:70:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:71:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:72:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:69:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:68:13-106
+intent-filter#action:name:android.intent.action.ACTION_POWER_CONNECTED+action:name:android.intent.action.ACTION_POWER_DISCONNECTED
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:73:13-76:29
+action#android.intent.action.ACTION_POWER_CONNECTED
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:74:17-87
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:74:25-84
+action#android.intent.action.ACTION_POWER_DISCONNECTED
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:75:17-90
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:75:25-87
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:78:9-88:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:81:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:82:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:83:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:80:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:79:13-104
+intent-filter#action:name:android.intent.action.BATTERY_LOW+action:name:android.intent.action.BATTERY_OKAY
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:84:13-87:29
+action#android.intent.action.BATTERY_OKAY
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:85:17-77
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:85:25-74
+action#android.intent.action.BATTERY_LOW
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:86:17-76
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:86:25-73
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:89:9-99:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:92:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:93:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:94:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:91:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:90:13-104
+intent-filter#action:name:android.intent.action.DEVICE_STORAGE_LOW+action:name:android.intent.action.DEVICE_STORAGE_OK
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:95:13-98:29
+action#android.intent.action.DEVICE_STORAGE_LOW
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:96:17-83
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:96:25-80
+action#android.intent.action.DEVICE_STORAGE_OK
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:97:17-82
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:97:25-79
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:100:9-109:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:103:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:104:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:105:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:102:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:101:13-103
+intent-filter#action:name:android.net.conn.CONNECTIVITY_CHANGE
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:106:13-108:29
+action#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:107:17-79
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:107:25-76
+receiver#androidx.work.impl.background.systemalarm.RescheduleReceiver
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:110:9-121:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:113:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:114:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:115:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:112:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:111:13-88
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.TIMEZONE_CHANGED+action:name:android.intent.action.TIME_SET
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:116:13-120:29
+action#android.intent.action.TIME_SET
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:118:17-73
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:118:25-70
+action#android.intent.action.TIMEZONE_CHANGED
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:119:17-81
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:119:25-78
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:122:9-131:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:125:13-72
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:126:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:127:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:124:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:123:13-99
+intent-filter#action:name:androidx.work.impl.background.systemalarm.UpdateProxies
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:128:13-130:29
+action#androidx.work.impl.background.systemalarm.UpdateProxies
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:129:17-98
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:129:25-95
+receiver#androidx.work.impl.diagnostics.DiagnosticsReceiver
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:132:9-142:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:135:13-35
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:136:13-36
+	android:permission
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:137:13-57
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:138:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:134:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:133:13-78
+intent-filter#action:name:androidx.work.diagnostics.REQUEST_DIAGNOSTICS
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:139:13-141:29
+action#androidx.work.diagnostics.REQUEST_DIAGNOSTICS
+ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:140:17-88
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /Users/ming.yang/.gradle/caches/8.9/transforms/5d38d9478d4955bd59f582a9bb333a41/transformed/work-runtime-2.7.0/AndroidManifest.xml:140:25-85
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /Users/ming.yang/.gradle/caches/8.9/transforms/9155d5eaa60b313c76699f88d3330471/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.1] /Users/ming.yang/.gradle/caches/8.9/transforms/9155d5eaa60b313c76699f88d3330471/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /Users/ming.yang/.gradle/caches/8.9/transforms/9155d5eaa60b313c76699f88d3330471/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+permission#com.batteryhd.app.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /Users/ming.yang/.gradle/caches/8.9/transforms/9155d5eaa60b313c76699f88d3330471/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.1] /Users/ming.yang/.gradle/caches/8.9/transforms/9155d5eaa60b313c76699f88d3330471/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /Users/ming.yang/.gradle/caches/8.9/transforms/9155d5eaa60b313c76699f88d3330471/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /Users/ming.yang/.gradle/caches/8.9/transforms/9155d5eaa60b313c76699f88d3330471/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /Users/ming.yang/.gradle/caches/8.9/transforms/9155d5eaa60b313c76699f88d3330471/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+uses-permission#com.batteryhd.app.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /Users/ming.yang/.gradle/caches/8.9/transforms/9155d5eaa60b313c76699f88d3330471/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /Users/ming.yang/.gradle/caches/8.9/transforms/9155d5eaa60b313c76699f88d3330471/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+uses-library#android.ext.adservices
+ADDED from [androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] /Users/ming.yang/.gradle/caches/8.9/transforms/bdee19783677d9948fa6d3c315e518e3/transformed/ads-adservices-1.0.0-beta05/AndroidManifest.xml:23:9-25:40
+	android:required
+		ADDED from [androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] /Users/ming.yang/.gradle/caches/8.9/transforms/bdee19783677d9948fa6d3c315e518e3/transformed/ads-adservices-1.0.0-beta05/AndroidManifest.xml:25:13-37
+	android:name
+		ADDED from [androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] /Users/ming.yang/.gradle/caches/8.9/transforms/bdee19783677d9948fa6d3c315e518e3/transformed/ads-adservices-1.0.0-beta05/AndroidManifest.xml:24:13-50
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/f83eec970a9693e68be2a1dbbeac3d24/transformed/lifecycle-process-2.8.4/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/f83eec970a9693e68be2a1dbbeac3d24/transformed/lifecycle-process-2.8.4/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.8.4] /Users/ming.yang/.gradle/caches/8.9/transforms/f83eec970a9693e68be2a1dbbeac3d24/transformed/lifecycle-process-2.8.4/AndroidManifest.xml:30:17-78
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/28688df0e0cfe1e4f38e149300c79ac7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/28688df0e0cfe1e4f38e149300c79ac7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/28688df0e0cfe1e4f38e149300c79ac7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/28688df0e0cfe1e4f38e149300c79ac7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/28688df0e0cfe1e4f38e149300c79ac7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/28688df0e0cfe1e4f38e149300c79ac7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/28688df0e0cfe1e4f38e149300c79ac7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/28688df0e0cfe1e4f38e149300c79ac7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/28688df0e0cfe1e4f38e149300c79ac7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/28688df0e0cfe1e4f38e149300c79ac7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/28688df0e0cfe1e4f38e149300c79ac7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/28688df0e0cfe1e4f38e149300c79ac7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/28688df0e0cfe1e4f38e149300c79ac7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/28688df0e0cfe1e4f38e149300c79ac7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/28688df0e0cfe1e4f38e149300c79ac7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/28688df0e0cfe1e4f38e149300c79ac7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/28688df0e0cfe1e4f38e149300c79ac7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/28688df0e0cfe1e4f38e149300c79ac7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/28688df0e0cfe1e4f38e149300c79ac7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/28688df0e0cfe1e4f38e149300c79ac7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/ming.yang/.gradle/caches/8.9/transforms/28688df0e0cfe1e4f38e149300c79ac7/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:25-92
+service#com.google.android.datatransport.runtime.backends.TransportBackendDiscovery
+ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f2204af0215b35d3db1e07545fab679/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:28:9-34:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f6893fb84151d5d34edd0f7043b2408/transformed/transport-runtime-3.1.8/AndroidManifest.xml:36:9-38:40
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f6893fb84151d5d34edd0f7043b2408/transformed/transport-runtime-3.1.8/AndroidManifest.xml:36:9-38:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f2204af0215b35d3db1e07545fab679/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f2204af0215b35d3db1e07545fab679/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:29:13-103
+meta-data#backend:com.google.android.datatransport.cct.CctBackendFactory
+ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f2204af0215b35d3db1e07545fab679/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:31:13-33:39
+	android:value
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f2204af0215b35d3db1e07545fab679/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:33:17-36
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f2204af0215b35d3db1e07545fab679/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:32:17-94
+service#com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService
+ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f6893fb84151d5d34edd0f7043b2408/transformed/transport-runtime-3.1.8/AndroidManifest.xml:26:9-30:19
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f6893fb84151d5d34edd0f7043b2408/transformed/transport-runtime-3.1.8/AndroidManifest.xml:28:13-37
+	android:permission
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f6893fb84151d5d34edd0f7043b2408/transformed/transport-runtime-3.1.8/AndroidManifest.xml:29:13-69
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f6893fb84151d5d34edd0f7043b2408/transformed/transport-runtime-3.1.8/AndroidManifest.xml:27:13-117
+receiver#com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver
+ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f6893fb84151d5d34edd0f7043b2408/transformed/transport-runtime-3.1.8/AndroidManifest.xml:32:9-34:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f6893fb84151d5d34edd0f7043b2408/transformed/transport-runtime-3.1.8/AndroidManifest.xml:34:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/ming.yang/.gradle/caches/8.9/transforms/7f6893fb84151d5d34edd0f7043b2408/transformed/transport-runtime-3.1.8/AndroidManifest.xml:33:13-132
+service#androidx.room.MultiInstanceInvalidationService
+ADDED from [androidx.room:room-runtime:2.2.5] /Users/ming.yang/.gradle/caches/8.9/transforms/0214994db6396add966e4562604e45b7/transformed/room-runtime-2.2.5/AndroidManifest.xml:25:9-28:40
+	android:exported
+		ADDED from [androidx.room:room-runtime:2.2.5] /Users/ming.yang/.gradle/caches/8.9/transforms/0214994db6396add966e4562604e45b7/transformed/room-runtime-2.2.5/AndroidManifest.xml:28:13-37
+	android:directBootAware
+		ADDED from [androidx.room:room-runtime:2.2.5] /Users/ming.yang/.gradle/caches/8.9/transforms/0214994db6396add966e4562604e45b7/transformed/room-runtime-2.2.5/AndroidManifest.xml:27:13-43
+	android:name
+		ADDED from [androidx.room:room-runtime:2.2.5] /Users/ming.yang/.gradle/caches/8.9/transforms/0214994db6396add966e4562604e45b7/transformed/room-runtime-2.2.5/AndroidManifest.xml:26:13-74

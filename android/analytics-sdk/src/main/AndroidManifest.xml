@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+      埋点 SDK 所需权限（PRD 10.7：均为低敏权限，不采集位置、不采集硬件标识）
+
+      注意：ACCESS_NETWORK_STATE 仅用于读取网络类型（wifi/cellular/offline）作为分群维度，
+      以及判断离线状态以跳过无效上报，**不用于获取精确位置**。
+      INTERNET 用于上报与配置拉取。
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+</manifest>

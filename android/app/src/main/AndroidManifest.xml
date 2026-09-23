@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 网络：埋点上报与广告（PRD 10.7 说明均已包含，无新增权限） -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Android 13+ 通知运行时权限：充电限值/温度告警/周报提醒 -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- 功耗分析的应用耗电排行（需引导用户到系统设置授予） -->
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+
+    <!-- 充电状态变化：充电会话埋点（PRD 10.2 P0：平均充电时长的唯一来源） -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name=".BatteryHdApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BatteryHD"
+        tools:targetApi="34">
+
+        <!-- ─────────────────────────────────────────────────────────────
+             AdMob App ID。
+             这里填的是 **测试 ID**，仅用于工程可编译与开发期验证。
+             正式包必须在 build.gradle 里按 flavor 注入真实 App ID；
+             缺失或错误会导致 AdMob 初始化失败且不展示任何广告。
+             ───────────────────────────────────────────────────────────── -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+
+        <!-- 隐私同意：必须是 launcher。
+             PRD 10.6.2 / 10.3 要求「先取得同意再初始化埋点」，
+             若把主界面设为 launcher，启动瞬间就会采集数据，等同未获同意即收集。 -->
+        <activity
+            android:name=".ui.ConsentActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.ProActivity"
+            android:exported="false"
+            android:label="@string/title_pro"
+            android:screenOrientation="portrait" />
+
+        <!-- 充电状态广播：Android 8+ 隐式广播豁免列表不含 ACTION_POWER_CONNECTED，
+             因此不在 manifest 静态注册，改由 ChargeSessionTracker 在进程内动态注册。
+             此处仅保留可显式触发的开机广播，用于补报未结束的充电会话。 -->
+        <receiver
+            android:name=".battery.BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 电量概览 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/surface"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/tvLevel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/home_level"
+                android:textAppearance="?attr/textAppearanceDisplaySmall"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/progressLevel"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:layout_marginTop="12dp"
+                android:max="100" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/home_discharging"
+                android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+            <TextView
+                android:id="@+id/tvTemp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/home_temp"
+                android:textAppearance="?attr/textAppearanceBodySmall"
+                android:textColor="?android:attr/textColorSecondary" />
+        </LinearLayout>
+
+        <!-- 健康度 -->
+        <LinearLayout
+            android:id="@+id/cardHealth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/surface"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/home_health_title"
+                android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+            <TextView
+                android:id="@+id/tvHealthScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+            <TextView
+                android:id="@+id/tvCapacity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceBodyMedium" />
+        </LinearLayout>
+
+        <!-- 场景续航 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/surface"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/home_scenes"
+                android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+            <Button
+                android:id="@+id/btnExpandScenes"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/monitor_expand" />
+
+            <TextView
+                android:id="@+id/tvScenes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textAppearance="?attr/textAppearanceBodySmall"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- Pro 入口（免费用户可见；点击先埋 feature_gate_shown） -->
+        <Button
+            android:id="@+id/btnPro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/home_go_pro" />
+
+        <!-- Banner 广告位：由 AdsManager 在运行时注入 AdView。
+             unit_id 全部来自远程配置，这里只占位，绝不硬编码。 -->
+        <FrameLayout
+            android:id="@+id/bannerContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>

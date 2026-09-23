@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- BottomNavigationView 最多支持 5 个 item，超出会抛 IllegalArgumentException。
+         因此「设置」不放在底部栏，改由首页右上角入口进入（见 MainActivity.onOptionsItemSelected）。 -->
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/nav_home" />
+    <item
+        android:id="@+id/nav_monitor"
+        android:icon="@drawable/ic_battery"
+        android:title="@string/nav_monitor" />
+    <item
+        android:id="@+id/nav_charge"
+        android:icon="@drawable/ic_charge"
+        android:title="@string/nav_charge" />
+    <item
+        android:id="@+id/nav_power"
+        android:icon="@drawable/ic_power"
+        android:title="@string/nav_power" />
+    <item
+        android:id="@+id/nav_saving"
+        android:icon="@drawable/ic_saving"
+        android:title="@string/nav_saving" />
+</menu>

@@ -1,0 +1,178 @@
+name: batteryhd
+
+services:
+  # ---------------------------------------------------------------- Nginx
+  nginx:
+    image: nginx:1.27-alpine
+    restart: always
+    ports:
+      - '${HTTP_PORT:-8082}:80'
+      - '${HTTPS_PORT:-8443}:443'
+      - '${ORIGIN_PORT:-8085}:8080'
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./nginx/cert:/etc/nginx/cert:ro
+      - ./nginx/logs:/var/log/nginx
+    depends_on:
+      - php
+    networks:
+      - batteryhd
+    mem_limit: 64m
+
+  # ------------------------------------------------------------- Laravel API
+  php:
+    build:
+      context: ./php
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - ../backend:/var/www/api
+      - ./php/php.ini:/usr/local/etc/php/conf.d/zz-batteryhd.ini:ro
+    environment:
+      - TZ=Asia/Shanghai
+      - DB_HOST=mysql
+      - DB_PORT=3306
+      - REDIS_HOST=redis
+      - REDIS_CLIENT=predis
+      - CACHE_STORE=redis
+      - SESSION_DRIVER=redis
+      - QUEUE_CONNECTION=redis
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    expose:
+      - '9000'
+    networks:
+      - batteryhd
+    mem_limit: 256m
+
+  # 队列：埋点批量落库（analytics 独立队列）
+  queue:
+    healthcheck:
+      disable: true
+    build:
+      context: ./php
+      dockerfile: Dockerfile
+    restart: always
+    entrypoint:
+      - php
+      - /var/www/api/artisan
+      - queue:work
+      - redis
+      - --queue=analytics,default
+      - --sleep=3
+      - --tries=3
+      - --max-time=3600
+    volumes:
+      - ../backend:/var/www/api
+      - ./php/php.ini:/usr/local/etc/php/conf.d/zz-batteryhd.ini:ro
+    environment:
+      - TZ=Asia/Shanghai
+      - DB_HOST=mysql
+      - REDIS_HOST=redis
+      - REDIS_CLIENT=predis
+      - QUEUE_CONNECTION=redis
+    depends_on:
+      - php
+      - redis
+      - mysql
+    networks:
+      - batteryhd
+    mem_limit: 160m
+
+  # 定时任务：分区预建、过期清理、会话兜底、数据删除请求
+  scheduler:
+    healthcheck:
+      disable: true
+    build:
+      context: ./php
+      dockerfile: Dockerfile
+    restart: always
+    entrypoint:
+      - php
+      - /var/www/api/artisan
+      - schedule:work
+    volumes:
+      - ../backend:/var/www/api
+      - ./php/php.ini:/usr/local/etc/php/conf.d/zz-batteryhd.ini:ro
+    environment:
+      - TZ=Asia/Shanghai
+      - DB_HOST=mysql
+      - REDIS_HOST=redis
+      - REDIS_CLIENT=predis
+    depends_on:
+      - php
+      - redis
+      - mysql
+    networks:
+      - batteryhd
+    mem_limit: 160m
+
+  # --------------------------------------------------------------- MySQL 8
+  mysql:
+    image: mysql:8.0
+    restart: always
+    command: >
+      --default-authentication-plugin=mysql_native_password
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_unicode_ci
+      --innodb-buffer-pool-size=64M
+      --performance-schema=OFF
+      --max-connections=60
+      --table-open-cache=256
+      --tmp-table-size=16M
+      --max-heap-table-size=16M
+      --innodb-flush-log-at-trx-commit=2
+      --skip-innodb-adaptive-hash-index
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - TZ=Asia/Shanghai
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test:
+        - CMD
+        - mysqladmin
+        - ping
+        - -h
+        - 127.0.0.1
+        - -p${MYSQL_ROOT_PASSWORD}
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 40s
+    networks:
+      - batteryhd
+    mem_limit: 384m
+
+  # --------------------------------------------------------------- Redis 7
+  redis:
+    image: redis:7-alpine
+    restart: always
+    command: redis-server --appendonly yes --maxmemory 128mb --maxmemory-policy allkeys-lru
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test:
+        - CMD
+        - redis-cli
+        - ping
+      interval: 10s
+      timeout: 3s
+      retries: 10
+    networks:
+      - batteryhd
+    mem_limit: 96m
+
+networks:
+  batteryhd:
+    driver: bridge
+
+volumes:
+  mysql_data:
+  redis_data:

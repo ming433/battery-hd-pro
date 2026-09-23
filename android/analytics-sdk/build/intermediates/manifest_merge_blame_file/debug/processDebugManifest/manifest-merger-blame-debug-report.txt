@@ -1,0 +1,21 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.batteryhd.analytics" >
+4
+5    <uses-sdk android:minSdkVersion="26" />
+6
+7    <!--
+8      埋点 SDK 所需权限（PRD 10.7：均为低敏权限，不采集位置、不采集硬件标识）
+9
+10      注意：ACCESS_NETWORK_STATE 仅用于读取网络类型（wifi/cellular/offline）作为分群维度，
+11      以及判断离线状态以跳过无效上报，**不用于获取精确位置**。
+12      INTERNET 用于上报与配置拉取。
+13    -->
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->/Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/analytics-sdk/src/main/AndroidManifest.xml:11:5-67
+14-->/Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/analytics-sdk/src/main/AndroidManifest.xml:11:22-64
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->/Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/analytics-sdk/src/main/AndroidManifest.xml:12:5-79
+15-->/Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/analytics-sdk/src/main/AndroidManifest.xml:12:22-76
+16
+17</manifest>

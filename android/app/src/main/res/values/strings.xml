@@ -1,0 +1,113 @@
+<resources>
+    <string name="app_name">Battery HD Pro</string>
+
+    <!-- 同意页 -->
+    <string name="consent_title">Sebelum kita mulai</string>
+    <string name="consent_body">Kami mengumpulkan data penggunaan anonim (jenis perangkat, versi aplikasi, fitur yang dipakai) untuk meningkatkan aplikasi. Data tidak pernah dikaitkan dengan identitas Anda dan tidak berisi nomor HP, IMEI, atau lokasi.</string>
+    <string name="consent_accept">Setuju &amp; Lanjutkan</string>
+    <string name="consent_decline">Tolak</string>
+    <string name="consent_privacy">Baca Kebijakan Privasi</string>
+    <string name="consent_note">Anda dapat mengubah pilihan ini kapan saja di Pengaturan → Data &amp; Privasi.</string>
+
+    <!-- 导航 -->
+    <string name="nav_home">Beranda</string>
+    <string name="nav_monitor">Baterai</string>
+    <string name="nav_charge">Cas</string>
+    <string name="nav_power">Daya</string>
+    <string name="nav_saving">Hemat</string>
+    <string name="nav_settings">Setelan</string>
+
+    <!-- 首页 -->
+    <string name="home_health_title">Kesehatan Baterai</string>
+    <string name="home_level">%1$d%%</string>
+    <string name="home_temp">%1$.1f°C</string>
+    <string name="home_charging">Mengisi daya</string>
+    <string name="home_discharging">Tidak mengisi daya</string>
+    <string name="home_scenes">Perkiraan daya tahan</string>
+    <string name="home_go_pro">Buka Pro</string>
+
+    <!-- 电池监测 -->
+    <string name="monitor_title">Detail Baterai</string>
+    <string name="monitor_capacity">Kapasitas: %1$d mAh</string>
+    <string name="monitor_health_score">Skor kesehatan: %1$d</string>
+    <string name="monitor_voltage">Tegangan: %1$.2f V</string>
+    <string name="monitor_technology">Jenis: %1$s</string>
+    <string name="monitor_expand">Lihat perkiraan penggunaan</string>
+
+    <!-- 充电保护 -->
+    <string name="charge_title">Perlindungan Pengisian</string>
+    <string name="charge_limit_label">Batas pengisian: %1$d%%</string>
+    <string name="charge_temp_alert">Peringatan suhu: %1$.1f°C</string>
+    <string name="charge_start_calibration">Mulai Kalibrasi</string>
+    <string name="calibration_done">Kalibrasi selesai</string>
+    <string name="charge_status">Status: %1$s</string>
+
+    <!-- 功耗分析 -->
+    <string name="power_title">Analisis Daya</string>
+    <string name="power_permission_needed">Aplikasi membutuhkan izin "Penggunaan Data" untuk menampilkan peringkat konsumsi daya.</string>
+    <string name="power_grant">Berikan Izin</string>
+    <string name="power_range_day">Hari ini</string>
+    <string name="power_range_week">Minggu ini</string>
+
+    <!-- 智能省电 -->
+    <string name="saving_title">Hemat Pintar</string>
+    <string name="saving_mode_balanced">Seimbang</string>
+    <string name="saving_mode_aggressive">Agresif</string>
+    <string name="saving_mode_custom">Kustom</string>
+    <string name="saving_enable">Aktifkan Hemat Pintar</string>
+    <string name="saving_apps">Pilih aplikasi untuk di-hibernasi</string>
+
+    <!-- 设置 -->
+    <string name="settings_title">Setelan</string>
+    <string name="settings_analytics">Kirim data penggunaan</string>
+    <string name="settings_analytics_off">Nonaktifkan pengumpulan</string>
+    <string name="settings_delete_data">Hapus data saya</string>
+    <string name="settings_delete_done">Data lokal telah dihapus</string>
+    <string name="settings_version">Versi %1$s</string>
+
+    <!-- Pro -->
+    <string name="title_pro">Battery HD Pro</string>
+    <string name="pro_benefit_1">Tanpa iklan selamanya</string>
+    <string name="pro_benefit_2">Laporan pengisian mingguan</string>
+    <string name="pro_benefit_3">Kalibrasi terpandu</string>
+    <string name="pro_buy">Berlangganan</string>
+    <string name="pro_restore">Pulihkan pembelian</string>
+    <string name="pro_owned">Terima kasih! Anda sudah Pro.</string>
+    <string name="pro_price_error">Harga tidak tersedia</string>
+
+    <!-- 通知 -->
+    <string name="notification_channel_alerts">Peringatan baterai</string>
+    <string name="notification_channel_alerts_desc">Peringatan suhu dan batas pengisian</string>
+    <string name="notification_channel_reports">Laporan</string>
+    <string name="notification_channel_reports_desc">Laporan pengisian mingguan</string>
+    <string name="notification_charge_limit_title">Batas pengisian tercapai</string>
+    <string name="notification_charge_limit_text">Baterai mencapai %1$d%%. Cabut pengisi daya untuk menjaga kesehatan baterai.</string>
+    <string name="notification_temp_title">Suhu baterai tinggi</string>
+    <string name="notification_temp_text">Suhu %1$.1f°C melewati ambang %2$.1f°C. Hentikan pengisian sementara.</string>
+    <string name="notification_weekly_report_title">Laporan pengisian mingguan</string>
+    <string name="notification_weekly_report_text">Lihat ringkasan kebiasaan pengisian minggu ini.</string>
+
+    <!-- 提醒设置 -->
+    <string name="settings_reminders_title">Pengingat</string>
+    <string name="settings_reminder_charge_limit">Batas pengisian</string>
+    <string name="settings_reminder_temp_alert">Peringatan suhu</string>
+    <string name="settings_reminder_weekly_report">Laporan mingguan</string>
+    <string name="settings_reminder_calibration">Pengingat kalibrasi</string>
+    <string name="settings_notification_permission">Izinkan notifikasi</string>
+    <string name="settings_notification_denied">Notifikasi dinonaktifkan di setelan sistem</string>
+
+    <!-- 周报 -->
+    <string name="monitor_weekly_report">Lihat laporan mingguan</string>
+    <string name="report_weekly_title">Laporan Minggu ke-%1$d</string>
+    <string name="report_weekly_summary">Rata-rata durasi pengisian %1$s dari %2$d sesi.</string>
+    <string name="report_no_data">Belum ada data pengisian minggu ini.</string>
+
+    <!-- 校准 -->
+    <string name="charge_calibration_step_discharge">Langkah 1/3: gunakan baterai hingga di bawah 20%%</string>
+    <string name="charge_calibration_step_charge">Langkah 2/3: isi daya hingga 100%% tanpa mencabut</string>
+    <string name="charge_calibration_step_verify">Langkah 3/3: menghitung kapasitas…</string>
+    <string name="charge_calibration_cancel">Batalkan kalibrasi</string>
+    <string name="charge_calibration_abandoned">Kalibrasi dibatalkan</string>
+    <string name="charge_calibration_next">Lanjut</string>
+    <string name="charge_calibration_finish">Selesai</string>
+</resources>
