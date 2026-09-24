@@ -3,18 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg"
     android:orientation="vertical">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:background="@color/bg"
+        android:elevation="0dp"
         app:navigationContentDescription="@string/abc_action_bar_up_description"
         app:navigationIcon="?attr/homeAsUpIndicator"
-        app:navigationIconTint="@android:color/white"
+        app:navigationIconTint="@color/text_primary"
         app:title="@string/title_pro"
-        app:titleTextColor="@android:color/white" />
+        app:titleTextAppearance="?attr/textAppearanceTitleLarge"
+        app:titleTextColor="@color/text_primary" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -22,58 +25,201 @@
         android:layout_weight="1"
         android:fillViewport="true">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dp">
-
-        <TextView
-            android:id="@+id/tvBenefit1"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/pro_benefit_1"
-            android:textAppearance="?attr/textAppearanceBodyLarge" />
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="24dp">
 
-        <TextView
-            android:id="@+id/tvBenefit2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/pro_benefit_2"
-            android:textAppearance="?attr/textAppearanceBodyLarge" />
+            <!-- Hero Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/gauge_track"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+                app:strokeWidth="0dp">
 
-        <TextView
-            android:id="@+id/tvBenefit3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/pro_benefit_3"
-            android:textAppearance="?attr/textAppearanceBodyLarge" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="32dp">
 
-        <TextView
-            android:id="@+id/tvPrice"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:gravity="center"
-            android:textAppearance="?attr/textAppearanceTitleMedium" />
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/ic_battery"
+                        app:tint="@color/primary" />
 
-        <Button
-            android:id="@+id/btnBuy"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/pro_buy" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/title_pro"
+                        android:textAppearance="?attr/textAppearanceHeadlineMedium"
+                        android:textColor="@color/primary"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
 
-        <Button
-            android:id="@+id/btnRestore"
-            style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/pro_restore" />
+            <!-- Benefits Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:strokeWidth="0dp">
 
-    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <!-- Benefit 1 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_verified"
+                            app:tint="@color/battery_good" />
+
+                        <TextView
+                            android:id="@+id/tvBenefit1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:text="@string/pro_benefit_1"
+                            android:textAppearance="?attr/textAppearanceBodyLarge"
+                            android:textColor="@color/text_primary" />
+                    </LinearLayout>
+
+                    <!-- Benefit 2 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_verified"
+                            app:tint="@color/battery_good" />
+
+                        <TextView
+                            android:id="@+id/tvBenefit2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:text="@string/pro_benefit_2"
+                            android:textAppearance="?attr/textAppearanceBodyLarge"
+                            android:textColor="@color/text_primary" />
+                    </LinearLayout>
+
+                    <!-- Benefit 3 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_verified"
+                            app:tint="@color/battery_good" />
+
+                        <TextView
+                            android:id="@+id/tvBenefit3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:text="@string/pro_benefit_3"
+                            android:textAppearance="?attr/textAppearanceBodyLarge"
+                            android:textColor="@color/text_primary" />
+                    </LinearLayout>
+
+                    <!-- Benefit 4 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_verified"
+                            app:tint="@color/battery_good" />
+
+                        <TextView
+                            android:id="@+id/tvBenefit4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:text="@string/pro_benefit_4"
+                            android:textAppearance="?attr/textAppearanceBodyLarge"
+                            android:textColor="@color/text_primary" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Price -->
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:textAppearance="?attr/textAppearanceHeadlineSmall"
+                android:textColor="@color/text_primary" />
+
+            <!-- Subscribe Button -->
+            <Button
+                android:id="@+id/btnBuy"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/pro_buy"
+                android:textSize="16sp" />
+
+            <!-- Restore Button -->
+            <Button
+                android:id="@+id/btnRestore"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/pro_restore"
+                android:textColor="@color/text_secondary" />
+
+            <!-- Watch Ad to Unlock -->
+            <Button
+                android:id="@+id/btnWatchAd"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/pro_watch_ad" />
+
+        </LinearLayout>
     </ScrollView>
 </LinearLayout>

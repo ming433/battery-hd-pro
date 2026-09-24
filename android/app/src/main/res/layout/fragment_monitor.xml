@@ -1,64 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg"
     android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="16dp">
 
-        <LinearLayout
+        <!-- Battery Health Card -->
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/surface"
-            android:elevation="2dp"
-            android:orientation="vertical"
-            android:padding="16dp">
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:strokeWidth="0dp">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/monitor_title"
-                android:textAppearance="?attr/textAppearanceTitleMedium" />
+                android:orientation="vertical"
+                android:padding="20dp">
 
-            <TextView
-                android:id="@+id/tvHealthScore"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:textAppearance="?attr/textAppearanceBodyMedium" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_health_title"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="@color/text_primary" />
 
-            <TextView
-                android:id="@+id/tvCapacity"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="?attr/textAppearanceBodyMedium" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/tvVoltage"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="?attr/textAppearanceBodyMedium" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tvTechnology"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="?attr/textAppearanceBodyMedium" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/btnExpand"
-                style="?attr/materialButtonOutlinedStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="@string/monitor_expand" />
+                            <TextView
+                                android:id="@+id/tvHealthScore"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/text_primary"
+                                android:textSize="32sp"
+                                android:textStyle="bold"
+                                tools:text="87%" />
 
-            <TextView
-                android:id="@+id/tvScenes"
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipVerified"
+                                style="@style/Widget.Material3.Chip.Assist"
+                                android:layout_width="wrap_content"
+                                android:layout_height="28dp"
+                                android:layout_marginStart="12dp"
+                                android:text="@string/monitor_verified"
+                                android:textColor="@color/battery_good"
+                                android:textSize="11sp"
+                                app:checkedIcon="@drawable/ic_verified"
+                                app:checkedIconEnabled="true"
+                                app:checkedIconVisible="true"
+                                app:chipBackgroundColor="@color/charging_teal_light"
+                                app:chipMinHeight="28dp" />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="8dp"
+                                android:src="@drawable/ic_info"
+                                app:tint="@color/text_hint" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvCapacity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:textAppearance="?attr/textAppearanceBodyMedium"
+                            android:textColor="@color/text_secondary"
+                            tools:text="4214 of 4855 mAh • Good" />
+                    </LinearLayout>
+
+                    <!-- Cycles and Battery Type Info -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/monitor_cycles"
+                            android:textAppearance="?attr/textAppearanceLabelSmall"
+                            android:textColor="@color/text_hint" />
+
+                        <TextView
+                            android:id="@+id/tvCycles"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_primary"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            tools:text="13.8" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/monitor_battery_type"
+                            android:textAppearance="?attr/textAppearanceLabelSmall"
+                            android:textColor="@color/text_hint" />
+
+                        <TextView
+                            android:id="@+id/tvTechnology"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/monitor_li_ion"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/monitor_based_on_data"
+                    android:textAppearance="?attr/textAppearanceLabelSmall"
+                    android:textColor="@color/text_hint" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Why Health Below 100% Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="1dp"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"

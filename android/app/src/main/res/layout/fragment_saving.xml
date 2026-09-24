@@ -1,72 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:background="@color/bg"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/surface"
-        android:elevation="2dp"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="16dp">
 
-        <TextView
+        <!-- Smart Saver Card -->
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/saving_title"
-            android:textAppearance="?attr/textAppearanceTitleMedium" />
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:strokeWidth="0dp">
 
-        <RadioGroup
-            android:id="@+id/rgMode"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp">
-
-            <RadioButton
-                android:id="@+id/rbBalanced"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:checked="true"
-                android:text="@string/saving_mode_balanced" />
+                android:orientation="vertical"
+                android:padding="20dp">
 
-            <RadioButton
-                android:id="@+id/rbAggressive"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/saving_mode_aggressive" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/saving_title"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="@color/text_primary" />
 
-            <RadioButton
-                android:id="@+id/rbCustom"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/saving_mode_custom" />
-        </RadioGroup>
+                <!-- Saver Mode Selection -->
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/rgMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:selectionRequired="true"
+                    app:singleLine="true"
+                    app:singleSelection="true">
 
-        <com.google.android.material.materialswitch.MaterialSwitch
-            android:id="@+id/switchSaving"
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/rbBalanced"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/saving_mode_balanced"
+                        app:chipBackgroundColor="@color/surface_variant" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/rbAggressive"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/saving_mode_aggressive"
+                        app:chipBackgroundColor="@color/surface_variant" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/rbCustom"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/saving_mode_custom"
+                        app:chipBackgroundColor="@color/surface_variant" />
+                </com.google.android.material.chip.ChipGroup>
+
+                <!-- Enable Switch -->
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchSaving"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/saving_enable"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textColor="@color/text_primary"
+                    app:thumbTint="@color/primary"
+                    app:trackTint="@color/gauge_track" />
+
+                <Button
+                    android:id="@+id/btnPickApps"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/saving_apps" />
+
+                <TextView
+                    android:id="@+id/tvSelected"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_suggestion_card"
+                    android:padding="12dp"
+                    android:textAppearance="?attr/textAppearanceBodySmall"
+                    android:textColor="@color/text_secondary"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Info Card -->
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="@string/saving_enable" />
+            app:cardBackgroundColor="@color/surface_variant"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="0dp">
 
-        <Button
-            android:id="@+id/btnPickApps"
-            style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="@string/saving_apps" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="14dp">
 
-        <TextView
-            android:id="@+id/tvSelected"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:textAppearance="?attr/textAppearanceBodySmall"
-            android:textColor="?android:attr/textColorSecondary" />
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_info"
+                    app:tint="@color/primary" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:text="Smart Saver helps extend battery life by managing background app activity. Select apps to hibernate when not in use."
+                    android:textAppearance="?attr/textAppearanceBodySmall"
+                    android:textColor="@color/text_secondary" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
     </LinearLayout>
-
-</LinearLayout>
+</ScrollView>

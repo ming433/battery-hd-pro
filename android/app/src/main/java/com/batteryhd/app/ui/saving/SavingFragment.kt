@@ -48,9 +48,9 @@ class SavingFragment : Fragment(R.layout.fragment_saving) {
         updateSelected()
     }
 
-    private fun currentMode(): String = when (binding.rgMode.checkedRadioButtonId) {
-        R.id.rbAggressive -> Dictionary.SavingMode.AGGRESSIVE
-        R.id.rbCustom -> Dictionary.SavingMode.CUSTOM
+    private fun currentMode(): String = when {
+        binding.rbAggressive.isChecked -> Dictionary.SavingMode.AGGRESSIVE
+        binding.rbCustom.isChecked -> Dictionary.SavingMode.CUSTOM
         else -> Dictionary.SavingMode.BALANCED
     }
 
@@ -83,10 +83,11 @@ class SavingFragment : Fragment(R.layout.fragment_saving) {
 
     private fun updateSelected() {
         val count = app.prefs.hibernatedCategories.size
-        binding.tvSelected.text = if (count == 0) {
-            getString(R.string.saving_apps)
+        if (count == 0) {
+            binding.tvSelected.visibility = android.view.View.GONE
         } else {
-            app.prefs.hibernatedCategories.joinToString(", ")
+            binding.tvSelected.visibility = android.view.View.VISIBLE
+            binding.tvSelected.text = app.prefs.hibernatedCategories.joinToString(", ")
         }
     }
 

@@ -56,6 +56,19 @@ class ChargeFragment : Fragment(R.layout.fragment_charge) {
             }
         }
 
+        binding.tvSuggested.text = getString(R.string.charge_suggested, suggestedLimit)
+
+        binding.btnApplySuggestion.setOnClickListener {
+            binding.sliderLimit.value = suggestedLimit.toFloat()
+            app.prefs.chargeLimitPercent = suggestedLimit
+            binding.tvLimit.text = getString(R.string.charge_limit_label, suggestedLimit)
+            updateSuggestionVisibility(suggestedLimit)
+            Analytics.track(
+                Dictionary.Event.SMART_LIMIT_APPLIED,
+                mapOf("suggested_limit" to suggestedLimit, "previous_limit" to limit)
+            )
+        }
+
         binding.btnCalibrate.setOnClickListener { startCalibration() }
         binding.btnCalibrationNext.setOnClickListener { advanceCalibration(view) }
         binding.btnCalibrationCancel.setOnClickListener {
@@ -151,6 +164,14 @@ class ChargeFragment : Fragment(R.layout.fragment_charge) {
         } else {
             binding.chargePlanSetup.visibility = View.VISIBLE
             binding.chargePlanActive.visibility = View.GONE
+        }
+    }
+
+    private fun updateSuggestionVisibility(currentLimit: Int) {
+        binding.tvDifferentFromCoach.visibility = if (currentLimit != suggestedLimit) {
+            View.VISIBLE
+        } else {
+            View.GONE
         }
     }
 

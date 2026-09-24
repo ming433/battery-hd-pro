@@ -41,8 +41,8 @@ class PowerFragment : Fragment(R.layout.fragment_power) {
 
         binding.btnGrant.setOnClickListener { requestUsagePermission() }
 
-        binding.rgRange.setOnCheckedChangeListener { _, checkedId ->
-            timeRange = if (checkedId == R.id.rbWeek) {
+        binding.rgRange.setOnCheckedStateChangeListener { _, checkedIds ->
+            timeRange = if (checkedIds.contains(R.id.rbWeek)) {
                 Dictionary.TimeRange.WEEK
             } else {
                 Dictionary.TimeRange.DAY

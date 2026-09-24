@@ -1,15 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#FF00897B</color>
-    <color name="primary_dark">#FF00695C</color>
-    <color name="accent">#FFFFA000</color>
-    <color name="bg">#FFF5F7F8</color>
+    <!-- Primary palette: Indigo/Purple inspired by Battery Guru -->
+    <color name="primary">#FF5C6BC0</color>
+    <color name="primary_dark">#FF3949AB</color>
+    <color name="primary_light">#FF9FA8DA</color>
+    <color name="accent">#FF7C4DFF</color>
+
+    <!-- Surface & Background -->
+    <color name="bg">#FFF8F9FC</color>
     <color name="surface">#FFFFFFFF</color>
+    <color name="surface_variant">#FFF3F4F9</color>
+
+    <!-- Text colors -->
     <color name="text_primary">#DE000000</color>
     <color name="text_secondary">#99000000</color>
+    <color name="text_hint">#61000000</color>
+    <color name="text_on_primary">#FFFFFFFF</color>
+
+    <!-- Divider & Stroke -->
     <color name="divider">#1F000000</color>
+    <color name="card_stroke">#14000000</color>
+
+    <!-- Battery state colors -->
     <color name="battery_good">#FF43A047</color>
     <color name="battery_warn">#FFFB8C00</color>
     <color name="battery_bad">#FFE53935</color>
-    <color name="ic_launcher_background">#FF00897B</color>
+
+    <!-- Charging accent (teal for charging states as secondary) -->
+    <color name="charging_teal">#FF009688</color>
+    <color name="charging_teal_light">#FFB2DFDB</color>
+
+    <!-- Gauge colors -->
+    <color name="gauge_track">#FFEDE7F6</color>
+    <color name="gauge_progress">#FF5C6BC0</color>
+    <color name="gauge_progress_charging">#FF009688</color>
+
+    <!-- Card elevation shadow tint -->
+    <color name="card_shadow">#1A5C6BC0</color>
+
+    <!-- Bottom nav -->
+    <color name="nav_selected">#FF5C6BC0</color>
+    <color name="nav_unselected">#99000000</color>
+
+    <color name="ic_launcher_background">#FF5C6BC0</color>
 </resources>

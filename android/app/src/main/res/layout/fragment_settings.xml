@@ -1,96 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:background="@color/bg"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/surface"
-        android:elevation="2dp"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="16dp">
 
-        <TextView
+        <!-- Settings Title Card -->
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/settings_title"
-            android:textAppearance="?attr/textAppearanceTitleMedium" />
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:strokeWidth="0dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/settings_language"
-            android:textAppearance="?attr/textAppearanceTitleSmall" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
 
-        <Button
-            android:id="@+id/btnLanguage"
-            style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/settings_language_system" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_title"
+                    android:textAppearance="?attr/textAppearanceTitleLarge"
+                    android:textColor="@color/text_primary" />
 
-        <!-- 埋点总开关：PRD 10.6.2 要求用户可随时关闭。
-             关闭后 SDK 停止采集与上报，但广告配置下发不受影响（10.1 原则 5 隔离）。 -->
-        <com.google.android.material.materialswitch.MaterialSwitch
-            android:id="@+id/switchAnalytics"
+                <!-- Language Section -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/settings_language"
+                    android:textAppearance="?attr/textAppearanceTitleSmall"
+                    android:textColor="@color/text_secondary" />
+
+                <Button
+                    android:id="@+id/btnLanguage"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/settings_language_system" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Data & Privacy Card -->
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="@string/settings_analytics" />
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:strokeWidth="0dp">
 
-        <!-- 提醒开关：变更需上报 reminder_setting_changed（PRD 10.2.4 H）。
-             注意开关状态与"通知权限"是两件事：开关关了不发通知，
-             权限没授予则发了也收不到，两者都要能分别度量。 -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/settings_reminders_title"
-            android:textAppearance="?attr/textAppearanceTitleSmall" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
 
-        <com.google.android.material.materialswitch.MaterialSwitch
-            android:id="@+id/switchReminderChargeLimit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:checked="true"
-            android:text="@string/settings_reminder_charge_limit" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_data_privacy"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="@color/text_primary" />
 
-        <com.google.android.material.materialswitch.MaterialSwitch
-            android:id="@+id/switchReminderTempAlert"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="@string/settings_reminder_temp_alert" />
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchAnalytics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/settings_analytics"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textColor="@color/text_primary" />
 
-        <com.google.android.material.materialswitch.MaterialSwitch
-            android:id="@+id/switchReminderWeeklyReport"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="@string/settings_reminder_weekly_report" />
+                <!-- Crowdsource toggle -->
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchCrowdsource"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/settings_crowdsource"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textColor="@color/text_primary" />
 
-        <com.google.android.material.materialswitch.MaterialSwitch
-            android:id="@+id/switchReminderCalibration"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:checked="false"
-            android:text="@string/settings_reminder_calibration" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="52dp"
+                    android:text="@string/settings_crowdsource_desc"
+                    android:textAppearance="?attr/textAppearanceLabelSmall"
+                    android:textColor="@color/text_hint" />
 
-        <!-- Android 13+ 通知运行时权限；低于 13 时隐藏 -->
-        <Button
-            android:id="@+id/btnNotificationPermission"
-            style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/settings_notification_permission"
-            android:visibility="gone" />
+                <Button
+                    android:id="@+id/btnDeleteData"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/settings_delete_data"
+                    android:textColor="@color/battery_bad" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
         <!-- M4: Crowdsource Calibration Opt-In -->
         <TextView
@@ -129,24 +150,133 @@
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/settings_delete_data" />
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:strokeWidth="0dp">
 
-        <Button
-            android:id="@+id/btnPro"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_reminders_title"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="@color/text_primary" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchReminderChargeLimit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:checked="true"
+                    android:text="@string/settings_reminder_charge_limit"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textColor="@color/text_primary" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchReminderTempAlert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:checked="true"
+                    android:text="@string/settings_reminder_temp_alert"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textColor="@color/text_primary" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchReminderWeeklyReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:checked="true"
+                    android:text="@string/settings_reminder_weekly_report"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textColor="@color/text_primary" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchReminderCalibration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:checked="false"
+                    android:text="@string/settings_reminder_calibration"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textColor="@color/text_primary" />
+
+                <Button
+                    android:id="@+id/btnNotificationPermission"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/settings_notification_permission"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Coach Pass Card -->
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="@string/home_go_pro" />
+            app:cardBackgroundColor="@color/gauge_track"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:strokeWidth="0dp">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_pro"
+                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                        android:textColor="@color/primary" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/pro_benefit_4"
+                        android:textAppearance="?attr/textAppearanceLabelSmall"
+                        android:textColor="@color/text_secondary" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnPro"
+                    style="@style/Widget.Material3.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_go_pro" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Version -->
         <TextView
             android:id="@+id/tvVersion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
             android:text="@string/settings_version"
             android:textAppearance="?attr/textAppearanceBodySmall"
-            android:textColor="?android:attr/textColorSecondary" />
-    </LinearLayout>
+            android:textColor="@color/text_hint" />
 
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

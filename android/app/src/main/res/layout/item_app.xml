@@ -1,25 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:gravity="center_vertical"
     android:orientation="horizontal"
     android:paddingHorizontal="16dp"
-    android:paddingVertical="12dp">
+    android:paddingVertical="14dp">
 
-    <!-- 只显示应用名与占比。
-         合规约束（PRD 10.6.1）：包名不随埋点上报，列表数据仅本地使用。 -->
+    <!-- Rank indicator -->
+    <TextView
+        android:id="@+id/tvRank"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:gravity="center"
+        android:textAppearance="?attr/textAppearanceLabelMedium"
+        android:textColor="@color/text_hint" />
+
+    <!-- App name -->
     <TextView
         android:id="@+id/tvName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
         android:layout_weight="1"
-        android:textAppearance="?attr/textAppearanceBodyMedium" />
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="?attr/textAppearanceBodyMedium"
+        android:textColor="@color/text_primary" />
 
-    <TextView
-        android:id="@+id/tvPercent"
+    <!-- Usage percentage with progress bar -->
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?attr/textAppearanceBodySmall"
-        android:textColor="?android:attr/textColorSecondary" />
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ProgressBar
+            android:id="@+id/progressUsage"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="60dp"
+            android:layout_height="4dp"
+            android:max="100"
+            android:progressDrawable="@drawable/bg_card_compact"
+            android:progressTint="@color/primary" />
+
+        <TextView
+            android:id="@+id/tvPercent"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textAppearance="?attr/textAppearanceLabelMedium"
+            android:textColor="@color/text_secondary" />
+    </LinearLayout>
 
 </LinearLayout>

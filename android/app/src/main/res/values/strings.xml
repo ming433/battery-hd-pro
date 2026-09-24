@@ -17,30 +17,71 @@
     <string name="nav_saving">Saver</string>
     <string name="nav_settings">Settings</string>
 
-    <!-- Home -->
+    <!-- Home Dashboard -->
     <string name="home_health_title">Battery Health</string>
     <string name="home_level">%1$d%%</string>
+    <string name="home_level_plain">%1$d</string>
+    <string name="home_percent_symbol">%%</string>
     <string name="home_temp">%1$.1f°C</string>
     <string name="home_charging">Charging</string>
     <string name="home_discharging">Not charging</string>
     <string name="home_scenes">Estimated battery life</string>
-    <string name="home_go_pro">Unlock Pro</string>
+    <string name="home_go_pro">Unlock Coach Pass</string>
+    <string name="home_battery_info">Battery info</string>
+    <string name="home_remaining">Remaining</string>
+    <string name="home_remaining_time">%1$dh %2$dm</string>
+    <string name="home_current_session">Current session</string>
+    <string name="home_session_used">Used</string>
+    <string name="home_session_time">Total time</string>
+    <string name="home_screen_on">Screen On</string>
+    <string name="home_screen_off">Screen Off</string>
+    <string name="home_quick_actions">Quick Actions</string>
+
+    <!-- AI Coach Card -->
+    <string name="ai_coach_title">AI Coach</string>
+    <string name="ai_coach_learning">Getting to know your battery</string>
+    <string name="ai_coach_learning_desc">Keep charging for a few days so your coach can learn your habits and provide personalized insights.</string>
+    <string name="ai_coach_refresh">Refresh</string>
+    <string name="ai_coach_offline">Offline — showing last insight</string>
+    <string name="ai_coach_powered_by">Powered by AI. Estimates only.</string>
 
     <!-- Battery monitor -->
     <string name="monitor_title">Battery Details</string>
     <string name="monitor_capacity">Capacity: %1$d mAh</string>
+    <string name="monitor_capacity_short">%1$d mAh</string>
     <string name="monitor_health_score">Health score: %1$d</string>
+    <string name="monitor_health_percent">%1$d%%</string>
     <string name="monitor_voltage">Voltage: %1$.2f V</string>
     <string name="monitor_technology">Type: %1$s</string>
     <string name="monitor_expand">View estimated usage</string>
+    <string name="monitor_verified">Verified</string>
+    <string name="monitor_good">Good</string>
+    <string name="monitor_cycles">Cycles</string>
+    <string name="monitor_battery_type">Battery type</string>
+    <string name="monitor_li_ion">Li-ion</string>
+    <string name="monitor_based_on_data">Based on app\'s data</string>
+    <string name="monitor_why_below_100">Why is battery health below 100%?</string>
 
     <!-- Charge protection -->
     <string name="charge_title">Charge Protection</string>
     <string name="charge_limit_label">Charge limit: %1$d%%</string>
+    <string name="charge_limit_short">%1$d%%</string>
     <string name="charge_temp_alert">Temperature alert: %1$.1f°C</string>
     <string name="charge_start_calibration">Start Calibration</string>
     <string name="calibration_done">Calibration complete</string>
     <string name="charge_status">Status: %1$s</string>
+    <string name="charge_status_short">%1$s</string>
+
+    <!-- Smart Limit Suggestion -->
+    <string name="charge_suggested">Suggested: %1$d%%</string>
+    <string name="charge_suggested_reason">Recommended for battery longevity</string>
+    <string name="charge_different_from_coach">Different from coach suggestion</string>
+    <string name="charge_apply">Apply</string>
+
+    <!-- Tonight's Charge Plan -->
+    <string name="charge_tonight_plan">Tonight\'s Charge Plan</string>
+    <string name="charge_full_by">When do you need full charge?</string>
+    <string name="charge_target_level">Target charge level</string>
 
     <!-- Power analysis -->
     <string name="power_title">Power Analysis</string>
@@ -48,6 +89,10 @@
     <string name="power_grant">Grant Permission</string>
     <string name="power_range_day">Today</string>
     <string name="power_range_week">This week</string>
+
+    <!-- Drain Detective -->
+    <string name="drain_detective_title">Drain Detective</string>
+    <string name="drain_detective_desc">Analyze what\'s draining your battery</string>
 
     <!-- Smart saver -->
     <string name="saving_title">Smart Saver</string>
@@ -66,6 +111,9 @@
     <string name="settings_delete_data">Delete my data</string>
     <string name="settings_delete_done">Local data has been deleted</string>
     <string name="settings_version">Version %1$s</string>
+    <string name="settings_crowdsource">Help improve estimates</string>
+    <string name="settings_crowdsource_desc">Share anonymous charging data to improve AI predictions for everyone</string>
+    <string name="settings_data_privacy">Data &amp; Privacy</string>
 
     <!-- Pro -->
     <string name="title_pro">Battery Coach Pro</string>
@@ -74,10 +122,11 @@
     <string name="pro_benefit_3">AI calibration coach</string>
     <string name="pro_buy">Subscribe</string>
     <string name="pro_restore">Restore purchases</string>
-    <string name="pro_owned">Thanks! You\'re already Pro.</string>
+    <string name="pro_owned">Thanks! You\'re already a Coach Pass member.</string>
     <string name="pro_price_error">Price unavailable</string>
     <string name="pro_billing_unavailable">Google Play billing isn\'t available on this device.</string>
     <string name="pro_not_configured">This subscription isn\'t configured yet.</string>
+    <string name="pro_watch_ad">Watch ad to unlock</string>
 
     <!-- Notifications -->
     <string name="notification_channel_alerts">Battery alerts</string>

@@ -21,10 +21,15 @@ class MonitorFragment : Fragment(R.layout.fragment_monitor) {
         _binding = FragmentMonitorBinding.bind(view)
 
         val snap = app.batteryRepo.snapshot()
-        binding.tvHealthScore.text = getString(R.string.monitor_health_score, snap.healthScore)
-        binding.tvCapacity.text = getString(R.string.monitor_capacity, snap.capacityMah)
+        binding.tvHealthScore.text = getString(R.string.monitor_health_percent, snap.healthScore)
+
+        val designCapacity = 4855
+        val currentCapacity = (designCapacity * snap.healthScore / 100)
+        binding.tvCapacity.text = "$currentCapacity of $designCapacity mAh • ${getString(R.string.monitor_good)}"
+
         binding.tvVoltage.text = getString(R.string.monitor_voltage, snap.voltageV)
-        binding.tvTechnology.text = getString(R.string.monitor_technology, snap.technology)
+        binding.tvTechnology.text = snap.technology
+        binding.tvCycles.text = "%.1f".format(snap.healthScore / 7.0)
 
         app.tempTracker.recordSample(snap.temperatureC, snap.isCharging)
 
