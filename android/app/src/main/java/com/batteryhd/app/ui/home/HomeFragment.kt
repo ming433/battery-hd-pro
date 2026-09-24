@@ -81,8 +81,67 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             (activity as? MainActivity)?.openPro(Dictionary.Source.BANNER)
         }
 
+        // Ask Coach (M3)
+        setupAskCoach()
+
         // Banner：unit_id 全部来自远程配置，此处只传容器与页面名
         app.ads.loadBanner(binding.bannerContainer, Dictionary.Screen.HOME_DASHBOARD)
+    }
+
+    // ------------------------------------------------------------ Ask Coach (M3)
+
+    private fun setupAskCoach() {
+        binding.btnAskCoach.setOnClickListener {
+            val question = binding.etAskCoach.text?.toString()?.trim() ?: ""
+            if (question.isNotEmpty()) {
+                askCoachQuestion(question)
+            }
+        }
+
+        binding.btnCoachAction.setOnClickListener {
+            val response = lastCoachResponse ?: return@setOnClickListener
+            handleInsightAction(response.suggestedAction)
+        }
+    }
+
+    private var lastCoachResponse: com.batteryhd.app.coach.AskCoach.CoachResponse? = null
+
+    private fun askCoachQuestion(question: String) {
+        val response = app.askCoach.ask(question)
+        lastCoachResponse = response
+
+        binding.tvCoachResponse.visibility = View.VISIBLE
+        binding.tvCoachResponse.text = response.answer
+
+        if (response.wasBlocked) {
+            Analytics.track(
+                "ai_ask_coach_blocked",
+                mapOf("block_reason" to (response.blockReason ?: "unknown"))
+            )
+        } else {
+            Analytics.track(
+                "ai_ask_coach_query",
+                mapOf(
+                    "confidence" to response.confidence,
+                    "has_action" to (response.suggestedAction != CoachInsight.PrimaryAction.NONE)
+                )
+            )
+        }
+
+        if (response.suggestedAction != CoachInsight.PrimaryAction.NONE && !response.wasBlocked) {
+            binding.btnCoachAction.visibility = View.VISIBLE
+            binding.btnCoachAction.text = when (response.suggestedAction) {
+                CoachInsight.PrimaryAction.SET_CHARGE_LIMIT -> getString(R.string.ai_insight_action_set_limit)
+                CoachInsight.PrimaryAction.START_CALIBRATION -> getString(R.string.ai_insight_action_calibrate)
+                CoachInsight.PrimaryAction.OPEN_DRAIN_DETAIL -> getString(R.string.ai_insight_action_drain_detail)
+                CoachInsight.PrimaryAction.ENABLE_TEMP_ALERT -> getString(R.string.ai_insight_action_temp_alert)
+                else -> ""
+            }
+        } else {
+            binding.btnCoachAction.visibility = View.GONE
+        }
+
+        binding.etAskCoach.text?.clear()
     }
 
     private fun refresh() {

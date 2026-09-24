@@ -109,6 +109,16 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
             (activity as? MainActivity)?.openPro(Dictionary.Source.SETTINGS)
         }
 
+        // M4: Crowdsource calibration opt-in
+        binding.switchCrowdsource.isChecked = app.prefs.calibrationCrowdsourceOptIn
+        binding.switchCrowdsource.setOnCheckedChangeListener { _, isChecked ->
+            app.prefs.calibrationCrowdsourceOptIn = isChecked
+            Analytics.track(
+                "calibration_crowdsource_toggle",
+                mapOf("enabled" to isChecked)
+            )
+        }
+
         binding.tvVersion.text = getString(R.string.settings_version, BuildConfig.VERSION_NAME)
     }
 
