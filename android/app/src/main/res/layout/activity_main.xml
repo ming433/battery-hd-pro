@@ -3,15 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg"
     android:orientation="vertical">
 
+    <!-- App Bar with light background -->
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:background="@color/bg"
+        android:elevation="0dp"
+        app:menu="@menu/main_menu"
         app:title="@string/app_name"
-        app:titleTextColor="@android:color/white" />
+        app:titleCentered="false"
+        app:titleTextAppearance="?attr/textAppearanceTitleLarge"
+        app:titleTextColor="@color/text_primary" />
 
     <FrameLayout
         android:id="@+id/fragmentContainer"
@@ -19,11 +25,17 @@
         android:layout_height="0dp"
         android:layout_weight="1" />
 
+    <!-- Bottom Navigation with Material 3 styling -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?android:attr/windowBackground"
+        android:background="@color/surface"
+        app:elevation="8dp"
+        app:itemActiveIndicatorStyle="@style/Widget.BatteryCoach.BottomNavigation.ActiveIndicator"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:itemTextColor="@color/bottom_nav_color"
+        app:labelVisibilityMode="labeled"
         app:menu="@menu/bottom_nav_menu" />
 
 </LinearLayout>

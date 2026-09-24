@@ -1,13 +1,118 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Material3 主题。
-         注意：本项目未使用 MaterialComponents（旧版）主题，避免两者混用导致
-         "This Activity already has an action bar supplied by the window decor" 崩溃。 -->
+    <!-- Material3 Light Theme - Battery Guru inspired -->
     <style name="Theme.BatteryHD" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Primary colors (Indigo/Purple) -->
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorPrimaryContainer">@color/primary_light</item>
+        <item name="colorOnPrimary">@color/text_on_primary</item>
+        <item name="colorOnPrimaryContainer">@color/primary_dark</item>
+
+        <!-- Secondary/Accent colors -->
         <item name="colorSecondary">@color/accent</item>
+        <item name="colorSecondaryContainer">@color/gauge_track</item>
+        <item name="colorOnSecondary">@color/text_on_primary</item>
+
+        <!-- Surface colors -->
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+
+        <!-- Background -->
         <item name="android:colorBackground">@color/bg</item>
-        <item name="android:statusBarColor" tools:targetApi="l">@color/primary_dark</item>
-        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="colorOnBackground">@color/text_primary</item>
+
+        <!-- Status bar: light with dark icons for modern look -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/bg</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="l">@color/surface</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+
+        <!-- Card styling -->
+        <item name="materialCardViewStyle">@style/Widget.BatteryCoach.CardView</item>
+
+        <!-- Slider styling -->
+        <item name="sliderStyle">@style/Widget.BatteryCoach.Slider</item>
+
+        <!-- Bottom Navigation -->
+        <item name="bottomNavigationStyle">@style/Widget.BatteryCoach.BottomNavigation</item>
+    </style>
+
+    <!-- Custom Card Style: Rounded corners, subtle shadow -->
+    <style name="Widget.BatteryCoach.CardView" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="cardBackgroundColor">@color/surface</item>
+        <item name="contentPadding">16dp</item>
+    </style>
+
+    <!-- Outlined Card Style -->
+    <style name="Widget.BatteryCoach.CardView.Outlined" parent="Widget.Material3.CardView.Outlined">
+        <item name="cardCornerRadius">16dp</item>
+        <item name="strokeColor">@color/card_stroke</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cardBackgroundColor">@color/surface</item>
+        <item name="contentPadding">16dp</item>
+    </style>
+
+    <!-- Compact Card Style for Grid Items -->
+    <style name="Widget.BatteryCoach.CardView.Compact" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardElevation">1dp</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="cardBackgroundColor">@color/surface</item>
+        <item name="contentPadding">12dp</item>
+    </style>
+
+    <!-- Slider with purple accent -->
+    <style name="Widget.BatteryCoach.Slider" parent="Widget.Material3.Slider">
+        <item name="thumbColor">@color/primary</item>
+        <item name="trackColorActive">@color/primary</item>
+        <item name="trackColorInactive">@color/gauge_track</item>
+        <item name="tickColorActive">@color/primary_light</item>
+        <item name="tickColorInactive">@color/gauge_track</item>
+    </style>
+
+    <!-- Bottom Navigation -->
+    <style name="Widget.BatteryCoach.BottomNavigation" parent="Widget.Material3.BottomNavigationView">
+        <item name="backgroundTint">@color/surface</item>
+        <item name="itemIconTint">@color/bottom_nav_color</item>
+        <item name="itemTextColor">@color/bottom_nav_color</item>
+        <item name="itemActiveIndicatorStyle">@style/Widget.BatteryCoach.BottomNavigation.ActiveIndicator</item>
+    </style>
+
+    <style name="Widget.BatteryCoach.BottomNavigation.ActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/gauge_track</item>
+    </style>
+
+    <!-- Large Display Number Style -->
+    <style name="TextAppearance.BatteryCoach.Display" parent="TextAppearance.Material3.DisplayLarge">
+        <item name="android:textSize">72sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <!-- Large Metric Number -->
+    <style name="TextAppearance.BatteryCoach.Headline" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+
+    <!-- Card Title -->
+    <style name="TextAppearance.BatteryCoach.CardTitle" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+
+    <!-- Metric Value -->
+    <style name="TextAppearance.BatteryCoach.MetricValue" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+
+    <!-- Metric Label -->
+    <style name="TextAppearance.BatteryCoach.MetricLabel" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textColor">@color/text_secondary</item>
     </style>
 </resources>

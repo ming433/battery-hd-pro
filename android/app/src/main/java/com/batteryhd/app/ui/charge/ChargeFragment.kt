@@ -29,6 +29,8 @@ class ChargeFragment : Fragment(R.layout.fragment_charge) {
     /** 温度告警阈值（°C）。超过 45°C 会显著加速电池老化 */
     private val tempThresholdC = 45f
 
+    private val suggestedLimit = 80
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         _binding = FragmentChargeBinding.bind(view)
 
@@ -40,7 +42,21 @@ class ChargeFragment : Fragment(R.layout.fragment_charge) {
             val percent = value.toInt()
             app.prefs.chargeLimitPercent = percent
             binding.tvLimit.text = getString(R.string.charge_limit_label, percent)
+            updateSuggestionVisibility(percent)
             if (fromUser) checkLimitAndAlert(percent)
+        }
+
+        binding.tvSuggested.text = getString(R.string.charge_suggested, suggestedLimit)
+
+        binding.btnApplySuggestion.setOnClickListener {
+            binding.sliderLimit.value = suggestedLimit.toFloat()
+            app.prefs.chargeLimitPercent = suggestedLimit
+            binding.tvLimit.text = getString(R.string.charge_limit_label, suggestedLimit)
+            updateSuggestionVisibility(suggestedLimit)
+            Analytics.track(
+                Dictionary.Event.SMART_LIMIT_APPLIED,
+                mapOf("suggested_limit" to suggestedLimit, "previous_limit" to limit)
+            )
         }
 
         binding.btnCalibrate.setOnClickListener { startCalibration() }
@@ -50,10 +66,17 @@ class ChargeFragment : Fragment(R.layout.fragment_charge) {
             Snackbar.make(view, R.string.charge_calibration_abandoned, Snackbar.LENGTH_SHORT).show()
         }
 
-        // 进程被杀/重建后恢复进行中的校准
         restoreCalibration()
-
+        updateSuggestionVisibility(limit)
         refresh()
+    }
+
+    private fun updateSuggestionVisibility(currentLimit: Int) {
+        binding.tvDifferentFromCoach.visibility = if (currentLimit != suggestedLimit) {
+            View.VISIBLE
+        } else {
+            View.GONE
+        }
     }
 
     private fun refresh() {

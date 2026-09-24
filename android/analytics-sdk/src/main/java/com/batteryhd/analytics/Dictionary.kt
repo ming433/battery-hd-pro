@@ -328,6 +328,10 @@ object Dictionary {
         const val NOTIFICATION_RECEIVED = "notification_received"
         const val NOTIFICATION_CLICKED = "notification_clicked"
         const val REMINDER_SETTING_CHANGED = "reminder_setting_changed"
+
+        // I AI Coach
+        const val AI_COACH_REFRESHED = "ai_coach_refreshed"
+        const val SMART_LIMIT_APPLIED = "smart_limit_applied"
     }
 
     /**
