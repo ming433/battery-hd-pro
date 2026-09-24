@@ -7,6 +7,7 @@ import com.batteryhd.analytics.Analytics
 import com.batteryhd.analytics.Dictionary
 import com.batteryhd.app.BatteryHdApp
 import com.batteryhd.app.R
+import com.batteryhd.app.coach.SmartLimitAdvisor
 import com.batteryhd.app.databinding.FragmentChargeBinding
 import com.batteryhd.app.ui.reportLimitTriggered
 import com.batteryhd.app.ui.reportTempAlert
@@ -29,8 +30,12 @@ class ChargeFragment : Fragment(R.layout.fragment_charge) {
     /** 温度告警阈值（°C）。超过 45°C 会显著加速电池老化 */
     private val tempThresholdC = 45f
 
+    private lateinit var smartLimitAdvisor: SmartLimitAdvisor
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         _binding = FragmentChargeBinding.bind(view)
+
+        smartLimitAdvisor = SmartLimitAdvisor(app.batteryRepo, app.prefs)
 
         val limit = app.prefs.chargeLimitPercent
         binding.sliderLimit.value = limit.toFloat()
@@ -40,7 +45,10 @@ class ChargeFragment : Fragment(R.layout.fragment_charge) {
             val percent = value.toInt()
             app.prefs.chargeLimitPercent = percent
             binding.tvLimit.text = getString(R.string.charge_limit_label, percent)
-            if (fromUser) checkLimitAndAlert(percent)
+            if (fromUser) {
+                checkLimitAndAlert(percent)
+                updateSmartLimitDifferentWarning()
+            }
         }
 
         binding.btnCalibrate.setOnClickListener { startCalibration() }
@@ -50,10 +58,15 @@ class ChargeFragment : Fragment(R.layout.fragment_charge) {
             Snackbar.make(view, R.string.charge_calibration_abandoned, Snackbar.LENGTH_SHORT).show()
         }
 
+        binding.btnApplySuggestion.setOnClickListener {
+            applySuggestedLimit()
+        }
+
         // 进程被杀/重建后恢复进行中的校准
         restoreCalibration()
 
         refresh()
+        refreshSmartLimitSuggestion()
     }
 
     private fun refresh() {
@@ -77,6 +90,57 @@ class ChargeFragment : Fragment(R.layout.fragment_charge) {
         if (snap.isCharging && snap.levelPercent >= limit) {
             reportLimitTriggered(limit, snap)
         }
+    }
+
+    // ------------------------------------------------------------ Smart Limit
+
+    private fun refreshSmartLimitSuggestion() {
+        val suggestion = smartLimitAdvisor.getSuggestion()
+
+        binding.tvSuggestedLimit.text = getString(R.string.smart_limit_suggested, suggestion.suggestedLimit)
+
+        val reasonText = when (suggestion.reason) {
+            SmartLimitAdvisor.Suggestion.Reason.HEALTH_BASED ->
+                getString(R.string.smart_limit_reason_health)
+            SmartLimitAdvisor.Suggestion.Reason.HIGH_TEMP_DETECTED ->
+                getString(R.string.smart_limit_reason_temp)
+            SmartLimitAdvisor.Suggestion.Reason.DEFAULT_RECOMMENDATION ->
+                getString(R.string.smart_limit_reason_default)
+        }
+        binding.tvSuggestedReason.text = reasonText
+
+        updateSmartLimitDifferentWarning()
+    }
+
+    private fun updateSmartLimitDifferentWarning() {
+        val isDifferent = smartLimitAdvisor.isCurrentLimitDifferentFromSuggestion()
+        binding.tvLimitDifferent.visibility = if (isDifferent) View.VISIBLE else View.GONE
+    }
+
+    private fun applySuggestedLimit() {
+        val suggestion = smartLimitAdvisor.getSuggestion()
+        val newLimit = suggestion.suggestedLimit
+
+        app.prefs.chargeLimitPercent = newLimit
+        binding.sliderLimit.value = newLimit.toFloat()
+        binding.tvLimit.text = getString(R.string.charge_limit_label, newLimit)
+
+        updateSmartLimitDifferentWarning()
+
+        Analytics.track(
+            "ai_smart_limit_apply",
+            mapOf(
+                "suggested_limit" to newLimit,
+                "reason" to suggestion.reason.name,
+                "confidence" to suggestion.confidence.name
+            )
+        )
+
+        Snackbar.make(
+            requireView(),
+            getString(R.string.charge_limit_label, newLimit),
+            Snackbar.LENGTH_SHORT
+        ).show()
     }
 
     // ------------------------------------------------------------ 校准
