@@ -252,6 +252,69 @@ class Prefs(context: Context) {
         get() = prefs.getLong(KEY_FIRST_LAUNCH, 0L)
         set(value) = prefs.edit().putLong(KEY_FIRST_LAUNCH, value).apply()
 
+    // ------------------------------------------------------------ Charge Plan (M2)
+
+    var chargePlanTargetPercent: Int
+        get() = prefs.getInt(KEY_CHARGE_PLAN_TARGET, 80)
+        set(value) = prefs.edit().putInt(KEY_CHARGE_PLAN_TARGET, value).apply()
+
+    var chargePlanReadyByHour: Int
+        get() = prefs.getInt(KEY_CHARGE_PLAN_HOUR, 7)
+        set(value) = prefs.edit().putInt(KEY_CHARGE_PLAN_HOUR, value).apply()
+
+    var chargePlanReadyByMinute: Int
+        get() = prefs.getInt(KEY_CHARGE_PLAN_MINUTE, 0)
+        set(value) = prefs.edit().putInt(KEY_CHARGE_PLAN_MINUTE, value).apply()
+
+    var chargePlanCreatedAt: Long
+        get() = prefs.getLong(KEY_CHARGE_PLAN_CREATED, 0L)
+        set(value) = prefs.edit().putLong(KEY_CHARGE_PLAN_CREATED, value).apply()
+
+    fun clearChargePlan() {
+        prefs.edit()
+            .remove(KEY_CHARGE_PLAN_TARGET)
+            .remove(KEY_CHARGE_PLAN_HOUR)
+            .remove(KEY_CHARGE_PLAN_MINUTE)
+            .remove(KEY_CHARGE_PLAN_CREATED)
+            .apply()
+    }
+
+    // ------------------------------------------------------------ Coach Pass (M3 Rewarded)
+
+    /** 24h Coach Pass expiration timestamp (unlocked via rewarded ad) */
+    var coachPassExpiresAt: Long
+        get() = prefs.getLong(KEY_COACH_PASS_EXPIRES, 0L)
+        set(value) = prefs.edit().putLong(KEY_COACH_PASS_EXPIRES, value).apply()
+
+    /** Grant 24h Coach Pass */
+    fun grantCoachPass24h() {
+        coachPassExpiresAt = System.currentTimeMillis() + 24 * 60 * 60 * 1000L
+    }
+
+    fun isCoachPassActive(): Boolean = coachPassExpiresAt > System.currentTimeMillis()
+
+    // ------------------------------------------------------------ Calibration Crowdsource (M4)
+
+    /** User opted in to share calibration data anonymously */
+    var calibrationCrowdsourceOptIn: Boolean
+        get() = prefs.getBoolean(KEY_CALIBRATION_CROWDSOURCE, false)
+        set(value) = prefs.edit().putBoolean(KEY_CALIBRATION_CROWDSOURCE, value).apply()
+
+    /** Last successful calibration timestamp (for suggestions) */
+    var lastCalibrationCompletedAt: Long
+        get() = prefs.getLong(KEY_LAST_CALIBRATION_COMPLETED, 0L)
+        set(value) = prefs.edit().putLong(KEY_LAST_CALIBRATION_COMPLETED, value).apply()
+
+    // ------------------------------------------------------------ Weekly Report History (M3)
+
+    var weeklyHighTempCharges: Int
+        get() = prefs.getInt(KEY_WEEKLY_HIGH_TEMP_CHARGES, 0)
+        set(value) = prefs.edit().putInt(KEY_WEEKLY_HIGH_TEMP_CHARGES, value).apply()
+
+    fun incrementWeeklyHighTempCharge() {
+        weeklyHighTempCharges = weeklyHighTempCharges + 1
+    }
+
     companion object {
         private const val PREF_NAME = "bhd_app"
         private const val KEY_IS_PRO = "is_pro"
@@ -277,6 +340,14 @@ class Prefs(context: Context) {
         private const val KEY_WEEKLY_KEY = "weekly_key"
         private const val KEY_WEEKLY_SESSIONS = "weekly_sessions"
         private const val KEY_WEEKLY_DURATION = "weekly_duration_ms"
+        private const val KEY_CHARGE_PLAN_TARGET = "charge_plan_target"
+        private const val KEY_CHARGE_PLAN_HOUR = "charge_plan_hour"
+        private const val KEY_CHARGE_PLAN_MINUTE = "charge_plan_minute"
+        private const val KEY_CHARGE_PLAN_CREATED = "charge_plan_created_at"
+        private const val KEY_COACH_PASS_EXPIRES = "coach_pass_expires_at"
+        private const val KEY_CALIBRATION_CROWDSOURCE = "calibration_crowdsource_opt_in"
+        private const val KEY_LAST_CALIBRATION_COMPLETED = "last_calibration_completed_at"
+        private const val KEY_WEEKLY_HIGH_TEMP_CHARGES = "weekly_high_temp_charges"
 
         const val DEFAULT_CHARGE_LIMIT = 80
     }
