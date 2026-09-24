@@ -53,13 +53,69 @@
                     android:textAppearance="?attr/textAppearanceBodyMedium"
                     android:textColor="@color/text_primary" />
 
-                <!-- Custom Charge Limit Slider Track -->
+            <!-- Smart Limit Suggestion -->
+            <LinearLayout
+                android:id="@+id/smartLimitPanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/smart_limit_background"
+                android:orientation="vertical"
+                android:padding="12dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvSuggestedLimit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="?attr/textAppearanceTitleSmall"
+                        android:textColor="@color/primary" />
+
+                    <Button
+                        android:id="@+id/btnApplySuggestion"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="8dp"
+                        android:text="@string/smart_limit_apply"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvSuggestedReason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textAppearance="?attr/textAppearanceBodySmall"
+                    android:textColor="?android:attr/textColorSecondary" />
+
+                <TextView
+                    android:id="@+id/tvLimitDifferent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/smart_limit_different"
+                    android:textAppearance="?attr/textAppearanceLabelSmall"
+                    android:textColor="@color/battery_warn"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTempAlert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/charge_temp_alert"
+                android:textAppearance="?attr/textAppearanceBodyMedium" />
 
                     <com.google.android.material.slider.Slider
                         android:id="@+id/sliderLimit"
@@ -198,18 +254,56 @@
             app:cardElevation="2dp"
             app:strokeWidth="0dp">
 
+            <!-- Calibration Coach Panel (M2) -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/smart_limit_background"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="12dp"
+                android:visibility="gone">
 
                 <TextView
+                    android:id="@+id/tvCalibrationTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/charge_tonight_plan"
-                    android:textAppearance="?attr/textAppearanceTitleMedium"
-                    android:textColor="@color/text_primary" />
+                    android:text="@string/calibration_coach_title"
+                    android:textAppearance="?attr/textAppearanceTitleSmall"
+                    android:textColor="@color/primary" />
+
+                <TextView
+                    android:id="@+id/tvCalibrationStep"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/charge_calibration_step_discharge"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvCalibrationWhy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textAppearance="?attr/textAppearanceBodySmall"
+                    android:textColor="?android:attr/textColorSecondary" />
+
+                <TextView
+                    android:id="@+id/tvCalibrationTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textAppearance="?attr/textAppearanceBodySmall" />
+
+                <TextView
+                    android:id="@+id/tvCalibrationTip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textAppearance="?attr/textAppearanceLabelSmall"
+                    android:textColor="@color/battery_warn"
+                    android:visibility="gone" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -222,117 +316,113 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/charge_calibration_cancel" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Tonight's Charge Plan (M2) -->
+        <LinearLayout
+            android:id="@+id/chargePlanPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/surface"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/charge_plan_title"
+                android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+            <LinearLayout
+                android:id="@+id/chargePlanSetup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/charge_plan_set_time"
+                    android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
-                    <!-- Time Picker Button -->
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnTargetTime"
-                        style="@style/Widget.Material3.Button.OutlinedButton"
+                    <Button
+                        android:id="@+id/btnSetTime"
+                        style="?attr/materialButtonOutlinedStyle"
                         android:layout_width="wrap_content"
-                        android:layout_height="48dp"
-                        android:text="07:00"
-                        android:textSize="16sp" />
+                        android:layout_height="wrap_content"
+                        android:text="07:00" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:text="@string/charge_target_level"
-                        android:textAppearance="?attr/textAppearanceBodySmall"
-                        android:textColor="@color/text_secondary" />
-
-                    <!-- Visual charge level indicator -->
-                    <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
+                        android:layout_marginStart="16dp"
                         android:layout_weight="1"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
+                        android:text="@string/charge_plan_target"
+                        android:textAppearance="?attr/textAppearanceBodySmall" />
 
-                        <!-- Filled dots -->
-                        <View
-                            android:layout_width="8dp"
-                            android:layout_height="8dp"
-                            android:layout_marginEnd="4dp"
-                            android:background="@drawable/bg_card_compact"
-                            android:backgroundTint="@color/charging_teal" />
-
-                        <View
-                            android:layout_width="8dp"
-                            android:layout_height="8dp"
-                            android:layout_marginEnd="4dp"
-                            android:background="@drawable/bg_card_compact"
-                            android:backgroundTint="@color/charging_teal" />
-
-                        <View
-                            android:layout_width="8dp"
-                            android:layout_height="8dp"
-                            android:layout_marginEnd="4dp"
-                            android:background="@drawable/bg_card_compact"
-                            android:backgroundTint="@color/charging_teal" />
-
-                        <View
-                            android:layout_width="8dp"
-                            android:layout_height="8dp"
-                            android:layout_marginEnd="4dp"
-                            android:background="@drawable/bg_card_compact"
-                            android:backgroundTint="@color/charging_teal" />
-
-                        <View
-                            android:layout_width="8dp"
-                            android:layout_height="8dp"
-                            android:layout_marginEnd="4dp"
-                            android:background="@drawable/bg_card_compact"
-                            android:backgroundTint="@color/charging_teal" />
-
-                        <View
-                            android:layout_width="8dp"
-                            android:layout_height="8dp"
-                            android:layout_marginEnd="4dp"
-                            android:background="@drawable/bg_card_compact"
-                            android:backgroundTint="@color/charging_teal" />
-
-                        <View
-                            android:layout_width="8dp"
-                            android:layout_height="8dp"
-                            android:layout_marginEnd="4dp"
-                            android:background="@drawable/bg_card_compact"
-                            android:backgroundTint="@color/charging_teal" />
-
-                        <!-- Marker line -->
-                        <View
-                            android:layout_width="2dp"
-                            android:layout_height="16dp"
-                            android:layout_marginHorizontal="4dp"
-                            android:background="@color/charging_teal" />
-
-                        <!-- Empty dots -->
-                        <View
-                            android:layout_width="8dp"
-                            android:layout_height="8dp"
-                            android:layout_marginEnd="4dp"
-                            android:background="@drawable/bg_card_compact"
-                            android:backgroundTint="@color/gauge_track" />
-
-                        <View
-                            android:layout_width="8dp"
-                            android:layout_height="8dp"
-                            android:layout_marginEnd="4dp"
-                            android:background="@drawable/bg_card_compact"
-                            android:backgroundTint="@color/gauge_track" />
-
-                        <View
-                            android:layout_width="8dp"
-                            android:layout_height="8dp"
-                            android:background="@drawable/bg_card_compact"
-                            android:backgroundTint="@color/gauge_track" />
-                    </LinearLayout>
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/sliderPlanTarget"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:stepSize="5.0"
+                        android:value="80.0"
+                        android:valueFrom="50.0"
+                        android:valueTo="100.0" />
                 </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnCreatePlan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/charge_plan_create" />
             </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:id="@+id/chargePlanActive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvPlanSummary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+                <TextView
+                    android:id="@+id/tvPlanHeatWarning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textAppearance="?attr/textAppearanceBodySmall"
+                    android:textColor="@color/battery_warn"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnClearPlan"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/charge_plan_clear" />
+            </LinearLayout>
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>

@@ -251,6 +251,14 @@ class MainActivity : AppCompatActivity() {
         else -> Dictionary.Screen.HOME_DASHBOARD
     }
 
+    fun navigateToCharge() {
+        binding.bottomNav.selectedItemId = R.id.nav_charge
+    }
+
+    fun navigateToPower() {
+        binding.bottomNav.selectedItemId = R.id.nav_power
+    }
+
     private fun syncBottomNavVisibility() {
         binding.bottomNav.visibility = if (settingsOpen) View.GONE else View.VISIBLE
     }

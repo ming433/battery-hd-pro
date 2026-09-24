@@ -9,6 +9,14 @@ import com.batteryhd.app.ads.AdsManager
 import com.batteryhd.app.battery.BatteryRepository
 import com.batteryhd.app.battery.ChargeSessionTracker
 import com.batteryhd.app.billing.BillingManager
+import com.batteryhd.app.coach.AskCoach
+import com.batteryhd.app.coach.CalibrationCoach
+import com.batteryhd.app.coach.ChargePlanAdvisor
+import com.batteryhd.app.coach.CoachInsightRepository
+import com.batteryhd.app.coach.DrainDetective
+import com.batteryhd.app.coach.LocalCoachInsightRepository
+import com.batteryhd.app.coach.TemperatureTracker
+import com.batteryhd.app.coach.WeeklyReportGenerator
 import com.batteryhd.app.util.Prefs
 
 /**
@@ -34,6 +42,20 @@ class BatteryHdApp : Application() {
         private set
     lateinit var billing: BillingManager
         private set
+    lateinit var coachRepo: CoachInsightRepository
+        private set
+    lateinit var tempTracker: TemperatureTracker
+        private set
+    lateinit var chargePlanAdvisor: ChargePlanAdvisor
+        private set
+    lateinit var calibrationCoach: CalibrationCoach
+        private set
+    lateinit var drainDetective: DrainDetective
+        private set
+    lateinit var weeklyReportGenerator: WeeklyReportGenerator
+        private set
+    lateinit var askCoach: AskCoach
+        private set
 
     /** Pro 状态变化回调（UI 订阅用于隐藏广告入口） */
     var onProChanged: ((Boolean) -> Unit)? = null
@@ -58,6 +80,13 @@ class BatteryHdApp : Application() {
         chargeTracker = ChargeSessionTracker(this, prefs, batteryRepo)
         ads = AdsManager(this, prefs)
         billing = BillingManager(this, prefs) { pro -> onProChanged?.invoke(pro) }
+        coachRepo = LocalCoachInsightRepository(batteryRepo, prefs)
+        tempTracker = TemperatureTracker(this)
+        chargePlanAdvisor = ChargePlanAdvisor(batteryRepo, prefs)
+        calibrationCoach = CalibrationCoach(batteryRepo)
+        drainDetective = DrainDetective(this, batteryRepo, prefs)
+        weeklyReportGenerator = WeeklyReportGenerator(this, batteryRepo, prefs, tempTracker)
+        askCoach = AskCoach(batteryRepo, prefs, tempTracker)
         billing.start()
 
         if (prefs.firstLaunchAt == 0L) {

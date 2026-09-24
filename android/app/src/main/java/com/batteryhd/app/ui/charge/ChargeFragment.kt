@@ -1,5 +1,6 @@
 package com.batteryhd.app.ui.charge
 
+import android.app.TimePickerDialog
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -7,6 +8,8 @@ import com.batteryhd.analytics.Analytics
 import com.batteryhd.analytics.Dictionary
 import com.batteryhd.app.BatteryHdApp
 import com.batteryhd.app.R
+import com.batteryhd.app.coach.ChargePlanAdvisor
+import com.batteryhd.app.coach.SmartLimitAdvisor
 import com.batteryhd.app.databinding.FragmentChargeBinding
 import com.batteryhd.app.ui.reportLimitTriggered
 import com.batteryhd.app.ui.reportTempAlert
@@ -29,10 +32,15 @@ class ChargeFragment : Fragment(R.layout.fragment_charge) {
     /** 温度告警阈值（°C）。超过 45°C 会显著加速电池老化 */
     private val tempThresholdC = 45f
 
-    private val suggestedLimit = 80
+    private lateinit var smartLimitAdvisor: SmartLimitAdvisor
+
+    private var planReadyByHour = 7
+    private var planReadyByMinute = 0
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         _binding = FragmentChargeBinding.bind(view)
+
+        smartLimitAdvisor = SmartLimitAdvisor(app.batteryRepo, app.prefs)
 
         val limit = app.prefs.chargeLimitPercent
         binding.sliderLimit.value = limit.toFloat()
@@ -42,8 +50,10 @@ class ChargeFragment : Fragment(R.layout.fragment_charge) {
             val percent = value.toInt()
             app.prefs.chargeLimitPercent = percent
             binding.tvLimit.text = getString(R.string.charge_limit_label, percent)
-            updateSuggestionVisibility(percent)
-            if (fromUser) checkLimitAndAlert(percent)
+            if (fromUser) {
+                checkLimitAndAlert(percent)
+                updateSmartLimitDifferentWarning()
+            }
         }
 
         binding.tvSuggested.text = getString(R.string.charge_suggested, suggestedLimit)
@@ -66,9 +76,95 @@ class ChargeFragment : Fragment(R.layout.fragment_charge) {
             Snackbar.make(view, R.string.charge_calibration_abandoned, Snackbar.LENGTH_SHORT).show()
         }
 
+        binding.btnApplySuggestion.setOnClickListener {
+            applySuggestedLimit()
+        }
+
+        // 进程被杀/重建后恢复进行中的校准
         restoreCalibration()
-        updateSuggestionVisibility(limit)
+
+        // Tonight's Charge Plan (M2)
+        setupChargePlan()
+
         refresh()
+        refreshSmartLimitSuggestion()
+        refreshChargePlan()
+    }
+
+    // ------------------------------------------------------------ Charge Plan (M2)
+
+    private fun setupChargePlan() {
+        binding.btnSetTime.setOnClickListener {
+            TimePickerDialog(
+                requireContext(),
+                { _, hour, minute ->
+                    planReadyByHour = hour
+                    planReadyByMinute = minute
+                    binding.btnSetTime.text = String.format("%02d:%02d", hour, minute)
+                },
+                planReadyByHour,
+                planReadyByMinute,
+                true
+            ).show()
+        }
+
+        binding.btnCreatePlan.setOnClickListener {
+            createChargePlan()
+        }
+
+        binding.btnClearPlan.setOnClickListener {
+            app.chargePlanAdvisor.clearPlan()
+            refreshChargePlan()
+            Analytics.track("ai_charge_plan_clear", emptyMap())
+        }
+
+        binding.sliderPlanTarget.addOnChangeListener { _, _, _ -> }
+    }
+
+    private fun createChargePlan() {
+        val targetPercent = binding.sliderPlanTarget.value.toInt()
+        val input = ChargePlanAdvisor.PlanInput(
+            readyByHour = planReadyByHour,
+            readyByMinute = planReadyByMinute,
+            targetPercent = targetPercent
+        )
+
+        val plan = app.chargePlanAdvisor.generatePlan(input)
+        app.chargePlanAdvisor.savePlan(plan)
+
+        refreshChargePlan()
+
+        Analytics.track(
+            "ai_charge_plan_create",
+            mapOf(
+                "target_percent" to plan.targetPercent,
+                "ready_by_hour" to plan.readyByHour,
+                "has_heat_guidance" to (plan.heatPauseGuidance != null)
+            )
+        )
+
+        Snackbar.make(requireView(), R.string.charge_plan_active, Snackbar.LENGTH_SHORT).show()
+    }
+
+    private fun refreshChargePlan() {
+        val savedPlan = app.chargePlanAdvisor.getSavedPlan()
+
+        if (savedPlan != null) {
+            binding.chargePlanSetup.visibility = View.GONE
+            binding.chargePlanActive.visibility = View.VISIBLE
+
+            binding.tvPlanSummary.text = savedPlan.summary
+
+            if (savedPlan.heatPauseGuidance != null) {
+                binding.tvPlanHeatWarning.visibility = View.VISIBLE
+                binding.tvPlanHeatWarning.text = savedPlan.heatPauseGuidance
+            } else {
+                binding.tvPlanHeatWarning.visibility = View.GONE
+            }
+        } else {
+            binding.chargePlanSetup.visibility = View.VISIBLE
+            binding.chargePlanActive.visibility = View.GONE
+        }
     }
 
     private fun updateSuggestionVisibility(currentLimit: Int) {
@@ -102,6 +198,57 @@ class ChargeFragment : Fragment(R.layout.fragment_charge) {
         }
     }
 
+    // ------------------------------------------------------------ Smart Limit
+
+    private fun refreshSmartLimitSuggestion() {
+        val suggestion = smartLimitAdvisor.getSuggestion()
+
+        binding.tvSuggestedLimit.text = getString(R.string.smart_limit_suggested, suggestion.suggestedLimit)
+
+        val reasonText = when (suggestion.reason) {
+            SmartLimitAdvisor.Suggestion.Reason.HEALTH_BASED ->
+                getString(R.string.smart_limit_reason_health)
+            SmartLimitAdvisor.Suggestion.Reason.HIGH_TEMP_DETECTED ->
+                getString(R.string.smart_limit_reason_temp)
+            SmartLimitAdvisor.Suggestion.Reason.DEFAULT_RECOMMENDATION ->
+                getString(R.string.smart_limit_reason_default)
+        }
+        binding.tvSuggestedReason.text = reasonText
+
+        updateSmartLimitDifferentWarning()
+    }
+
+    private fun updateSmartLimitDifferentWarning() {
+        val isDifferent = smartLimitAdvisor.isCurrentLimitDifferentFromSuggestion()
+        binding.tvLimitDifferent.visibility = if (isDifferent) View.VISIBLE else View.GONE
+    }
+
+    private fun applySuggestedLimit() {
+        val suggestion = smartLimitAdvisor.getSuggestion()
+        val newLimit = suggestion.suggestedLimit
+
+        app.prefs.chargeLimitPercent = newLimit
+        binding.sliderLimit.value = newLimit.toFloat()
+        binding.tvLimit.text = getString(R.string.charge_limit_label, newLimit)
+
+        updateSmartLimitDifferentWarning()
+
+        Analytics.track(
+            "ai_smart_limit_apply",
+            mapOf(
+                "suggested_limit" to newLimit,
+                "reason" to suggestion.reason.name,
+                "confidence" to suggestion.confidence.name
+            )
+        )
+
+        Snackbar.make(
+            requireView(),
+            getString(R.string.charge_limit_label, newLimit),
+            Snackbar.LENGTH_SHORT
+        ).show()
+    }
+
     // ------------------------------------------------------------ 校准
 
     private fun startCalibration() {
@@ -123,19 +270,35 @@ class ChargeFragment : Fragment(R.layout.fragment_charge) {
     private fun enterStep(step: String) {
         app.prefs.calibrationStep = step
 
-        val (textRes, buttonRes) = when (step) {
-            Dictionary.CalibrationStep.DISCHARGE ->
-                R.string.charge_calibration_step_discharge to R.string.charge_calibration_next
-            Dictionary.CalibrationStep.FULL_CHARGE ->
-                R.string.charge_calibration_step_charge to R.string.charge_calibration_next
-            else ->
-                R.string.charge_calibration_step_verify to R.string.charge_calibration_finish
+        val guidance = app.calibrationCoach.getGuidanceForStep(step)
+
+        binding.tvCalibrationStep.text = "Step ${guidance.stepNumber}/3: ${guidance.title}"
+        binding.tvCalibrationWhy.text = guidance.whyItMatters
+        binding.tvCalibrationTime.text = "${getString(R.string.calibration_time)}: ${guidance.estimatedTime}"
+
+        if (guidance.recoveryHint != null) {
+            binding.tvCalibrationTip.visibility = View.VISIBLE
+            binding.tvCalibrationTip.text = guidance.recoveryHint
+        } else {
+            binding.tvCalibrationTip.visibility = View.GONE
         }
 
-        binding.tvCalibrationStep.text = getString(textRes)
-        binding.btnCalibrationNext.text = getString(buttonRes)
+        val buttonText = when (step) {
+            Dictionary.CalibrationStep.VERIFY -> getString(R.string.charge_calibration_finish)
+            else -> if (guidance.canSkipTo) "Continue" else getString(R.string.charge_calibration_next)
+        }
+        binding.btnCalibrationNext.text = buttonText
+
         binding.calibrationPanel.visibility = View.VISIBLE
         binding.btnCalibrate.visibility = View.GONE
+
+        Analytics.track(
+            "ai_calibration_coach_step",
+            mapOf(
+                "step" to step,
+                "can_skip" to guidance.canSkipTo
+            )
+        )
     }
 
     private fun advanceCalibration(view: View) {
@@ -151,13 +314,26 @@ class ChargeFragment : Fragment(R.layout.fragment_charge) {
     private fun finishCalibration(view: View) {
         val snap = app.batteryRepo.snapshot()
 
+        app.prefs.lastCalibrationCompletedAt = System.currentTimeMillis()
+
+        val crowdsourceData = if (app.prefs.calibrationCrowdsourceOptIn) {
+            mapOf(
+                "device_model" to android.os.Build.MODEL,
+                "measured_capacity_mah" to snap.capacityMah,
+                "health_score" to snap.healthScore
+            )
+        } else {
+            emptyMap()
+        }
+
         Analytics.track(
             Dictionary.Event.CALIBRATION_COMPLETED,
             mapOf(
                 "cycles_completed" to 1,
                 "measured_capacity_mah" to snap.capacityMah,
-                "deviation_percent" to 0.0
-            )
+                "deviation_percent" to 0.0,
+                "crowdsource_opted_in" to app.prefs.calibrationCrowdsourceOptIn
+            ) + crowdsourceData
         )
 
         app.prefs.clearCalibration()

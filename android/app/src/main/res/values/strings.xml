@@ -115,12 +115,11 @@
     <string name="settings_crowdsource_desc">Share anonymous charging data to improve AI predictions for everyone</string>
     <string name="settings_data_privacy">Data &amp; Privacy</string>
 
-    <!-- Coach Pass / Pro -->
-    <string name="title_pro">Coach Pass</string>
+    <!-- Pro -->
+    <string name="title_pro">Battery Coach Pro</string>
     <string name="pro_benefit_1">No ads, forever</string>
-    <string name="pro_benefit_2">Weekly charging report</string>
-    <string name="pro_benefit_3">Guided calibration</string>
-    <string name="pro_benefit_4">Ask Coach — personalized insights</string>
+    <string name="pro_benefit_2">AI-powered weekly charging report</string>
+    <string name="pro_benefit_3">AI calibration coach</string>
     <string name="pro_buy">Subscribe</string>
     <string name="pro_restore">Restore purchases</string>
     <string name="pro_owned">Thanks! You\'re already a Coach Pass member.</string>
@@ -165,20 +164,110 @@
     <string name="charge_calibration_next">Next</string>
     <string name="charge_calibration_finish">Done</string>
 
-    <!-- Temperature -->
-    <string name="temp_title">Battery Temperature</string>
-    <string name="temp_alarm_title">Temperature alarm</string>
-    <string name="temp_alarm_desc">Activate temperature alerts for timely notifications when thresholds are exceeded.</string>
-    <string name="temp_normal">Normal</string>
-    <string name="temp_high">High (&gt;= 35°C)</string>
-    <string name="temp_average">Average</string>
-    <string name="temp_minimum">Minimum</string>
-    <string name="temp_maximum">Maximum</string>
+    <!-- AI Insight -->
+    <string name="ai_insight_title">AI Coach</string>
+    <string name="ai_insight_refresh">Refresh</string>
+    <string name="ai_insight_offline">Offline — showing last insight</string>
+    <string name="ai_insight_no_history">Keep charging for a few days so your coach can learn your habits.</string>
+    <string name="ai_insight_powered_by">Powered by AI. Estimates only.</string>
+    <string name="ai_insight_action_set_limit">Set Charge Limit</string>
+    <string name="ai_insight_action_calibrate">Start Calibration</string>
+    <string name="ai_insight_action_drain_detail">View Power Usage</string>
+    <string name="ai_insight_action_temp_alert">Enable Temp Alert</string>
 
-    <!-- Electric Current -->
-    <string name="current_title">Electric Current</string>
-    <string name="current_charging">Charging</string>
-    <string name="current_discharging">Discharging</string>
-    <string name="current_ma">%1$d mA</string>
-    <string name="current_watts">%1$.1f W</string>
+    <!-- Smart Limit -->
+    <string name="smart_limit_suggested">Suggested: %1$d%%</string>
+    <string name="smart_limit_apply">Apply</string>
+    <string name="smart_limit_reason_health">Based on your battery health score</string>
+    <string name="smart_limit_reason_temp">Recent high-temperature charging detected</string>
+    <string name="smart_limit_reason_default">Recommended for battery longevity</string>
+    <string name="smart_limit_different">Different from coach suggestion</string>
+
+    <!-- Widget -->
+    <string name="widget_name">Battery Coach</string>
+    <string name="widget_description">Shows battery level, temperature, and charging status</string>
+    <string name="widget_charging">Charging</string>
+    <string name="widget_not_charging">Not charging</string>
+
+    <!-- M2: Tonight\'s Charge Plan -->
+    <string name="charge_plan_title">Tonight\'s Charge Plan</string>
+    <string name="charge_plan_set_time">When do you need full charge?</string>
+    <string name="charge_plan_target">Target charge level</string>
+    <string name="charge_plan_create">Create Plan</string>
+    <string name="charge_plan_clear">Clear Plan</string>
+    <string name="charge_plan_ready_by">Ready by %1$02d:%2$02d</string>
+    <string name="charge_plan_start_at">Start charging around %1$02d:%2$02d</string>
+    <string name="charge_plan_estimated">Estimated %1$d minutes to reach %2$d%%</string>
+    <string name="charge_plan_heat_warning">Heat guidance available</string>
+    <string name="charge_plan_active">Active plan</string>
+    <string name="charge_plan_no_plan">No plan set. Create one to optimize overnight charging.</string>
+
+    <!-- M2: Calibration Coach -->
+    <string name="calibration_coach_title">Calibration Coach</string>
+    <string name="calibration_why">Why this step?</string>
+    <string name="calibration_time">Estimated time</string>
+    <string name="calibration_tip">Tip</string>
+    <string name="calibration_skip_available">You can proceed to next step</string>
+    <string name="calibration_recovery">If you need to stop…</string>
+
+    <!-- M2: Drain Detective -->
+    <string name="drain_detective_title">Drain Detective</string>
+    <string name="drain_detective_analyzing">Analyzing battery usage…</string>
+    <string name="drain_detective_grant_access">Grant Usage Access for detailed app analysis</string>
+    <string name="drain_detective_per_hour">%1$.1f%% per hour</string>
+    <string name="drain_detective_baseline">Your baseline: %1$.1f%% per hour</string>
+    <string name="drain_detective_deviation">%1$d%% %2$s than usual</string>
+    <string name="drain_detective_higher">higher</string>
+    <string name="drain_detective_lower">lower</string>
+    <string name="drain_detective_top_apps">Top battery users</string>
+
+    <!-- M2: Temperature Chart -->
+    <string name="temp_chart_title">Temperature (24h)</string>
+    <string name="temp_chart_max">Max: %1$.1f°C</string>
+    <string name="temp_chart_avg">Avg: %1$.1f°C</string>
+    <string name="temp_chart_no_data">Collecting temperature data…</string>
+    <string name="temp_chart_high_temp_warning">High temperature detected during charging</string>
+
+    <!-- M3: Weekly AI Report -->
+    <string name="weekly_report_title">Weekly Battery Report</string>
+    <string name="weekly_report_habits_score">Habits Score</string>
+    <string name="weekly_report_grade">Grade: %1$s</string>
+    <string name="weekly_report_sessions">%1$d charging sessions</string>
+    <string name="weekly_report_high_temp">%1$d high-temp charges</string>
+    <string name="weekly_report_avg_duration">Avg duration: %1$s</string>
+    <string name="weekly_report_best_day">Best day</string>
+    <string name="weekly_report_worst_day">Watch out</string>
+    <string name="weekly_report_top_apps">Top battery users</string>
+    <string name="weekly_report_actions">Recommended actions</string>
+    <string name="weekly_report_unlock">Unlock full report</string>
+    <string name="weekly_report_watch_ad">Watch ad for full report</string>
+    <string name="weekly_report_pro_only">Full report available with Pro</string>
+    <string name="weekly_report_summary_only">Summary (Free)</string>
+
+    <!-- M3: Rewarded / Coach Pass -->
+    <string name="coach_pass_title">24h Coach Pass</string>
+    <string name="coach_pass_active">Coach Pass active until %1$s</string>
+    <string name="coach_pass_unlock">Watch ad to unlock all features for 24 hours</string>
+    <string name="coach_pass_unlocked">Coach Pass activated!</string>
+    <string name="rewarded_loading">Loading…</string>
+    <string name="rewarded_unavailable">Reward not available right now</string>
+    <string name="rewarded_error">Something went wrong. Try again later.</string>
+
+    <!-- M3: Ask Coach -->
+    <string name="ask_coach_title">Ask Coach</string>
+    <string name="ask_coach_hint">Ask about battery, charging, or power…</string>
+    <string name="ask_coach_send">Send</string>
+    <string name="ask_coach_placeholder">Try: \"Should I charge overnight?\" or \"Why is my battery draining fast?\"</string>
+    <string name="ask_coach_thinking">Thinking…</string>
+    <string name="ask_coach_blocked">I can\'t help with that request.</string>
+
+    <!-- M4: Crowdsource Calibration -->
+    <string name="settings_crowdsource_title">Help improve Battery Coach</string>
+    <string name="settings_crowdsource_desc">Share anonymous calibration data (device model + battery stats) to help us improve accuracy for all users.</string>
+    <string name="settings_crowdsource_toggle">Share calibration data</string>
+    <string name="settings_crowdsource_privacy">Only anonymous, aggregated data is shared. No personal information.</string>
+
+    <!-- M4: Localization note -->
+    <!-- NOTE: All new M2-M4 strings are English-only in this release. -->
+    <!-- Translation follow-up required for: in, vi, th, hi, es, pt, fr, de, ru, pl, hu, sk -->
 </resources>

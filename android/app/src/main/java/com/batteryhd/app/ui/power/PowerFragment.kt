@@ -52,6 +52,33 @@ class PowerFragment : Fragment(R.layout.fragment_power) {
 
         updatePermissionState()
         loadRanking()
+        refreshDrainDetective()
+    }
+
+    private fun refreshDrainDetective() {
+        val analysis = app.drainDetective.analyze()
+
+        binding.tvDrainHeadline.text = analysis.headline
+        binding.tvDrainExplanation.text = analysis.explanation
+
+        if (analysis.drainPerHourPercent > 0) {
+            binding.tvDrainRate.visibility = View.VISIBLE
+            binding.tvDrainRate.text = getString(
+                R.string.drain_detective_per_hour,
+                analysis.drainPerHourPercent
+            )
+        } else {
+            binding.tvDrainRate.visibility = View.GONE
+        }
+
+        Analytics.track(
+            "ai_drain_detective_open",
+            mapOf(
+                "has_usage_access" to analysis.hasUsageAccess,
+                "confidence" to analysis.confidence.name,
+                "deviation_percent" to analysis.deviationPercent
+            )
+        )
     }
 
     override fun onResume() {
