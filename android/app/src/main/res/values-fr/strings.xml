@@ -1,0 +1,102 @@
+<resources>
+    <string name="app_name">Battery HD Pro</string>
+
+    <string name="consent_title">Avant de commencer</string>
+    <string name="consent_body">Nous collectons des données d\'utilisation anonymes (type d\'appareil, version de l\'application et fonctionnalités utilisées) pour améliorer l\'application. Ces données ne sont jamais liées à votre identité et ne contiennent ni numéro de téléphone, ni IMEI, ni position.</string>
+    <string name="consent_accept">Accepter et continuer</string>
+    <string name="consent_decline">Refuser</string>
+    <string name="consent_privacy">Lire la politique de confidentialité</string>
+    <string name="consent_note">Vous pouvez modifier ce choix à tout moment dans Paramètres → Données et confidentialité.</string>
+
+    <string name="nav_home">Accueil</string>
+    <string name="nav_monitor">Batterie</string>
+    <string name="nav_charge">Charge</string>
+    <string name="nav_power">Conso</string>
+    <string name="nav_saving">Éco</string>
+    <string name="nav_settings">Réglages</string>
+
+    <string name="home_health_title">Santé de la batterie</string>
+    <string name="home_level">%1$d%%</string>
+    <string name="home_temp">%1$.1f°C</string>
+    <string name="home_charging">En charge</string>
+    <string name="home_discharging">Pas en charge</string>
+    <string name="home_scenes">Autonomie estimée</string>
+    <string name="home_go_pro">Passer à Pro</string>
+
+    <string name="monitor_title">Détails de la batterie</string>
+    <string name="monitor_capacity">Capacité : %1$d mAh</string>
+    <string name="monitor_health_score">Score de santé : %1$d</string>
+    <string name="monitor_voltage">Tension : %1$.2f V</string>
+    <string name="monitor_technology">Type : %1$s</string>
+    <string name="monitor_expand">Voir l\'estimation d\'usage</string>
+
+    <string name="charge_title">Protection de la charge</string>
+    <string name="charge_limit_label">Limite de charge : %1$d%%</string>
+    <string name="charge_temp_alert">Alerte de température : %1$.1f°C</string>
+    <string name="charge_start_calibration">Démarrer l\'étalonnage</string>
+    <string name="calibration_done">Étalonnage terminé</string>
+    <string name="charge_status">État : %1$s</string>
+
+    <string name="power_title">Analyse de consommation</string>
+    <string name="power_permission_needed">L\'application a besoin de l\'accès aux données d\'utilisation pour afficher le classement de consommation.</string>
+    <string name="power_grant">Autoriser</string>
+    <string name="power_range_day">Aujourd\'hui</string>
+    <string name="power_range_week">Cette semaine</string>
+
+    <string name="saving_title">Économie intelligente</string>
+    <string name="saving_mode_balanced">Équilibré</string>
+    <string name="saving_mode_aggressive">Intensif</string>
+    <string name="saving_mode_custom">Personnalisé</string>
+    <string name="saving_enable">Activer l\'économie intelligente</string>
+    <string name="saving_apps">Choisir les applications à mettre en veille</string>
+
+    <string name="settings_title">Paramètres</string>
+    <string name="settings_language">Langue</string>
+    <string name="settings_language_system">Langue du système</string>
+    <string name="settings_analytics">Envoyer les données d\'utilisation</string>
+    <string name="settings_analytics_off">Désactiver la collecte</string>
+    <string name="settings_delete_data">Supprimer mes données</string>
+    <string name="settings_delete_done">Les données locales ont été supprimées</string>
+    <string name="settings_version">Version %1$s</string>
+
+    <string name="title_pro">Battery HD Pro</string>
+    <string name="pro_benefit_1">Sans publicité, pour toujours</string>
+    <string name="pro_benefit_2">Rapport de charge hebdomadaire</string>
+    <string name="pro_benefit_3">Étalonnage guidé</string>
+    <string name="pro_buy">S\'abonner</string>
+    <string name="pro_restore">Restaurer les achats</string>
+    <string name="pro_owned">Merci ! Vous êtes déjà Pro.</string>
+    <string name="pro_price_error">Prix indisponible</string>
+
+    <string name="notification_channel_alerts">Alertes batterie</string>
+    <string name="notification_channel_alerts_desc">Alertes de température et de limite de charge</string>
+    <string name="notification_channel_reports">Rapports</string>
+    <string name="notification_channel_reports_desc">Rapport de charge hebdomadaire</string>
+    <string name="notification_charge_limit_title">Limite de charge atteinte</string>
+    <string name="notification_charge_limit_text">La batterie a atteint %1$d%%. Débranchez le chargeur pour préserver sa santé.</string>
+    <string name="notification_temp_title">Température de la batterie élevée</string>
+    <string name="notification_temp_text">La température %1$.1f°C dépasse le seuil de %2$.1f°C. Interrompez la charge pour le moment.</string>
+    <string name="notification_weekly_report_title">Rapport de charge hebdomadaire</string>
+    <string name="notification_weekly_report_text">Consultez le résumé de vos habitudes de charge cette semaine.</string>
+
+    <string name="settings_reminders_title">Rappels</string>
+    <string name="settings_reminder_charge_limit">Limite de charge</string>
+    <string name="settings_reminder_temp_alert">Alerte de température</string>
+    <string name="settings_reminder_weekly_report">Rapport hebdomadaire</string>
+    <string name="settings_reminder_calibration">Rappel d\'étalonnage</string>
+    <string name="settings_notification_permission">Autoriser les notifications</string>
+    <string name="settings_notification_denied">Les notifications sont désactivées dans les paramètres système</string>
+
+    <string name="monitor_weekly_report">Voir le rapport hebdomadaire</string>
+    <string name="report_weekly_title">Rapport de la semaine %1$d</string>
+    <string name="report_weekly_summary">Durée de charge moyenne %1$s sur %2$d sessions.</string>
+    <string name="report_no_data">Pas encore de données de charge cette semaine.</string>
+
+    <string name="charge_calibration_step_discharge">Étape 1/3 : utilisez la batterie jusqu\'à moins de 20%%</string>
+    <string name="charge_calibration_step_charge">Étape 2/3 : chargez jusqu\'à 100%% sans débrancher</string>
+    <string name="charge_calibration_step_verify">Étape 3/3 : calcul de la capacité…</string>
+    <string name="charge_calibration_cancel">Annuler l\'étalonnage</string>
+    <string name="charge_calibration_abandoned">Étalonnage annulé</string>
+    <string name="charge_calibration_next">Suivant</string>
+    <string name="charge_calibration_finish">Terminer</string>
+</resources>

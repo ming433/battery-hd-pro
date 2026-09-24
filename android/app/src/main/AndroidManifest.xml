@@ -25,6 +25,7 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.BatteryHD"
+        android:localeConfig="@xml/locales_config"
         tools:targetApi="34">
 
         <!-- ─────────────────────────────────────────────────────────────

@@ -1,0 +1,102 @@
+<resources>
+    <string name="app_name">Battery HD Pro</string>
+
+    <string name="consent_title">शुरू करने से पहले</string>
+    <string name="consent_body">हम ऐप को बेहतर बनाने के लिए अनाम उपयोग डेटा (डिवाइस का प्रकार, ऐप संस्करण और आपके इस्तेमाल किए फ़ीचर) इकट्ठा करते हैं। यह डेटा कभी आपकी पहचान से नहीं जोड़ा जाता और इसमें फ़ोन नंबर, IMEI या स्थान नहीं होता।</string>
+    <string name="consent_accept">सहमत हों और जारी रखें</string>
+    <string name="consent_decline">अस्वीकार करें</string>
+    <string name="consent_privacy">गोपनीयता नीति पढ़ें</string>
+    <string name="consent_note">आप यह विकल्प कभी भी सेटिंग्स → डेटा और गोपनीयता में बदल सकते हैं।</string>
+
+    <string name="nav_home">होम</string>
+    <string name="nav_monitor">बैटरी</string>
+    <string name="nav_charge">चार्ज</string>
+    <string name="nav_power">पावर</string>
+    <string name="nav_saving">बचत</string>
+    <string name="nav_settings">सेटिंग्स</string>
+
+    <string name="home_health_title">बैटरी स्वास्थ्य</string>
+    <string name="home_level">%1$d%%</string>
+    <string name="home_temp">%1$.1f°C</string>
+    <string name="home_charging">चार्ज हो रही है</string>
+    <string name="home_discharging">चार्ज नहीं हो रही</string>
+    <string name="home_scenes">अनुमानित बैटरी जीवन</string>
+    <string name="home_go_pro">Pro अनलॉक करें</string>
+
+    <string name="monitor_title">बैटरी विवरण</string>
+    <string name="monitor_capacity">क्षमता: %1$d mAh</string>
+    <string name="monitor_health_score">स्वास्थ्य स्कोर: %1$d</string>
+    <string name="monitor_voltage">वोल्टेज: %1$.2f V</string>
+    <string name="monitor_technology">प्रकार: %1$s</string>
+    <string name="monitor_expand">अनुमानित उपयोग देखें</string>
+
+    <string name="charge_title">चार्ज सुरक्षा</string>
+    <string name="charge_limit_label">चार्ज सीमा: %1$d%%</string>
+    <string name="charge_temp_alert">तापमान चेतावनी: %1$.1f°C</string>
+    <string name="charge_start_calibration">कैलिब्रेशन शुरू करें</string>
+    <string name="calibration_done">कैलिब्रेशन पूरा हुआ</string>
+    <string name="charge_status">स्थिति: %1$s</string>
+
+    <string name="power_title">पावर विश्लेषण</string>
+    <string name="power_permission_needed">बिजली खपत की रैंकिंग दिखाने के लिए ऐप को उपयोग एक्सेस चाहिए।</string>
+    <string name="power_grant">अनुमति दें</string>
+    <string name="power_range_day">आज</string>
+    <string name="power_range_week">इस सप्ताह</string>
+
+    <string name="saving_title">स्मार्ट सेवर</string>
+    <string name="saving_mode_balanced">संतुलित</string>
+    <string name="saving_mode_aggressive">तीव्र</string>
+    <string name="saving_mode_custom">कस्टम</string>
+    <string name="saving_enable">स्मार्ट सेवर चालू करें</string>
+    <string name="saving_apps">हाइबरनेट करने के लिए ऐप चुनें</string>
+
+    <string name="settings_title">सेटिंग्स</string>
+    <string name="settings_language">भाषा</string>
+    <string name="settings_language_system">सिस्टम डिफ़ॉल्ट</string>
+    <string name="settings_analytics">उपयोग डेटा भेजें</string>
+    <string name="settings_analytics_off">संग्रह बंद करें</string>
+    <string name="settings_delete_data">मेरा डेटा हटाएं</string>
+    <string name="settings_delete_done">स्थानीय डेटा हटा दिया गया है</string>
+    <string name="settings_version">संस्करण %1$s</string>
+
+    <string name="title_pro">Battery HD Pro</string>
+    <string name="pro_benefit_1">हमेशा के लिए बिना विज्ञापन</string>
+    <string name="pro_benefit_2">साप्ताहिक चार्जिंग रिपोर्ट</string>
+    <string name="pro_benefit_3">निर्देशित कैलिब्रेशन</string>
+    <string name="pro_buy">सदस्यता लें</string>
+    <string name="pro_restore">खरीदारी पुनर्स्थापित करें</string>
+    <string name="pro_owned">धन्यवाद! आप पहले से Pro हैं।</string>
+    <string name="pro_price_error">कीमत उपलब्ध नहीं</string>
+
+    <string name="notification_channel_alerts">बैटरी चेतावनियाँ</string>
+    <string name="notification_channel_alerts_desc">तापमान और चार्ज-सीमा की चेतावनियाँ</string>
+    <string name="notification_channel_reports">रिपोर्ट</string>
+    <string name="notification_channel_reports_desc">साप्ताहिक चार्जिंग रिपोर्ट</string>
+    <string name="notification_charge_limit_title">चार्ज सीमा पूरी हुई</string>
+    <string name="notification_charge_limit_text">बैटरी %1$d%% तक पहुँच गई। बैटरी की सेहत के लिए चार्जर निकालें।</string>
+    <string name="notification_temp_title">बैटरी का तापमान अधिक है</string>
+    <string name="notification_temp_text">तापमान %1$.1f°C, %2$.1f°C की सीमा से ऊपर है। अभी चार्ज रोकें।</string>
+    <string name="notification_weekly_report_title">साप्ताहिक चार्जिंग रिपोर्ट</string>
+    <string name="notification_weekly_report_text">इस सप्ताह की चार्जिंग आदतों का सारांश देखें।</string>
+
+    <string name="settings_reminders_title">रिमाइंडर</string>
+    <string name="settings_reminder_charge_limit">चार्ज सीमा</string>
+    <string name="settings_reminder_temp_alert">तापमान चेतावनी</string>
+    <string name="settings_reminder_weekly_report">साप्ताहिक रिपोर्ट</string>
+    <string name="settings_reminder_calibration">कैलिब्रेशन रिमाइंडर</string>
+    <string name="settings_notification_permission">सूचनाओं की अनुमति दें</string>
+    <string name="settings_notification_denied">सिस्टम सेटिंग्स में सूचनाएँ बंद हैं</string>
+
+    <string name="monitor_weekly_report">साप्ताहिक रिपोर्ट देखें</string>
+    <string name="report_weekly_title">सप्ताह %1$d की रिपोर्ट</string>
+    <string name="report_weekly_summary">%2$d सत्रों में औसत चार्ज अवधि %1$s।</string>
+    <string name="report_no_data">इस सप्ताह अभी कोई चार्जिंग डेटा नहीं है।</string>
+
+    <string name="charge_calibration_step_discharge">चरण 1/3: बैटरी को 20%% से नीचे तक इस्तेमाल करें</string>
+    <string name="charge_calibration_step_charge">चरण 2/3: बिना निकाले 100%% तक चार्ज करें</string>
+    <string name="charge_calibration_step_verify">चरण 3/3: क्षमता की गणना हो रही है…</string>
+    <string name="charge_calibration_cancel">कैलिब्रेशन रद्द करें</string>
+    <string name="charge_calibration_abandoned">कैलिब्रेशन रद्द कर दिया गया</string>
+    <string name="charge_calibration_next">आगे</string>
+    <string name="charge_calibration_finish">हो गया</string>
+</resources>

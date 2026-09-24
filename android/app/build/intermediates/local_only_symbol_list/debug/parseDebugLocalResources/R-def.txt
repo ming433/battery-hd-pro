@@ -34,6 +34,7 @@ id btnDeleteData
 id btnExpand
 id btnExpandScenes
 id btnGrant
+id btnLanguage
 id btnNotificationPermission
 id btnPickApps
 id btnPro
@@ -160,7 +161,9 @@ string power_title
 string pro_benefit_1
 string pro_benefit_2
 string pro_benefit_3
+string pro_billing_unavailable
 string pro_buy
+string pro_not_configured
 string pro_owned
 string pro_price_error
 string pro_restore
@@ -177,6 +180,8 @@ string settings_analytics
 string settings_analytics_off
 string settings_delete_data
 string settings_delete_done
+string settings_language
+string settings_language_system
 string settings_notification_denied
 string settings_notification_permission
 string settings_reminder_calibration
@@ -188,4 +193,5 @@ string settings_title
 string settings_version
 string title_pro
 style Theme.BatteryHD
+xml locales_config
 xml network_security_config

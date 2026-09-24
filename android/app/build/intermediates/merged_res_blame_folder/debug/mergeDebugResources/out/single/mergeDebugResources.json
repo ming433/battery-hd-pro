@@ -1,94 +1,102 @@
 [
     {
-        "merged": "com.batteryhd.app-debug-50:/drawable_ic_battery.xml.flat",
-        "source": "com.batteryhd.app-main-52:/drawable/ic_battery.xml"
+        "merged": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-debug-5:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-main-7:/drawable/ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-50:/layout_fragment_saving.xml.flat",
-        "source": "com.batteryhd.app-main-52:/layout/fragment_saving.xml"
+        "merged": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-debug-5:/layout_activity_main.xml.flat",
+        "source": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-main-7:/layout/activity_main.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-50:/drawable_ic_charge.xml.flat",
-        "source": "com.batteryhd.app-main-52:/drawable/ic_charge.xml"
+        "merged": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-debug-5:/layout_fragment_monitor.xml.flat",
+        "source": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-main-7:/layout/fragment_monitor.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-50:/menu_bottom_nav_menu.xml.flat",
-        "source": "com.batteryhd.app-main-52:/menu/bottom_nav_menu.xml"
+        "merged": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-debug-5:/xml_locales_config.xml.flat",
+        "source": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-main-7:/xml/locales_config.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-50:/layout_activity_consent.xml.flat",
-        "source": "com.batteryhd.app-main-52:/layout/activity_consent.xml"
+        "merged": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-debug-5:/drawable_ic_home.xml.flat",
+        "source": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-main-7:/drawable/ic_home.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-50:/layout_activity_pro.xml.flat",
-        "source": "com.batteryhd.app-main-52:/layout/activity_pro.xml"
+        "merged": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-debug-5:/drawable_ic_power.xml.flat",
+        "source": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-main-7:/drawable/ic_power.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-50:/drawable_ic_power.xml.flat",
-        "source": "com.batteryhd.app-main-52:/drawable/ic_power.xml"
+        "merged": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-debug-5:/drawable_ic_settings.xml.flat",
+        "source": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-main-7:/drawable/ic_settings.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-50:/drawable_ic_settings.xml.flat",
-        "source": "com.batteryhd.app-main-52:/drawable/ic_settings.xml"
+        "merged": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-debug-5:/xml_network_security_config.xml.flat",
+        "source": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-debug-6:/xml/network_security_config.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-50:/drawable_ic_home.xml.flat",
-        "source": "com.batteryhd.app-main-52:/drawable/ic_home.xml"
+        "merged": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-debug-5:/layout_fragment_home.xml.flat",
+        "source": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-main-7:/layout/fragment_home.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-50:/layout_fragment_home.xml.flat",
-        "source": "com.batteryhd.app-main-52:/layout/fragment_home.xml"
+        "merged": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-debug-5:/layout_fragment_saving.xml.flat",
+        "source": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-main-7:/layout/fragment_saving.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-50:/xml_network_security_config.xml.flat",
-        "source": "com.batteryhd.app-debug-51:/xml/network_security_config.xml"
+        "merged": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-debug-5:/drawable_ic_stat_battery.xml.flat",
+        "source": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-main-7:/drawable/ic_stat_battery.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-50:/layout_fragment_settings.xml.flat",
-        "source": "com.batteryhd.app-main-52:/layout/fragment_settings.xml"
+        "merged": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-debug-5:/layout_activity_pro.xml.flat",
+        "source": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-main-7:/layout/activity_pro.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-50:/menu_main_menu.xml.flat",
-        "source": "com.batteryhd.app-main-52:/menu/main_menu.xml"
+        "merged": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-debug-5:/layout_activity_consent.xml.flat",
+        "source": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-main-7:/layout/activity_consent.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-50:/drawable_ic_stat_battery.xml.flat",
-        "source": "com.batteryhd.app-main-52:/drawable/ic_stat_battery.xml"
+        "merged": "com.batteryhd.app-debug-5:/layout_fragment_home.xml.flat",
+        "source": "com.batteryhd.app-main-7:/layout/fragment_home.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-50:/drawable_ic_saving.xml.flat",
-        "source": "com.batteryhd.app-main-52:/drawable/ic_saving.xml"
+        "merged": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-debug-5:/drawable_ic_charge.xml.flat",
+        "source": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-main-7:/drawable/ic_charge.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-50:/layout_fragment_power.xml.flat",
-        "source": "com.batteryhd.app-main-52:/layout/fragment_power.xml"
+        "merged": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-debug-5:/menu_bottom_nav_menu.xml.flat",
+        "source": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-main-7:/menu/bottom_nav_menu.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-50:/layout_fragment_monitor.xml.flat",
-        "source": "com.batteryhd.app-main-52:/layout/fragment_monitor.xml"
+        "merged": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-debug-5:/layout_item_app.xml.flat",
+        "source": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-main-7:/layout/item_app.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-50:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.batteryhd.app-main-52:/drawable/ic_launcher_foreground.xml"
+        "merged": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-debug-5:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-main-7:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-50:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.batteryhd.app-main-52:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-debug-5:/menu_main_menu.xml.flat",
+        "source": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-main-7:/menu/main_menu.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-50:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.batteryhd.app-main-52:/drawable/ic_launcher_background.xml"
+        "merged": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-debug-5:/drawable_ic_battery.xml.flat",
+        "source": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-main-7:/drawable/ic_battery.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-50:/layout_fragment_charge.xml.flat",
-        "source": "com.batteryhd.app-main-52:/layout/fragment_charge.xml"
+        "merged": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-debug-5:/layout_fragment_settings.xml.flat",
+        "source": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-main-7:/layout/fragment_settings.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-50:/layout_item_app.xml.flat",
-        "source": "com.batteryhd.app-main-52:/layout/item_app.xml"
+        "merged": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-debug-5:/layout_fragment_charge.xml.flat",
+        "source": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-main-7:/layout/fragment_charge.xml"
     },
     {
-        "merged": "com.batteryhd.app-debug-50:/layout_activity_main.xml.flat",
-        "source": "com.batteryhd.app-main-52:/layout/activity_main.xml"
+        "merged": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-debug-5:/drawable_ic_saving.xml.flat",
+        "source": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-main-7:/drawable/ic_saving.xml"
+    },
+    {
+        "merged": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-debug-5:/layout_fragment_power.xml.flat",
+        "source": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-main-7:/layout/fragment_power.xml"
+    },
+    {
+        "merged": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-debug-5:/drawable_ic_launcher_background.xml.flat",
+        "source": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/daemon/8.9/com.batteryhd.app-main-7:/drawable/ic_launcher_background.xml"
     }
 ]

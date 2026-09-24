@@ -6,6 +6,7 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Bundle
+import android.view.Gravity
 import android.view.View
 import android.widget.FrameLayout
 import com.batteryhd.analytics.Analytics
@@ -126,7 +127,12 @@ class AdsManager(
 
         val adView = AdView(container.context)
         adView.adUnitId = unitId
-        adView.setAdSize(AdSize.BANNER)
+        adView.setAdSize(fullWidthBannerSize(container))
+        adView.layoutParams = FrameLayout.LayoutParams(
+            FrameLayout.LayoutParams.MATCH_PARENT,
+            FrameLayout.LayoutParams.WRAP_CONTENT,
+            Gravity.CENTER_HORIZONTAL
+        )
 
         adView.onPaidEventListener = com.google.android.gms.ads.OnPaidEventListener { adValue ->
             reportRevenue(key, unitId, adValue)
@@ -177,6 +183,14 @@ class AdsManager(
         }
 
         adView.loadAd(buildRequest())
+    }
+
+    /** 按容器实际宽度取锚定自适应 Banner，避免固定 320dp 两侧留白。 */
+    private fun fullWidthBannerSize(container: FrameLayout): AdSize {
+        val metrics = container.resources.displayMetrics
+        val widthPx = if (container.width > 0) container.width else metrics.widthPixels
+        val adWidthDp = (widthPx / metrics.density).toInt().coerceAtLeast(1)
+        return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(container.context, adWidthDp)
     }
 
     // ------------------------------------------------------------ 插屏

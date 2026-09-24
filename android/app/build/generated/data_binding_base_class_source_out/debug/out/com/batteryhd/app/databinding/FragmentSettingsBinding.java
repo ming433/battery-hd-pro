@@ -25,6 +25,9 @@ public final class FragmentSettingsBinding implements ViewBinding {
   public final Button btnDeleteData;
 
   @NonNull
+  public final Button btnLanguage;
+
+  @NonNull
   public final Button btnNotificationPermission;
 
   @NonNull
@@ -49,13 +52,15 @@ public final class FragmentSettingsBinding implements ViewBinding {
   public final TextView tvVersion;
 
   private FragmentSettingsBinding(@NonNull LinearLayout rootView, @NonNull Button btnDeleteData,
-      @NonNull Button btnNotificationPermission, @NonNull Button btnPro,
-      @NonNull MaterialSwitch switchAnalytics, @NonNull MaterialSwitch switchReminderCalibration,
+      @NonNull Button btnLanguage, @NonNull Button btnNotificationPermission,
+      @NonNull Button btnPro, @NonNull MaterialSwitch switchAnalytics,
+      @NonNull MaterialSwitch switchReminderCalibration,
       @NonNull MaterialSwitch switchReminderChargeLimit,
       @NonNull MaterialSwitch switchReminderTempAlert,
       @NonNull MaterialSwitch switchReminderWeeklyReport, @NonNull TextView tvVersion) {
     this.rootView = rootView;
     this.btnDeleteData = btnDeleteData;
+    this.btnLanguage = btnLanguage;
     this.btnNotificationPermission = btnNotificationPermission;
     this.btnPro = btnPro;
     this.switchAnalytics = switchAnalytics;
@@ -96,6 +101,12 @@ public final class FragmentSettingsBinding implements ViewBinding {
       id = R.id.btnDeleteData;
       Button btnDeleteData = ViewBindings.findChildViewById(rootView, id);
       if (btnDeleteData == null) {
+        break missingId;
+      }
+
+      id = R.id.btnLanguage;
+      Button btnLanguage = ViewBindings.findChildViewById(rootView, id);
+      if (btnLanguage == null) {
         break missingId;
       }
 
@@ -147,7 +158,7 @@ public final class FragmentSettingsBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentSettingsBinding((LinearLayout) rootView, btnDeleteData,
+      return new FragmentSettingsBinding((LinearLayout) rootView, btnDeleteData, btnLanguage,
           btnNotificationPermission, btnPro, switchAnalytics, switchReminderCalibration,
           switchReminderChargeLimit, switchReminderTempAlert, switchReminderWeeklyReport,
           tvVersion);

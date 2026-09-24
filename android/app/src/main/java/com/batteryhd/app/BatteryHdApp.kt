@@ -58,6 +58,7 @@ class BatteryHdApp : Application() {
         chargeTracker = ChargeSessionTracker(this, prefs, batteryRepo)
         ads = AdsManager(this, prefs)
         billing = BillingManager(this, prefs) { pro -> onProChanged?.invoke(pro) }
+        billing.start()
 
         if (prefs.firstLaunchAt == 0L) {
             prefs.firstLaunchAt = System.currentTimeMillis()

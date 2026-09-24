@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.batteryhd.app-mergeDebugResources-48:/values-en-rIN/values-en-rIN.xml",
+            "outputFile": "com.batteryhd.app-mergeDebugResources-3:/values-en-rIN/values-en-rIN.xml",
             "map": [
                 {
-                    "source": "/Users/ming.yang/.gradle/caches/8.9/transforms/49c4f5d1a966de01c909e91be9c4e3f8/transformed/appcompat-1.7.0/res/values-en-rIN/values-en-rIN.xml",
+                    "source": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/caches/8.9/transforms/49c4f5d1a966de01c909e91be9c4e3f8/transformed/appcompat-1.7.0/res/values-en-rIN/values-en-rIN.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/ming.yang/.gradle/caches/8.9/transforms/9155d5eaa60b313c76699f88d3330471/transformed/core-1.13.1/res/values-en-rIN/values-en-rIN.xml",
+                    "source": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/caches/8.9/transforms/9155d5eaa60b313c76699f88d3330471/transformed/core-1.13.1/res/values-en-rIN/values-en-rIN.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "/Users/ming.yang/.gradle/caches/8.9/transforms/e861ea547b910808ea217b8db8afbe75/transformed/browser-1.8.0/res/values-en-rIN/values-en-rIN.xml",
+                    "source": "/private/var/folders/jb/rkh1rg5s5px2wmxdy_1_78880000gn/T/cursor-sandbox-cache/77a741dcf3c5b496f4cdf6938cbcb19a/gradle/caches/8.9/transforms/e861ea547b910808ea217b8db8afbe75/transformed/browser-1.8.0/res/values-en-rIN/values-en-rIN.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

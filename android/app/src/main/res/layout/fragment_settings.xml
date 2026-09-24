@@ -19,6 +19,21 @@
             android:text="@string/settings_title"
             android:textAppearance="?attr/textAppearanceTitleMedium" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/settings_language"
+            android:textAppearance="?attr/textAppearanceTitleSmall" />
+
+        <Button
+            android:id="@+id/btnLanguage"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/settings_language_system" />
+
         <!-- 埋点总开关：PRD 10.6.2 要求用户可随时关闭。
              关闭后 SDK 停止采集与上报，但广告配置下发不受影响（10.1 原则 5 隔离）。 -->
         <com.google.android.material.materialswitch.MaterialSwitch

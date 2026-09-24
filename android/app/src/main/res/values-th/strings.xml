@@ -1,0 +1,102 @@
+<resources>
+    <string name="app_name">Battery HD Pro</string>
+
+    <string name="consent_title">ก่อนเริ่มต้น</string>
+    <string name="consent_body">เราเก็บข้อมูลการใช้งานแบบไม่ระบุตัวตน (ประเภทอุปกรณ์ เวอร์ชันแอป และฟีเจอร์ที่คุณใช้) เพื่อปรับปรุงแอป ข้อมูลนี้ไม่เชื่อมกับตัวตนของคุณ และไม่มีเบอร์โทร IMEI หรือตำแหน่ง</string>
+    <string name="consent_accept">ยอมรับและดำเนินการต่อ</string>
+    <string name="consent_decline">ปฏิเสธ</string>
+    <string name="consent_privacy">อ่านนโยบายความเป็นส่วนตัว</string>
+    <string name="consent_note">คุณเปลี่ยนตัวเลือกนี้ได้ทุกเมื่อในการตั้งค่า → ข้อมูลและความเป็นส่วนตัว</string>
+
+    <string name="nav_home">หน้าแรก</string>
+    <string name="nav_monitor">แบตเตอรี่</string>
+    <string name="nav_charge">การชาร์จ</string>
+    <string name="nav_power">พลังงาน</string>
+    <string name="nav_saving">ประหยัด</string>
+    <string name="nav_settings">การตั้งค่า</string>
+
+    <string name="home_health_title">สุขภาพแบตเตอรี่</string>
+    <string name="home_level">%1$d%%</string>
+    <string name="home_temp">%1$.1f°C</string>
+    <string name="home_charging">กำลังชาร์จ</string>
+    <string name="home_discharging">ไม่ได้ชาร์จ</string>
+    <string name="home_scenes">ระยะเวลาใช้งานโดยประมาณ</string>
+    <string name="home_go_pro">ปลดล็อก Pro</string>
+
+    <string name="monitor_title">รายละเอียดแบตเตอรี่</string>
+    <string name="monitor_capacity">ความจุ: %1$d mAh</string>
+    <string name="monitor_health_score">คะแนนสุขภาพ: %1$d</string>
+    <string name="monitor_voltage">แรงดัน: %1$.2f V</string>
+    <string name="monitor_technology">ชนิด: %1$s</string>
+    <string name="monitor_expand">ดูการใช้งานโดยประมาณ</string>
+
+    <string name="charge_title">การป้องกันขณะชาร์จ</string>
+    <string name="charge_limit_label">ขีดจำกัดการชาร์จ: %1$d%%</string>
+    <string name="charge_temp_alert">การแจ้งเตือนอุณหภูมิ: %1$.1f°C</string>
+    <string name="charge_start_calibration">เริ่มปรับเทียบ</string>
+    <string name="calibration_done">ปรับเทียบเสร็จแล้ว</string>
+    <string name="charge_status">สถานะ: %1$s</string>
+
+    <string name="power_title">วิเคราะห์การใช้พลังงาน</string>
+    <string name="power_permission_needed">แอปต้องได้รับสิทธิ์การเข้าถึงการใช้งาน เพื่อแสดงอันดับแอปที่ใช้พลังงาน</string>
+    <string name="power_grant">ให้สิทธิ์</string>
+    <string name="power_range_day">วันนี้</string>
+    <string name="power_range_week">สัปดาห์นี้</string>
+
+    <string name="saving_title">ประหยัดอัจฉริยะ</string>
+    <string name="saving_mode_balanced">สมดุล</string>
+    <string name="saving_mode_aggressive">เข้มงวด</string>
+    <string name="saving_mode_custom">กำหนดเอง</string>
+    <string name="saving_enable">เปิดประหยัดอัจฉริยะ</string>
+    <string name="saving_apps">เลือกแอปที่จะพักการทำงาน</string>
+
+    <string name="settings_title">การตั้งค่า</string>
+    <string name="settings_language">ภาษา</string>
+    <string name="settings_language_system">ตามระบบ</string>
+    <string name="settings_analytics">ส่งข้อมูลการใช้งาน</string>
+    <string name="settings_analytics_off">ปิดการเก็บข้อมูล</string>
+    <string name="settings_delete_data">ลบข้อมูลของฉัน</string>
+    <string name="settings_delete_done">ลบข้อมูลในเครื่องแล้ว</string>
+    <string name="settings_version">เวอร์ชัน %1$s</string>
+
+    <string name="title_pro">Battery HD Pro</string>
+    <string name="pro_benefit_1">ไม่มีโฆษณาถาวร</string>
+    <string name="pro_benefit_2">รายงานการชาร์จรายสัปดาห์</string>
+    <string name="pro_benefit_3">ปรับเทียบแบบมีขั้นตอน</string>
+    <string name="pro_buy">สมัครสมาชิก</string>
+    <string name="pro_restore">กู้คืนการซื้อ</string>
+    <string name="pro_owned">ขอบคุณ! คุณเป็น Pro แล้ว</string>
+    <string name="pro_price_error">ไม่มีราคา</string>
+
+    <string name="notification_channel_alerts">การแจ้งเตือนแบตเตอรี่</string>
+    <string name="notification_channel_alerts_desc">การแจ้งเตือนอุณหภูมิและขีดจำกัดการชาร์จ</string>
+    <string name="notification_channel_reports">รายงาน</string>
+    <string name="notification_channel_reports_desc">รายงานการชาร์จรายสัปดาห์</string>
+    <string name="notification_charge_limit_title">ถึงขีดจำกัดการชาร์จแล้ว</string>
+    <string name="notification_charge_limit_text">แบตเตอรี่ถึง %1$d%% แล้ว ถอดที่ชาร์จเพื่อถนอมแบตเตอรี่</string>
+    <string name="notification_temp_title">อุณหภูมิแบตเตอรี่สูง</string>
+    <string name="notification_temp_text">อุณหภูมิ %1$.1f°C สูงกว่าเกณฑ์ %2$.1f°C โปรดหยุดชาร์จชั่วคราว</string>
+    <string name="notification_weekly_report_title">รายงานการชาร์จรายสัปดาห์</string>
+    <string name="notification_weekly_report_text">ดูสรุปพฤติกรรมการชาร์จในสัปดาห์นี้</string>
+
+    <string name="settings_reminders_title">การเตือน</string>
+    <string name="settings_reminder_charge_limit">ขีดจำกัดการชาร์จ</string>
+    <string name="settings_reminder_temp_alert">การแจ้งเตือนอุณหภูมิ</string>
+    <string name="settings_reminder_weekly_report">รายงานรายสัปดาห์</string>
+    <string name="settings_reminder_calibration">เตือนให้ปรับเทียบ</string>
+    <string name="settings_notification_permission">อนุญาตการแจ้งเตือน</string>
+    <string name="settings_notification_denied">การแจ้งเตือนถูกปิดในการตั้งค่าระบบ</string>
+
+    <string name="monitor_weekly_report">ดูรายงานรายสัปดาห์</string>
+    <string name="report_weekly_title">รายงานสัปดาห์ที่ %1$d</string>
+    <string name="report_weekly_summary">ระยะเวลาชาร์จเฉลี่ย %1$s จาก %2$d ครั้ง</string>
+    <string name="report_no_data">สัปดาห์นี้ยังไม่มีข้อมูลการชาร์จ</string>
+
+    <string name="charge_calibration_step_discharge">ขั้นตอนที่ 1/3: ใช้แบตเตอรี่จนต่ำกว่า 20%%</string>
+    <string name="charge_calibration_step_charge">ขั้นตอนที่ 2/3: ชาร์จถึง 100%% โดยไม่ถอดสาย</string>
+    <string name="charge_calibration_step_verify">ขั้นตอนที่ 3/3: กำลังคำนวณความจุ…</string>
+    <string name="charge_calibration_cancel">ยกเลิกการปรับเทียบ</string>
+    <string name="charge_calibration_abandoned">ยกเลิกการปรับเทียบแล้ว</string>
+    <string name="charge_calibration_next">ถัดไป</string>
+    <string name="charge_calibration_finish">เสร็จสิ้น</string>
+</resources>

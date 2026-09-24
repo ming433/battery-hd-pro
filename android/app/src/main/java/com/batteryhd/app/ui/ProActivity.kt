@@ -32,6 +32,7 @@ class ProActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityProBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.toolbar.setNavigationOnClickListener { finish() }
 
         Analytics.track(
             Dictionary.Event.PRO_PAGE_VIEWED,
@@ -50,14 +51,30 @@ class ProActivity : AppCompatActivity() {
             binding.btnBuy.text = getString(R.string.pro_owned)
         }
 
-        app.billing.queryProducts { price ->
-            binding.tvPrice.text = price
+        if (!app.billing.isConfigured) {
+            binding.tvPrice.setText(R.string.pro_not_configured)
+            binding.btnBuy.isEnabled = false
+        } else {
+            app.billing.queryProducts { price ->
+                runOnUiThread {
+                    binding.tvPrice.text = when {
+                        price.isNotEmpty() -> price
+                        app.billing.isPlayReady -> getString(R.string.pro_not_configured)
+                        else -> getString(R.string.pro_billing_unavailable)
+                    }
+                }
+            }
         }
 
         binding.btnBuy.setOnClickListener {
-            val ok = app.billing.launchPurchase(this)
-            if (!ok) {
-                Toast.makeText(this, R.string.pro_price_error, Toast.LENGTH_SHORT).show()
+            if (!app.billing.isConfigured) {
+                Toast.makeText(this, R.string.pro_not_configured, Toast.LENGTH_LONG).show()
+                return@setOnClickListener
+            }
+            app.billing.purchase(this) { ok ->
+                if (!ok && !isFinishing) {
+                    Toast.makeText(this, R.string.pro_billing_unavailable, Toast.LENGTH_LONG).show()
+                }
             }
         }
 
@@ -81,7 +98,7 @@ class ProActivity : AppCompatActivity() {
 
     companion object {
         private const val EXTRA_SOURCE = "source"
-        const val PLAN_ID: String = BillingManager.PLAN_ID
+        val PLAN_ID: String = BillingManager.PLAN_ID
 
         fun intent(context: Context, source: String): Intent =
             Intent(context, ProActivity::class.java).putExtra(EXTRA_SOURCE, source)

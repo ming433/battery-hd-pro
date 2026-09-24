@@ -1,11 +1,14 @@
 package com.batteryhd.app.ui
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.fragment.app.Fragment
 import com.batteryhd.analytics.Analytics
 import com.batteryhd.analytics.Dictionary
@@ -30,6 +33,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private var currentScreen: String = Dictionary.Screen.HOME_DASHBOARD
+    private var settingsOpen = false
 
     private val app: BatteryHdApp get() = application as BatteryHdApp
 
@@ -39,11 +43,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setSupportActionBar(binding.toolbar)
-        binding.toolbar.inflateMenu(R.menu.main_menu)
-        binding.toolbar.setOnMenuItemClickListener { onToolbarItemSelected(it) }
 
         setupBackHandling()
         setupBottomNav()
+
+        settingsOpen = supportFragmentManager.backStackEntryCount > 0
+        showSettingsNavigation(settingsOpen)
+        syncBottomNavVisibility()
 
         if (savedInstanceState == null) {
             showTab(R.id.nav_home)
@@ -51,6 +57,19 @@ class MainActivity : AppCompatActivity() {
         }
 
         handleNotificationIntent(intent)
+    }
+
+    override fun onStart() {
+        super.onStart()
+        // 切换语言会重建 Activity。设置页在返回栈里时，底栏保持隐藏，顶栏保留返回。
+        settingsOpen = supportFragmentManager.backStackEntryCount > 0
+        syncBottomNavVisibility()
+        showSettingsNavigation(settingsOpen)
+    }
+
+    override fun onPrepareOptionsMenu(menu: Menu): Boolean {
+        menu.findItem(R.id.action_settings)?.isVisible = !settingsOpen
+        return super.onPrepareOptionsMenu(menu)
     }
 
     override fun onNewIntent(intent: Intent) {
@@ -78,41 +97,53 @@ class MainActivity : AppCompatActivity() {
     // ------------------------------------------------------------ 导航
 
     private fun setupBottomNav() {
+        // 配置变更（含应用内切换语言）会恢复已选中的 tab，并回调这个监听。
+        // 若此时设置页还在返回栈里，直接 showTab 会把它弹出。等首帧后再接受点击。
+        var acceptSelection = false
         binding.bottomNav.setOnItemSelectedListener { item ->
-            showTab(item.itemId)
+            if (acceptSelection) showTab(item.itemId)
             true
         }
+        binding.bottomNav.post { acceptSelection = true }
         // 重复点击同一 tab 不重建 Fragment，避免埋点重复与 UI 闪烁
         binding.bottomNav.setOnItemReselectedListener { /* no-op */ }
     }
 
     private fun showTab(itemId: Int) {
+        settingsOpen = false
+        showSettingsNavigation(false)
         binding.bottomNav.visibility = View.VISIBLE
         supportFragmentManager.popBackStack()
 
-        val (fragment, screen) = when (itemId) {
-            R.id.nav_home -> HomeFragment() to Dictionary.Screen.HOME_DASHBOARD
-            R.id.nav_monitor -> MonitorFragment() to Dictionary.Screen.BATTERY_MONITOR
-            R.id.nav_charge -> ChargeFragment() to Dictionary.Screen.CHARGE_PROTECTION
-            R.id.nav_power -> PowerFragment() to Dictionary.Screen.POWER_ANALYSIS
-            R.id.nav_saving -> SavingFragment() to Dictionary.Screen.SMART_SAVING
-            else -> HomeFragment() to Dictionary.Screen.HOME_DASHBOARD
+        val fragment = when (itemId) {
+            R.id.nav_monitor -> MonitorFragment()
+            R.id.nav_charge -> ChargeFragment()
+            R.id.nav_power -> PowerFragment()
+            R.id.nav_saving -> SavingFragment()
+            else -> HomeFragment()
         }
 
         replaceFragment(fragment)
-        trackScreen(screen)
+        trackScreen(screenForTab(itemId))
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return onToolbarItemSelected(item) || super.onOptionsItemSelected(item)
     }
 
     private fun onToolbarItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_settings -> {
-                // 设置不在底栏，进入时隐藏底栏并压栈
-                binding.bottomNav.visibility = View.GONE
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragmentContainer, SettingsFragment())
-                    .addToBackStack(TAG_SETTINGS)
-                    .commit()
-                trackScreen(Dictionary.Screen.SETTINGS)
+                openSettings()
+                true
+            }
+            android.R.id.home -> {
+                if (settingsOpen) leaveSettings()
                 true
             }
             else -> false
@@ -168,13 +199,67 @@ class MainActivity : AppCompatActivity() {
             .commit()
     }
 
+    private fun openSettings() {
+        if (settingsOpen) return
+        settingsOpen = true
+        binding.bottomNav.visibility = View.GONE
+        showSettingsNavigation(true)
+        invalidateOptionsMenu()
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragmentContainer, SettingsFragment())
+            .addToBackStack(TAG_SETTINGS)
+            .commit()
+        trackScreen(Dictionary.Screen.SETTINGS)
+    }
+
+    private fun leaveSettings() {
+        if (!settingsOpen) return
+        settingsOpen = false
+        if (supportFragmentManager.backStackEntryCount > 0) {
+            supportFragmentManager.popBackStack()
+        }
+        binding.bottomNav.visibility = View.VISIBLE
+        showSettingsNavigation(false)
+        invalidateOptionsMenu()
+        trackScreen(screenForTab(binding.bottomNav.selectedItemId))
+    }
+
+    private fun showSettingsNavigation(inSettings: Boolean) {
+        if (inSettings) {
+            val icon = AppCompatResources.getDrawable(
+                this,
+                androidx.appcompat.R.drawable.abc_ic_ab_back_material
+            )?.mutate()
+            icon?.setTint(Color.WHITE)
+            binding.toolbar.navigationIcon = icon
+            binding.toolbar.navigationContentDescription =
+                getString(androidx.appcompat.R.string.abc_action_bar_up_description)
+            binding.toolbar.setNavigationOnClickListener { leaveSettings() }
+            binding.toolbar.title = getString(R.string.settings_title)
+        } else {
+            binding.toolbar.navigationIcon = null
+            binding.toolbar.setNavigationOnClickListener(null)
+            binding.toolbar.title = getString(R.string.app_name)
+        }
+    }
+
+    private fun screenForTab(itemId: Int): String = when (itemId) {
+        R.id.nav_monitor -> Dictionary.Screen.BATTERY_MONITOR
+        R.id.nav_charge -> Dictionary.Screen.CHARGE_PROTECTION
+        R.id.nav_power -> Dictionary.Screen.POWER_ANALYSIS
+        R.id.nav_saving -> Dictionary.Screen.SMART_SAVING
+        else -> Dictionary.Screen.HOME_DASHBOARD
+    }
+
+    private fun syncBottomNavVisibility() {
+        binding.bottomNav.visibility = if (settingsOpen) View.GONE else View.VISIBLE
+    }
+
     private fun setupBackHandling() {
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                if (supportFragmentManager.backStackEntryCount > 0) {
-                    supportFragmentManager.popBackStack()
-                    binding.bottomNav.visibility = View.VISIBLE
-                    trackScreen(Dictionary.Screen.HOME_DASHBOARD)
+                if (settingsOpen || supportFragmentManager.backStackEntryCount > 0) {
+                    leaveSettings()
                 } else {
                     finish()
                 }

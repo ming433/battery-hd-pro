@@ -12,10 +12,10 @@
 12      INTERNET 用于上报与配置拉取。
 13    -->
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->/Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/analytics-sdk/src/main/AndroidManifest.xml:11:5-67
-14-->/Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/analytics-sdk/src/main/AndroidManifest.xml:11:22-64
+14-->/Users/mingyang/androidWork/battery-hd-pro/android/analytics-sdk/src/main/AndroidManifest.xml:11:5-67
+14-->/Users/mingyang/androidWork/battery-hd-pro/android/analytics-sdk/src/main/AndroidManifest.xml:11:22-64
 15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-15-->/Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/analytics-sdk/src/main/AndroidManifest.xml:12:5-79
-15-->/Users/ming.yang/WorkBuddy/Battery-HD-Pro/android/analytics-sdk/src/main/AndroidManifest.xml:12:22-76
+15-->/Users/mingyang/androidWork/battery-hd-pro/android/analytics-sdk/src/main/AndroidManifest.xml:12:5-79
+15-->/Users/mingyang/androidWork/battery-hd-pro/android/analytics-sdk/src/main/AndroidManifest.xml:12:22-76
 16
 17</manifest>

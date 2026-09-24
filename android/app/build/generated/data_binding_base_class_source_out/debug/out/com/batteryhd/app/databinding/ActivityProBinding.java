@@ -5,26 +5,30 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ScrollView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.batteryhd.app.R;
+import com.google.android.material.appbar.MaterialToolbar;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class ActivityProBinding implements ViewBinding {
   @NonNull
-  private final ScrollView rootView;
+  private final LinearLayout rootView;
 
   @NonNull
   public final Button btnBuy;
 
   @NonNull
   public final Button btnRestore;
+
+  @NonNull
+  public final MaterialToolbar toolbar;
 
   @NonNull
   public final TextView tvBenefit1;
@@ -38,12 +42,13 @@ public final class ActivityProBinding implements ViewBinding {
   @NonNull
   public final TextView tvPrice;
 
-  private ActivityProBinding(@NonNull ScrollView rootView, @NonNull Button btnBuy,
-      @NonNull Button btnRestore, @NonNull TextView tvBenefit1, @NonNull TextView tvBenefit2,
-      @NonNull TextView tvBenefit3, @NonNull TextView tvPrice) {
+  private ActivityProBinding(@NonNull LinearLayout rootView, @NonNull Button btnBuy,
+      @NonNull Button btnRestore, @NonNull MaterialToolbar toolbar, @NonNull TextView tvBenefit1,
+      @NonNull TextView tvBenefit2, @NonNull TextView tvBenefit3, @NonNull TextView tvPrice) {
     this.rootView = rootView;
     this.btnBuy = btnBuy;
     this.btnRestore = btnRestore;
+    this.toolbar = toolbar;
     this.tvBenefit1 = tvBenefit1;
     this.tvBenefit2 = tvBenefit2;
     this.tvBenefit3 = tvBenefit3;
@@ -52,7 +57,7 @@ public final class ActivityProBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public ScrollView getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -89,6 +94,12 @@ public final class ActivityProBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.toolbar;
+      MaterialToolbar toolbar = ViewBindings.findChildViewById(rootView, id);
+      if (toolbar == null) {
+        break missingId;
+      }
+
       id = R.id.tvBenefit1;
       TextView tvBenefit1 = ViewBindings.findChildViewById(rootView, id);
       if (tvBenefit1 == null) {
@@ -113,8 +124,8 @@ public final class ActivityProBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityProBinding((ScrollView) rootView, btnBuy, btnRestore, tvBenefit1,
-          tvBenefit2, tvBenefit3, tvPrice);
+      return new ActivityProBinding((LinearLayout) rootView, btnBuy, btnRestore, toolbar,
+          tvBenefit1, tvBenefit2, tvBenefit3, tvPrice);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

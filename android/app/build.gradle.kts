@@ -1,6 +1,20 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+}
+
+// Play 商品 ID。真实值放在 gitignore 的 billing.properties，缺省用预留 ID。
+// 服务账号、Pub/Sub、OIDC 等密钥只放服务端，不进客户端。
+val billingProps = Properties().apply {
+    val file = rootProject.file("billing.properties")
+    if (file.exists()) file.inputStream().use { load(it) }
+}
+
+fun billingConfig(name: String, default: String): String {
+    val value = (billingProps.getProperty(name) ?: default).trim().replace("\"", "")
+    return "\"$value\""
 }
 
 android {
@@ -14,10 +28,17 @@ android {
         versionCode = 1
         versionName = "1.0.0"
 
-        // 面向东南亚，默认印尼（PRD：locale=in）
-        resourceConfigurations += setOf("in", "en")
+        // 默认英文。其余语言与电池类竞品公开的 13 语种一致，印尼语在 values-in。
+        resourceConfigurations += setOf(
+            "en", "in", "id", "fr", "de", "hi", "hu", "pl", "pt", "ru", "sk", "es", "th", "vi"
+        )
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        // 预留的 Play Console 订阅 ID。可在 android/billing.properties 覆盖。
+        buildConfigField("String", "PLAY_PRODUCT_ID", billingConfig("PLAY_PRODUCT_ID", "pro_monthly"))
+        buildConfigField("String", "PLAY_BASE_PLAN_ID", billingConfig("PLAY_BASE_PLAN_ID", "monthly"))
+        buildConfigField("String", "PLAY_OFFER_ID", billingConfig("PLAY_OFFER_ID", ""))
     }
 
     buildTypes {

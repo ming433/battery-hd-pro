@@ -17,8 +17,10 @@ import com.batteryhd.app.R
 import com.batteryhd.app.databinding.FragmentSettingsBinding
 import com.batteryhd.app.notification.NotificationHelper
 import com.batteryhd.app.ui.MainActivity
+import com.batteryhd.app.util.AppLanguage
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
-/** 设置：埋点开关、提醒开关、通知权限、数据删除、订阅入口 */
+/** 设置：语言、埋点开关、提醒开关、通知权限、数据删除、订阅入口 */
 class SettingsFragment : Fragment(R.layout.fragment_settings) {
 
     private var _binding: FragmentSettingsBinding? = null
@@ -60,6 +62,9 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         _binding = FragmentSettingsBinding.bind(view)
+
+        refreshLanguageLabel()
+        binding.btnLanguage.setOnClickListener { showLanguageDialog() }
 
         val consent = ConsentManager(requireContext())
         binding.switchAnalytics.isChecked = consent.isAnalyticsEnabled()
@@ -105,6 +110,30 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
         }
 
         binding.tvVersion.text = getString(R.string.settings_version, BuildConfig.VERSION_NAME)
+    }
+
+    // ------------------------------------------------------------ 语言
+
+    private fun refreshLanguageLabel() {
+        binding.btnLanguage.text = AppLanguage.nativeName(AppLanguage.currentTag())
+            ?: getString(R.string.settings_language_system)
+    }
+
+    private fun showLanguageDialog() {
+        val tags = arrayOf(AppLanguage.SYSTEM) + AppLanguage.choices.map { it.tag }.toTypedArray()
+        val labels = arrayOf(getString(R.string.settings_language_system)) +
+            AppLanguage.choices.map { it.nativeName }.toTypedArray()
+        val checked = tags.indexOf(AppLanguage.currentTag()).coerceAtLeast(0)
+
+        MaterialAlertDialogBuilder(requireContext())
+            .setTitle(R.string.settings_language)
+            .setSingleChoiceItems(labels, checked) { dialog, which ->
+                dialog.dismiss()
+                if (tags[which] != AppLanguage.currentTag()) {
+                    AppLanguage.apply(tags[which])
+                }
+            }
+            .show()
     }
 
     // ------------------------------------------------------------ 提醒开关

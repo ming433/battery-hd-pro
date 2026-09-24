@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,7 +20,7 @@ import java.lang.String;
 
 public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
-  private final ScrollView rootView;
+  private final LinearLayout rootView;
 
   @NonNull
   public final FrameLayout bannerContainer;
@@ -56,7 +55,7 @@ public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
   public final TextView tvTemp;
 
-  private FragmentHomeBinding(@NonNull ScrollView rootView, @NonNull FrameLayout bannerContainer,
+  private FragmentHomeBinding(@NonNull LinearLayout rootView, @NonNull FrameLayout bannerContainer,
       @NonNull Button btnExpandScenes, @NonNull Button btnPro, @NonNull LinearLayout cardHealth,
       @NonNull ProgressBar progressLevel, @NonNull TextView tvCapacity,
       @NonNull TextView tvHealthScore, @NonNull TextView tvLevel, @NonNull TextView tvScenes,
@@ -77,7 +76,7 @@ public final class FragmentHomeBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public ScrollView getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -168,7 +167,7 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentHomeBinding((ScrollView) rootView, bannerContainer, btnExpandScenes,
+      return new FragmentHomeBinding((LinearLayout) rootView, bannerContainer, btnExpandScenes,
           btnPro, cardHealth, progressLevel, tvCapacity, tvHealthScore, tvLevel, tvScenes, tvStatus,
           tvTemp);
     }
