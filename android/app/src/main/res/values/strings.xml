@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Battery HD Pro</string>
+    <string name="app_name">Battery Coach</string>
 
     <!-- Consent -->
     <string name="consent_title">Before we start</string>
@@ -68,10 +68,10 @@
     <string name="settings_version">Version %1$s</string>
 
     <!-- Pro -->
-    <string name="title_pro">Battery HD Pro</string>
+    <string name="title_pro">Battery Coach Pro</string>
     <string name="pro_benefit_1">No ads, forever</string>
-    <string name="pro_benefit_2">Weekly charging report</string>
-    <string name="pro_benefit_3">Guided calibration</string>
+    <string name="pro_benefit_2">AI-powered weekly charging report</string>
+    <string name="pro_benefit_3">AI calibration coach</string>
     <string name="pro_buy">Subscribe</string>
     <string name="pro_restore">Restore purchases</string>
     <string name="pro_owned">Thanks! You\'re already Pro.</string>
@@ -114,4 +114,29 @@
     <string name="charge_calibration_abandoned">Calibration cancelled</string>
     <string name="charge_calibration_next">Next</string>
     <string name="charge_calibration_finish">Done</string>
+
+    <!-- AI Insight -->
+    <string name="ai_insight_title">AI Coach</string>
+    <string name="ai_insight_refresh">Refresh</string>
+    <string name="ai_insight_offline">Offline — showing last insight</string>
+    <string name="ai_insight_no_history">Keep charging for a few days so your coach can learn your habits.</string>
+    <string name="ai_insight_powered_by">Powered by AI. Estimates only.</string>
+    <string name="ai_insight_action_set_limit">Set Charge Limit</string>
+    <string name="ai_insight_action_calibrate">Start Calibration</string>
+    <string name="ai_insight_action_drain_detail">View Power Usage</string>
+    <string name="ai_insight_action_temp_alert">Enable Temp Alert</string>
+
+    <!-- Smart Limit -->
+    <string name="smart_limit_suggested">Suggested: %1$d%%</string>
+    <string name="smart_limit_apply">Apply</string>
+    <string name="smart_limit_reason_health">Based on your battery health score</string>
+    <string name="smart_limit_reason_temp">Recent high-temperature charging detected</string>
+    <string name="smart_limit_reason_default">Recommended for battery longevity</string>
+    <string name="smart_limit_different">Different from coach suggestion</string>
+
+    <!-- Widget -->
+    <string name="widget_name">Battery Coach</string>
+    <string name="widget_description">Shows battery level, temperature, and charging status</string>
+    <string name="widget_charging">Charging</string>
+    <string name="widget_not_charging">Not charging</string>
 </resources>

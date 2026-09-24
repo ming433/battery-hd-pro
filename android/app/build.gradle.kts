@@ -106,4 +106,7 @@ dependencies {
     // ---- 变现：Play 订阅（客户端只做行为漏斗，收入真相源是服务端 RTDN）
     implementation("com.android.billingclient:billing:7.1.1")
     implementation("com.android.billingclient:billing-ktx:7.1.1")
+
+    // ---- 测试
+    testImplementation("junit:junit:4.13.2")
 }

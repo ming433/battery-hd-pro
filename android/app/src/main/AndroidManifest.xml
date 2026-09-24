@@ -76,6 +76,22 @@
             </intent-filter>
         </receiver>
 
+        <!-- Battery Coach Widget -->
+        <receiver
+            android:name=".widget.BatteryCoachWidget"
+            android:exported="true"
+            android:label="@string/widget_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.BATTERY_CHANGED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_battery_coach_info" />
+        </receiver>
+
     </application>
 
 </manifest>

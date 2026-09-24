@@ -9,6 +9,7 @@ import com.batteryhd.app.BatteryHdApp
 import com.batteryhd.app.R
 import com.batteryhd.app.ads.AdsManager
 import com.batteryhd.app.battery.BatteryRepository
+import com.batteryhd.app.coach.CoachInsight
 import com.batteryhd.app.databinding.FragmentHomeBinding
 import com.batteryhd.app.ui.MainActivity
 import com.batteryhd.app.ui.reportLimitTriggered
@@ -27,6 +28,24 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         _binding = FragmentHomeBinding.bind(view)
 
         refresh()
+        refreshInsight()
+
+        binding.btnRefreshInsight.setOnClickListener {
+            refreshInsight()
+            Analytics.track(
+                "ai_insight_refresh",
+                mapOf("source" to "manual")
+            )
+        }
+
+        binding.btnInsightAction.setOnClickListener {
+            val insight = app.coachRepo.getCachedInsight() ?: return@setOnClickListener
+            handleInsightAction(insight.primaryAction)
+            Analytics.track(
+                "ai_insight_action_click",
+                mapOf("action" to insight.primaryAction.name)
+            )
+        }
 
         binding.cardHealth.setOnClickListener {
             val snap = app.batteryRepo.snapshot()
@@ -87,7 +106,61 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     override fun onResume() {
         super.onResume()
-        if (_binding != null) refresh()
+        if (_binding != null) {
+            refresh()
+            showCachedInsight()
+        }
+    }
+
+    private fun refreshInsight() {
+        val insight = app.coachRepo.generateInsight()
+        displayInsight(insight)
+        Analytics.track(
+            "ai_insight_show",
+            mapOf(
+                "confidence" to insight.confidence.name,
+                "action" to insight.primaryAction.name
+            )
+        )
+    }
+
+    private fun showCachedInsight() {
+        val cached = app.coachRepo.getCachedInsight()
+        if (cached != null) {
+            displayInsight(cached.copy(isOffline = true))
+        }
+    }
+
+    private fun displayInsight(insight: CoachInsight) {
+        if (_binding == null) return
+
+        binding.tvInsightHeadline.text = insight.headline
+        binding.tvInsightSummary.text = insight.summary
+        binding.tvInsightOffline.visibility = if (insight.isOffline) View.VISIBLE else View.GONE
+
+        if (insight.primaryAction != CoachInsight.PrimaryAction.NONE) {
+            binding.btnInsightAction.visibility = View.VISIBLE
+            binding.btnInsightAction.text = when (insight.primaryAction) {
+                CoachInsight.PrimaryAction.SET_CHARGE_LIMIT -> getString(R.string.ai_insight_action_set_limit)
+                CoachInsight.PrimaryAction.START_CALIBRATION -> getString(R.string.ai_insight_action_calibrate)
+                CoachInsight.PrimaryAction.OPEN_DRAIN_DETAIL -> getString(R.string.ai_insight_action_drain_detail)
+                CoachInsight.PrimaryAction.ENABLE_TEMP_ALERT -> getString(R.string.ai_insight_action_temp_alert)
+                CoachInsight.PrimaryAction.NONE -> ""
+            }
+        } else {
+            binding.btnInsightAction.visibility = View.GONE
+        }
+    }
+
+    private fun handleInsightAction(action: CoachInsight.PrimaryAction) {
+        val mainActivity = activity as? MainActivity ?: return
+        when (action) {
+            CoachInsight.PrimaryAction.SET_CHARGE_LIMIT -> mainActivity.navigateToCharge()
+            CoachInsight.PrimaryAction.START_CALIBRATION -> mainActivity.navigateToCharge()
+            CoachInsight.PrimaryAction.OPEN_DRAIN_DETAIL -> mainActivity.navigateToPower()
+            CoachInsight.PrimaryAction.ENABLE_TEMP_ALERT -> mainActivity.navigateToCharge()
+            CoachInsight.PrimaryAction.NONE -> {}
+        }
     }
 
     override fun onDestroyView() {
